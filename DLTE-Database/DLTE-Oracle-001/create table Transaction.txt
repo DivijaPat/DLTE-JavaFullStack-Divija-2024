@@ -1,0 +1,21 @@
+create table Transaction(transaction_id number primary key, transaction_date date not null, transaction_to varchar(255) not null, transaction_amount number not null, transaction_remarks varchar(255) not null);
+
+insert into Transaction(transaction_id,transaction_amount,transaction_date,transaction_to,transaction_remarks) values(1,100,'20-feb-2024','Sunidhi','Friend');
+
+insert into Transaction(transaction_id,transaction_amount,transaction_date,transaction_to,transaction_remarks) values(2,400,'21-feb-2024','Sudheesh','Family');
+
+insert into Transaction(transaction_id,transaction_amount,transaction_date,transaction_to,transaction_remarks) values(3,350,'22-feb-2024','Dishitha','Emergency');
+
+insert into Transaction(transaction_id,transaction_amount,transaction_date,transaction_to,transaction_remarks) values(4,388,'26-feb-2024','Bhargavi','Bills');
+
+insert into Transaction(transaction_id,transaction_amount,transaction_date,transaction_to,transaction_remarks) values(5,1234,'28-feb-2024','Divija','education');
+
+insert into Transaction(transaction_id,transaction_amount,transaction_date,transaction_to,transaction_remarks) values(6,124,'23-feb-2024','Divija','education');
+
+insert into Transaction(transaction_id,transaction_amount,transaction_date,transaction_to,transaction_remarks) values(7,234,'29-feb-2024','Divya','Family');
+
+1) select * from Transaction where transaction_date between '20-feb-2024' and '22-feb-2024';
+2) select min(transaction_amount) from Transaction;
+3) select max(transaction_amount)from Transaction;
+4) select count(transaction_to)from Transaction where transaction_to='Divija';
+5) select * from Transaction where transaction_remarks='Family';
