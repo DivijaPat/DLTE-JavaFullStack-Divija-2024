@@ -51,20 +51,53 @@ public class TransactionAnalysis {
                     analysis.sortedAmount(myTransaction);
                     break;
                 case 7:
-                     analysis.sortedBeneficiary(myTransaction):
+                     analysis.sortedBeneficiary(myTransaction);
                 default:
                     System.exit(0);
             }
         }
     }
-    private void sortedAmount(Transaction[] myTransaction){
-        for(int index=0;index<myTransaction.length;index++){
+    private void sortedAmount(Transaction[] myTransaction) {
+        System.out.println("before sorting:");
+        for (Transaction each : myTransaction) {
+            System.out.println(each.getTransactionAmount());
+        }
 
+        for (int index = 0; index < myTransaction.length; index++) {
+            for (int next = 0; next < myTransaction.length - index - 1; next++) {
+                if (myTransaction[next].getTransactionAmount().compareTo(myTransaction[next + 1].getTransactionAmount()) < 0) {
+                    Transaction backup = myTransaction[next];
+                    myTransaction[next] = myTransaction[next + 1];
+                    myTransaction[next + 1] = backup;
+                }
+            }
+        }
+        System.out.println("After sorting");
+        for (Transaction each : myTransaction) {
+            System.out.println(each.getTransactionAmount());
         }
     }
     private void sortedBeneficiary(Transaction[] myTransaction){
-        
+        System.out.println("Before sorting:");
+        for(Transaction each:myTransaction){
+            System.out.println(each.getSentTo());
+        }
+
+        for(int index=0;index<myTransaction.length;index++){
+            for(int next=0;next<myTransaction.length-index-1;next++){
+                if(myTransaction[next].getSentTo().compareTo(myTransaction[next+1].getSentTo())<0){
+                    Transaction backup= myTransaction[next];
+                    myTransaction[next]=myTransaction[next+1];
+                    myTransaction[next+1]=backup;
+                }
+            }
+        }
+        System.out.println("After sorting");
+        for(Transaction each:myTransaction){
+            System.out.println(each.getSentTo());
+        }
     }
+
 
 
 
@@ -78,13 +111,17 @@ public class TransactionAnalysis {
         }
         System.out.println("no. of transactions made by "+name+" is "+countTransaction);
     }
-    private void minimumAmount(Transaction[] myTransaction){
-        int amount=myTransaction[0].getTransactionAmount();
-        for(Transaction each:myTransaction){
-            if(amount>each.getTransactionAmount())
-                amount=each.getTransactionAmount();
+    private void minimumAmount(Transaction[] myTransaction) {
+        int amount = myTransaction[0].getTransactionAmount();
+        for (Transaction each : myTransaction) {
+            if (amount > each.getTransactionAmount())
+                amount = each.getTransactionAmount();
         }
-        System.out.println("minimum amount is:"+amount);
+        System.out.println("name      minimum amount");
+        for (Transaction each : myTransaction) {
+            if(each.getTransactionAmount()==amount)
+                System.out.println(each.getSentTo()+" "+amount);
+        }
     }
     private void maximumAmount(Transaction[] myTransaction){
         int amount=myTransaction[0].getTransactionAmount();
@@ -92,7 +129,12 @@ public class TransactionAnalysis {
             if(amount<each.getTransactionAmount())
                 amount=each.getTransactionAmount();
         }
-        System.out.println("maximum amount is:"+amount);
+        System.out.println("name      maximum amount");
+        for (Transaction each : myTransaction) {
+            if(each.getTransactionAmount()==amount)
+                System.out.println(each.getSentTo()+" "+amount);
+        }
+
     }
     private void filterBasedOnDate(Transaction[] myTransaction,int start,int end){
         System.out.println("transaction between dates "+start+" and "+end+" is:");
