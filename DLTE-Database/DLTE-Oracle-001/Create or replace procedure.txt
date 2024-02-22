@@ -1,0 +1,94 @@
+ select * from bankers;        bank id ,name,passcode
+
+
+select banker_name from bankers where banker_id=139001;
+-----------------------------------------------------
+
+Create or replace procedure read_bankers_info(emp_id number,emp_name out varchar2,emp_info out varchar2)
+as,
+begin
+     select banker_name into emp_name from bankers where banker_id=emp_id;
+     emp_info:='Banker fetched successfully';
+exception
+     when no_data_found then
+     emp_info:='No banker matched';
+     when others then
+     emp_info:= 'Error due to '||SQLERRM;
+end;
+/
+
+-------------------------------------------------------
+variable found_one varchar2(255);
+variable info_or_error varchar2(255);
+variable my_id number;
+
+set my_id=139001;
+execute read_bankers_info(139001,:found_one,:info_or_error);
+print found_one;
+print_info_or_error;
+
+-------------------------------------------------------
+
+
+Insertion or Updation:
+
+Create or replace procedure update_customers(acc_num number,acc_name varchar2,acc_bal float,acc_cont number,acc_pass varchar2,acc_info out varchar2)
+as
+begin
+update customers set account_holder=acc_name,contact=acc_cont,account_passcode=acc_pass,account_balance=acc_bal where account_number=acc_num;
+acc_info:='KYC Updated';
+exception
+when others then
+acc_info:='Updation failed due to'||SQLERRM;
+end;
+/
+
+variable err_or_info varchar2(255);
+execute update_customers(1011,'Elroy',10000.9,5735478,'elroymite',:err_or_info);
+print error_or_info;
+
+drop procedure update_customers;
+
+--------------------------------------------------------
+Before this create table and insert 2 columns
+
+create or replace trigger check_some
+before insert on borrowers
+for each row
+begin
+    if :new.borrower_contact is null then:new.borrower_contact:=0;
+end;
+/
+------------------------------------------------------
+inser into borrower(id,name) values(234,'Aru')
+
+-------------------------------------------------------
+-------------------------------------------------------
+
+create table my_logs(date_of_log date, message varchar(255));
+
+
+create or replce trigger record_log
+after update on borrowers
+for each row
+when(borrower_id >0)
+begin
+  insert into my_logs values(sysdate,'Updated the borrower table'||:old.borrower.id);
+end;
+/
+
+
+update borrower set borrower_contact=34567843 where borrower_id=34567843;
+
+
+
+
+
+
+
+
+
+
+
+
+
