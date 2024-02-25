@@ -1,11 +1,16 @@
 package basics.service;
 
+import java.sql.SQLOutput;
 import java.util.Date;
+import java.util.ResourceBundle;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 public class CreditCardMethods {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        String filterDate = "";
+       int startDate,endDate;
         int option, creditCardPin, incorrectLogin = 1;
         Integer start, end;
         Long creditCardNumber;
@@ -15,67 +20,70 @@ public class CreditCardMethods {
                 new CreditCard(7865178764541L, "Akshira", new Date(2031, 5, 15), 327, 100000, new Date(2024, 4, 10), new Date(2024, 6, 11), 9864),
                 new CreditCard(1234565756769L, "Anusha", new Date(2028, 8, 11), 783, 100000, new Date(2024, 5, 18), new Date(2024, 8, 29), 1945),
         };
-
+        ResourceBundle resourceBundle= ResourceBundle.getBundle("application");
+        Logger logger= Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
         CreditCardMethods support = new CreditCardMethods();
-        System.out.println("Enter your choice:\n 1.Filter based on limit amount\n2. filter based on date of bill payment\n3.Update the PIN\n4. update amount limit of those whose bill generation date is on 5");
+        System.out.println(resourceBundle.getString("menu.title"));
+        System.out.println(resourceBundle.getString("menu.choices"));
         option = scanner.nextInt();
         switch (option) {
             case 1: try{
-                System.out.println("enter start card limit:");
+                System.out.println(resourceBundle.getString("start.limit"));
                 start = scanner.nextInt();
-                System.out.println("enter end card limit:");
+                System.out.println(resourceBundle.getString("end.limit"));
                 end = scanner.nextInt();
                 support.filterBasedOnLimit(myBank, start, end);
-                break;}
-                catch( MyBankCreditCardException  myBankCreditCardException){
-
                 }
-            case 2:
-                System.out.println("enter date(dd-mm-yyyy)");
-                filterDate = scanner.next();
-                support.filterBillPayment(myBank,filterDate);
+                catch( MyBankCreditCardException  myBankCreditCardException){
+                    System.out.println("None");
+                    logger.log(Level.WARNING,myBankCreditCardException.toString());
+                }
                 break;
-
+            case 2:
+                try {
+                    System.out.println(resourceBundle.getString("start.date"));
+                    startDate = scanner.nextInt();
+                    System.out.println(resourceBundle.getString("end.date"));
+                    endDate = scanner.nextInt();
+                    support.filterBillPayment(myBank,startDate,endDate);
+                } catch(MyBankCreditCardException myBankCreditCardException){
+                    System.out.println("No customers found");
+                    logger.log(Level.WARNING,myBankCreditCardException.toString());
+                }
+                break;
+            default:
+                System.out.println("Thank You");
+                scanner.close();
+                System.exit(0);
         }
-        scanner.close();
+
     }
 
     public void filterBasedOnLimit(CreditCard[] myBank,Integer start,Integer end){
-        for(CreditCard each:myBank){
-            if(each.getCreditCardLimit()>=start && each.getCreditCardLimit()<=end){
-                System.out.println(each.getCreditCardHolder()+" your credit card limit is between "+start+" and "+ end );
+        int flag=0;
+        for(CreditCard each:myBank) {
+            if (each.getCreditCardLimit() >= start && each.getCreditCardLimit() <= end) {
+                flag = 1;
+                System.out.println(each.getCreditCardHolder() + " your credit card limit is between " + start + " and " + end);
             }
-            else
-                throw new  MyBankCreditCardException();
+        }
+        if(flag==0){
+            throw new MyBankCreditCardException();
 
         }
 
     }
 
-    public void filterBillPayment(CreditCard[] myBank,String date) {
-        String splitDate[] = date.split("-");
+    public void filterBillPayment(CreditCard[] myBank,int startDate,int endDate) {
+        int flag=0;
+        System.out.println("customers who made bill payment between "+startDate+" and"+endDate);
         for (CreditCard each:myBank) {
-            if (Integer.parseInt(splitDate[0]) == each.getDateOfBillPayment().getDate() && Integer.parseInt(splitDate[1]) == each.getDateOfBillPayment().getMonth() && Integer.parseInt(splitDate[2]) == each.getDateOfBillPayment().getYear()) {
-                System.out.println(each.getCreditCardHolder() + " " + each.getCreditCardNumber());
+            if (each.getDateOfBillPayment().getDate() >= startDate &&  each.getDateOfBillPayment().getDate()<=endDate ){
+                flag=1;
+                System.out.println(each.getCreditCardHolder() + " " + each.getDateOfBillPayment().getDate());
             }
         }
+        if(flag==0)
+             throw new MyBankCreditCardException();
     }
-
-    public void updatePin(CreditCard[] myBank,long creditCardNumber){
-        Scanner scanner=new Scanner(System.in);
-        int newcreditCardPin;
-        System.out.println("enter new pin:");
-        newcreditCardPin=scanner.nextInt();
-        for(CreditCard each:myBank){
-           if(each.getCreditCardNumber().equals(creditCardNumber)){
-               each.setCreditCardPin(newcreditCardPin);
-                System.out.println("Your new credit card pin is:"+newcreditCardPin);
-            }
-
-        }
-        scanner.close();
-    }
-
-
-
 }

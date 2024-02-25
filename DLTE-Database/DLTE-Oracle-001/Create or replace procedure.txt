@@ -82,13 +82,65 @@ update borrower set borrower_contact=34567843 where borrower_id=34567843;
 
 
 
+---------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------
+
+1)create user elroy identified by mite;
+
+----exit and then login again with above user and passwd...but error bcz no previlege--
+
+2)grant connect to elroy;
+
+-----succeeded-------login---- no error------------
+
+3)alter session set current_schema=system;
+
+------session altered-------------------
+
+4)select * from table_name; -----------error----------
+
+5) create user varun identified by narendra;
+
+6) grant select on tbl_name to varun;
+
+7) drop user varun ---------if needed-----
+
+8) Grant connect to varun;
+
+9) connect varun/narendra;
+
+10) alter session set current_schema=system;
+
+11) connect system/root
+
+----To revoke-----
+12) revoke update on customers from elroy;
+
+13) connect system/root
+
+14) drop user varun;
+
+15) drop user elroy;
+
+==========================================================================
+
+DQL
+==========================================================================
 
 
+select * from bank_user where full_name like'%e%';    
 
 
+select * from bank_user where full_name like'%e%' and role='manager';
 
+select * from bank_user order by username;
 
+select * from bank_user order by username desc;
 
+select * from bank_user group by username;
 
+select * from bank_user where username in('Divija','Arundhathi');    ---------either or both
 
+select count(*) from  bank_user where wallet in('Divija','Arundhathi');
 
+--------------------------------------------------------------------------------------------------------
