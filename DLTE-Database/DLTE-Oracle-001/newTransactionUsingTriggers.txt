@@ -1,0 +1,15 @@
+insert into Transaction_2024(transaction_id,transaction_amount,transaction_date,transaction_to,transaction_remarks) values(3,350,'22-feb-2024','Dishitha','Emergency');
+
+CREATE or replace TRIGGER before_insert
+  2  BEFORE INSERT ON Transaction_2024
+  3  FOR EACH ROW
+  4  BEGIN
+  5   IF :NEW.transaction_remarks is null or :NEW.transaction_remarks=' ' THEN
+  6   :NEW.transaction_remarks:='No';
+  7   END IF;
+  8  END;
+  9  /
+
+ insert into Transaction_2024(transaction_id,transaction_amount,transaction_date,transaction_to) values(1,10000,'20-feb-2024','Sunidhi');
+
+ commit;

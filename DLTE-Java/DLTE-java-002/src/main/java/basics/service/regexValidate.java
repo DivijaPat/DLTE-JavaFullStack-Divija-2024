@@ -41,7 +41,7 @@ public class regexValidate {
         borrowerIncomeType= scanner.next();
         System.out.println("Enter mobile number:");
         borrowerMobile=scanner.next();
-        String mobileexpression= "[6-9]{1}[0-9]{9}";
+        String mobileexpression="[6-9][0-9]{9}";
         Pattern patternPhone= Pattern.compile(mobileexpression);
         Matcher matcherPhone = patternPhone.matcher(borrowerMobile);
         if(matcherPhone.matches())

@@ -1,4 +1,4 @@
- select * from bankers;        bank id ,name,passcode
+b select * from bankers;        bank id ,name,passcode
 
 
 select banker_name from bankers where banker_id=139001;

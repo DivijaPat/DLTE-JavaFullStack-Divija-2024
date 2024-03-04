@@ -3,7 +3,14 @@ import java.util.Scanner;
 public class CLI_FD_MaturityAmount {
     public static void main(String args[]){
         Scanner scanner=new Scanner(System.in);
-        //FD
+        int choice=0;
+
+
+
+
+
+
+
         int tenureFD;
         double  principalAmount, rateOfInterest, matureFD, interest;
         System.out.println("------FD Maturity Amount Calculator------");

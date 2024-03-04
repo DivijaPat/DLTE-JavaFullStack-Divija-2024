@@ -14,8 +14,8 @@ insert into Transaction(transaction_id,transaction_amount,transaction_date,trans
 
 insert into Transaction(transaction_id,transaction_amount,transaction_date,transaction_to,transaction_remarks) values(7,234,'29-feb-2024','Divya','Family');
 
-1) select * from Transaction where transaction_date between '20-feb-2024' and '22-feb-2024';
-2) select min(transaction_amount) from Transaction;
-3) select max(transaction_amount)from Transaction;
-4) select count(transaction_to)from Transaction where transaction_to='Divija';
-5) select * from Transaction where transaction_remarks='Family';
+1) Create view filterDate as select * from Transaction where transaction_date between '20-feb-2024' and '22-feb-2024';
+2) Create view minimumAmount as select min(transaction_amount) from Transaction;
+3) Create view maximumAmount as select max(transaction_amount)from Transaction;
+4) Create view countBeneficiary as select count(transaction_to)from Transaction where transaction_to='Divija';
+5) Create view filterRemarks as select * from Transaction where transaction_remarks='Family';
