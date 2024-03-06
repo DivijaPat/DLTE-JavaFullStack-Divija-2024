@@ -2,17 +2,14 @@ package basics.service.entity;
 
 public class Accounts {
     String username;
-    Integer password;
+   String password;
     String address;
     Long mobile;
     String email;
     Double balance;
 
-    public Accounts( ) {
 
-    }
-
-    public Accounts(String username, Integer password, String address, Long mobile, String email, Double balance) {
+    public Accounts(String username, String password, String address, Long mobile, String email, Double balance) {
         this.username = username;
         this.password = password;
         this.address = address;
@@ -29,11 +26,11 @@ public class Accounts {
         this.username = username;
     }
 
-    public Integer getPassword() {
+    public String getPassword() {
         return password;
     }
 
-    public void setPassword(Integer password) {
+    public void setPassword(String password) {
         this.password = password;
     }
 

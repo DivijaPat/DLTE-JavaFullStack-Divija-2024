@@ -1,0 +1,7 @@
+org\filestorage\App.class
+org\filestorage\FileOperation.class
+org\filestorage\Employee.class
+org\filestorage\EmployeeInformation.class
+org\filestorage\EmployeeDetails.class
+org\filestorage\OperationEmployeeDetails.class
+org\filestorage\EmployeeAddress.class

@@ -1,11 +1,12 @@
 package basics.service.middleware;
 
 import basics.service.remotes.StorageTarget;
+import basics.service.remotes.UserRepository;
 
 public class FileStorageTarget implements StorageTarget {
-    public UserFileRepository getUserRepository(){
-        return new UserFileRepository("accountInfo.doc"){
 
-        };
+    @Override
+    public UserRepository getUserRepository() {
+        return new UserFileRepository("accountInfo.doc");
     }
 }

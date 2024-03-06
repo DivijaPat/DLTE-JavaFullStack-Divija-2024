@@ -9,25 +9,25 @@ import java.util.List;
 public class BankServices {
     UserRepository userRepository;
     public BankServices(StorageTarget storageTarget) {
-        userRepository = (UserRepository) storageTarget.getUserRepository();
+        userRepository = storageTarget.getUserRepository();
     }
-    public boolean callVerifyPassword(String username, String password){
+    public boolean callverifyPassword(String username, String password){
         try{
-            return userRepository.verifyPassword(username,password);
+            return userRepository.callverifyPassword(username,password);
         }
         catch(Exception e){
             return false;
         }
     }
 
-    public void callTransfer(String username,String password,double transferAmount){
-        try{
-            userRepository.transfer(username,password,transferAmount);
-        }
-        catch(Exception e){
-            return;
-        }
-    }
+//    public void calltransfer(String username,String password,double transferAmount){
+//        try{
+//            userRepository.calltransfer(username,password,transferAmount);
+//        }
+//        catch(Exception e){
+//            return;
+//        }
+//    }
     public void callAddTransactions(){
         try{
             userRepository.addTransactions();
