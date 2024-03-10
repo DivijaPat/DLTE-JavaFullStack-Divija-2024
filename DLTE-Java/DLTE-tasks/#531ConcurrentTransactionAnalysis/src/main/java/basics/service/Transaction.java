@@ -4,8 +4,8 @@ import java.util.Date;
 
 public class Transaction {
     private Date dateOfTransaction;
-    private Double amount;
-    private String receiver;
+    private Double amountInTransaction;
+    private String transactionTo;
     private String remarks;
 
     public Date getDateOfTransaction() {
@@ -16,20 +16,20 @@ public class Transaction {
         this.dateOfTransaction = dateOfTransaction;
     }
 
-    public Double getAmount() {
-        return amount;
+    public Double getAmountInTransaction() {
+        return amountInTransaction;
     }
 
-    public void setAmount(Double amount) {
-        this.amount = amount;
+    public void setAmountInTransaction(Double amountInTransaction) {
+        this.amountInTransaction = amountInTransaction;
     }
 
-    public String getReceiver() {
-        return receiver;
+    public String getTransactionTo() {
+        return transactionTo;
     }
 
-    public void setReceiver(String receiver) {
-        this.receiver = receiver;
+    public void setTransactionTo(String transactionTo) {
+        this.transactionTo = transactionTo;
     }
 
     public String getRemarks() {
@@ -40,10 +40,22 @@ public class Transaction {
         this.remarks = remarks;
     }
 
-    public Transaction(Date dateOfTransaction, Double amount, String receiver, String remarks) {
+    public Transaction(Date dateOfTransaction, Double amountInTransaction, String transactionTo, String remarks) {
         this.dateOfTransaction = dateOfTransaction;
-        this.amount = amount;
-        this.receiver = receiver;
+        this.amountInTransaction = amountInTransaction;
+        this.transactionTo = transactionTo;
         this.remarks = remarks;
+
+
+    }
+
+    @Override
+    public String toString() {
+        return "Transaction{" +
+                "dateOfTransaction=" + dateOfTransaction +
+                ", amountInTransaction=" + amountInTransaction +
+                ", transactionTo='" + transactionTo + '\'' +
+                ", remarks='" + remarks + '\'' +
+                '}';
     }
 }

@@ -1,7 +1,4 @@
 package org.example;
-
-import java.util.Date;
-
 public class Transaction {
     private String dateOfTransaction;
     private Double amountInTransaction;
