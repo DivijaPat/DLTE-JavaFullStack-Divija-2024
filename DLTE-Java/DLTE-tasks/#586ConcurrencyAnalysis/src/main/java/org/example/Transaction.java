@@ -3,40 +3,42 @@ package org.example;
 import java.util.Date;
 
 public class Transaction {
-    private Date dateofTransaction;
-    private Double amountInTransaction;
-    private String transactionReciever;
+    private Date dateOfTransaction;
+    private double amountInTransaction;
+    private String transactionTo;
     private String remarks;
 
-    public Transaction(Date dateofTransaction, Double amountInTransaction, String transactionReciever, String remarks) {
-        this.dateofTransaction = dateofTransaction;
+    //constructor
+    public Transaction(Date dateOfTransaction, double amountInTransaction, String transactionTo, String remarks) {
+        this.dateOfTransaction = dateOfTransaction;
         this.amountInTransaction = amountInTransaction;
-        this.transactionReciever = transactionReciever;
+        this.transactionTo = transactionTo;
         this.remarks = remarks;
     }
+    //getters and setters
 
-    public Date getDateofTransaction() {
-        return dateofTransaction;
+    public Date getDateOfTransaction() {
+        return dateOfTransaction;
     }
 
-    public void setDateofTransaction(Date dateofTransaction) {
-        this.dateofTransaction = dateofTransaction;
+    public void setDateOfTransaction(Date dateOfTransaction) {
+        this.dateOfTransaction = dateOfTransaction;
     }
 
-    public Double getAmountInTransaction() {
+    public double getAmountInTransaction() {
         return amountInTransaction;
     }
 
-    public void setAmountInTransaction(Double amountInTransaction) {
+    public void setAmountInTransaction(double amountInTransaction) {
         this.amountInTransaction = amountInTransaction;
     }
 
-    public String getTransactionReciever() {
-        return transactionReciever;
+    public String getTransactionTo() {
+        return transactionTo;
     }
 
-    public void setTransactionReciever(String transactionReciever) {
-        this.transactionReciever = transactionReciever;
+    public void setTransactionTo(String transactionTo) {
+        this.transactionTo = transactionTo;
     }
 
     public String getRemarks() {
@@ -45,8 +47,5 @@ public class Transaction {
 
     public void setRemarks(String remarks) {
         this.remarks = remarks;
-    }
-
-    public Transaction() {
     }
 }
