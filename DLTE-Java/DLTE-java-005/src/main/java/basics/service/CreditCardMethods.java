@@ -1,7 +1,9 @@
 package basics.service;
 
-import com.sun.org.slf4j.internal.Logger;
-import com.sun.org.slf4j.internal.LoggerFactory;
+
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.sql.SQLOutput;
 import java.util.Date;
@@ -41,7 +43,7 @@ public class CreditCardMethods {
                 catch( MyBankCreditCardException  myBankCreditCardException){
                     System.out.println("None");
                    // logger.log(Level.WARNING,myBankCreditCardException.toString());
-                    logger.warn(myBankCreditCardException.toString());
+                    logger.info(myBankCreditCardException.toString());
                 }
                 break;
             case 2:
