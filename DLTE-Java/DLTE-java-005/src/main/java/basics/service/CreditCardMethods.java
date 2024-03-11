@@ -1,11 +1,14 @@
 package basics.service;
 
+import com.sun.org.slf4j.internal.Logger;
+import com.sun.org.slf4j.internal.LoggerFactory;
+
 import java.sql.SQLOutput;
 import java.util.Date;
 import java.util.ResourceBundle;
 import java.util.Scanner;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+//import java.util.logging.Level;
+//import java.util.logging.Logger;
 
 public class CreditCardMethods {
     public static void main(String[] args) {
@@ -21,7 +24,8 @@ public class CreditCardMethods {
                 new CreditCard(1234565756769L, "Anusha", new Date(2028, 8, 11), 783, 100000, new Date(2024, 5, 18), new Date(2024, 8, 29), 1945),
         };
         ResourceBundle resourceBundle= ResourceBundle.getBundle("application");
-        Logger logger= Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
+        //Logger logger= Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
+        Logger logger= LoggerFactory.getLogger(CreditCardMethods.class);
         CreditCardMethods support = new CreditCardMethods();
         System.out.println(resourceBundle.getString("menu.title"));
         System.out.println(resourceBundle.getString("menu.choices"));
@@ -36,7 +40,8 @@ public class CreditCardMethods {
                 }
                 catch( MyBankCreditCardException  myBankCreditCardException){
                     System.out.println("None");
-                    logger.log(Level.WARNING,myBankCreditCardException.toString());
+                   // logger.log(Level.WARNING,myBankCreditCardException.toString());
+                    logger.warn(myBankCreditCardException.toString());
                 }
                 break;
             case 2:
@@ -48,7 +53,8 @@ public class CreditCardMethods {
                     support.filterBillPayment(myBank,startDate,endDate);
                 } catch(MyBankCreditCardException myBankCreditCardException){
                     System.out.println("No customers found");
-                    logger.log(Level.WARNING,myBankCreditCardException.toString());
+                   // logger.log(Level.WARNING,myBankCreditCardException.toString());
+                    logger.warn(myBankCreditCardException.toString());
                 }
                 break;
             default:
