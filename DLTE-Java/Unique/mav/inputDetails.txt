@@ -1,0 +1,44 @@
+Mar 17, 2024 6:52:20 PM org.example.Middleware.UserDetailsFileRepository authenticate
+WARNING: Username not found.
+Mar 17, 2024 7:05:01 PM org.example.Middleware.UserDetailsFileRepository authenticate
+WARNING: Password not matched.
+Mar 17, 2024 7:05:01 PM org.example.Middleware.UserDetailsFileRepository authenticate
+WARNING: Login failed.
+Mar 17, 2024 7:13:40 PM org.example.Middleware.UserDetailsFileRepository authenticate
+WARNING: Username not found.
+Mar 17, 2024 7:14:00 PM org.example.Middleware.UserDetailsFileRepository authenticate
+WARNING: Username not found.
+Mar 17, 2024 7:14:08 PM org.example.Middleware.UserDetailsFileRepository authenticate
+WARNING: Username not found.
+Mar 17, 2024 7:14:25 PM org.example.Middleware.UserDetailsFileRepository authenticate
+WARNING: Password not matched.
+Mar 17, 2024 7:14:25 PM org.example.Middleware.UserDetailsFileRepository authenticate
+WARNING: Login failed.
+Mar 17, 2024 7:14:35 PM org.example.Middleware.UserDetailsFileRepository authenticate
+WARNING: Login failed.
+Mar 17, 2024 7:14:55 PM org.example.Middleware.UserDetailsFileRepository authenticate
+WARNING: Password not matched.
+Mar 17, 2024 7:14:55 PM org.example.Middleware.UserDetailsFileRepository authenticate
+WARNING: Login failed.
+Mar 17, 2024 7:15:05 PM org.example.Middleware.UserDetailsFileRepository authenticate
+WARNING: Login failed.
+Mar 17, 2024 7:15:20 PM org.example.Middleware.UserDetailsFileRepository authenticate
+WARNING: Password not matched.
+Mar 17, 2024 7:15:20 PM org.example.Middleware.UserDetailsFileRepository authenticate
+WARNING: Login failed.
+Mar 17, 2024 7:15:24 PM org.example.Middleware.UserDetailsFileRepository authenticate
+INFO: Login Successful
+Mar 17, 2024 7:17:15 PM org.example.Middleware.UserDetailsFileRepository authenticate
+WARNING: Password not matched.
+Mar 17, 2024 7:17:15 PM org.example.Middleware.UserDetailsFileRepository authenticate
+WARNING: Login failed.
+Mar 17, 2024 7:17:43 PM org.example.Middleware.UserDetailsFileRepository authenticate
+INFO: Login Successful
+Mar 17, 2024 7:18:10 PM org.example.Middleware.UserDetailsFileRepository authenticate
+WARNING: Password not matched.
+Mar 17, 2024 7:18:10 PM org.example.Middleware.UserDetailsFileRepository authenticate
+WARNING: Login failed.
+Mar 17, 2024 7:18:19 PM org.example.Middleware.UserDetailsFileRepository authenticate
+WARNING: Login failed.
+Mar 17, 2024 7:18:34 PM org.example.Middleware.UserDetailsFileRepository authenticate
+INFO: Login Successful
