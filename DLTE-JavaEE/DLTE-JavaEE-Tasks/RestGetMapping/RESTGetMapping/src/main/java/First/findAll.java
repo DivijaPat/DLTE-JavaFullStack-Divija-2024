@@ -15,7 +15,7 @@ import java.io.IOException;
 import java.util.List;
 
 @WebServlet("/transaction/findAll")
-public class FindAll extends HttpServlet {
+class FindAll extends HttpServlet {
     TransactionServices service;
 
     @Override
