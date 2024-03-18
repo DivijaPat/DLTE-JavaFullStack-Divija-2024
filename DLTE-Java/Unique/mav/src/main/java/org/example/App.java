@@ -1,13 +1,14 @@
 package org.example;
 
-import org.example.Entity.Account;
-import org.example.Exceptions.InsufficientFundsException;
-import org.example.Exceptions.InvalidCredentialsException;
-import org.example.Exceptions.ReceiverNotFoundException;
-import org.example.Middleware.FileStorageTarget;
-import org.example.Middleware.UserDetailsFileRepository;
-import org.example.Remote.StorageTarget;
-import org.example.Services.AccountServices;
+import org.example.entity.Account;
+import org.example.exceptions.InsufficientFundsException;
+import org.example.exceptions.InvalidCredentialsException;
+import org.example.exceptions.ReceiverNotFoundException;
+import org.example.middleware.DatabaseTarget;
+import org.example.middleware.FileStorageTarget;
+import org.example.middleware.UserDetailsFileRepository;
+import org.example.remote.StorageTarget;
+import org.example.services.AccountServices;
 //import org.slf4j.Logger;
 import javax.security.auth.login.AccountNotFoundException;
 import java.io.*;
@@ -17,7 +18,7 @@ import java.util.List;
 import java.util.ResourceBundle;
 import java.util.Scanner;
 import java.util.logging.Logger;
-import static java.lang.System.exit;
+
 public class App {
     private static Account account;
     private static Logger logger = Logger.getLogger(UserDetailsFileRepository.class.getName());
@@ -51,18 +52,19 @@ public class App {
 //        }
 //    }
         int option;
-        boolean status = false;
+        boolean status=false;
         String username, password;
-        storageTarget = new FileStorageTarget();
+        storageTarget = (StorageTarget) new DatabaseTarget();
+        //storageTarget = new FileStorageTarget();
         services = new AccountServices(storageTarget);
 
         while (!status) {
             int attempts = 0;
             while (attempts < 3) {
                 System.out.println("Enter your username: ");
-                username = scanner.nextLine();
+                username = scanner.next();
                 System.out.println("Enter your password: ");
-                password = scanner.nextLine();
+                password = scanner.next();
                 try {
                     status = services.authenticate(username, password);
                     if (status) {
@@ -124,23 +126,18 @@ public class App {
                     }
                     break;
                 case 2:
-                    System.out.println(resourceBundle.getString("under.progress"));
-                    break;
                 case 3:
-                    System.out.println(resourceBundle.getString("under.progress"));
-                    break;
                 case 4:
-                    System.out.println(resourceBundle.getString("under.progress"));
-                    break;
                 case 5:
                     System.out.println(resourceBundle.getString("under.progress"));
                     break;
                 case 6:
                     System.out.println("Exiting...");
                     status = false;
-                    break;
+                    System.exit(0);
                 default:
                     System.out.println("Invalid choice. Please try again.");
+
             }
         }
     }

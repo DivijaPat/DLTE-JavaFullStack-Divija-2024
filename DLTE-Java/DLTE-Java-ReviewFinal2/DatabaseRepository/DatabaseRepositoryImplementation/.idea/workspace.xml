@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="cf58bdab-634f-40fc-8a65-6afc084465cf" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-tasks/#795LambdaImplementation/src/main/java/org/example/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DLTE-tasks/#795LambdaImplementation/src/main/java/org/example/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-tasks/#795LambdaImplementation/target/classes/org/example/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DLTE-tasks/#795LambdaImplementation/target/classes/org/example/App.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2dbNJF3KSVnRhne2kKWc2XB1Ef9" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../DLTE-Java-ReviewFinal/Middleware" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.example" />
+    </key>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cf58bdab-634f-40fc-8a65-6afc084465cf" name="Default Changelist" comment="" />
+      <created>1710272743070</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1710272743070</updated>
+      <workItem from="1710272752665" duration="16086000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="574" y="133" key="#com.intellij.ide.util.MemberChooser" timestamp="1710313033950">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="574" y="133" key="#com.intellij.ide.util.MemberChooser/0.0.1536.816@0.0.1536.816" timestamp="1710313033950" />
+    <state x="204" y="343" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1710310569176">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="204" y="343" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1536.816@0.0.1536.816" timestamp="1710310569176" />
+    <state x="549" y="172" key="FileChooserDialogImpl" timestamp="1710306000465">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="549" y="172" key="FileChooserDialogImpl/0.0.1536.816@0.0.1536.816" timestamp="1710306000465" />
+    <state width="1478" height="205" key="GridCell.Tab.0.bottom" timestamp="1710328190620">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state width="1478" height="205" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1710328190620" />
+    <state width="1478" height="205" key="GridCell.Tab.0.center" timestamp="1710328190620">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state width="1478" height="205" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1710328190620" />
+    <state width="1478" height="205" key="GridCell.Tab.0.left" timestamp="1710328190620">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state width="1478" height="205" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1710328190620" />
+    <state width="1478" height="205" key="GridCell.Tab.0.right" timestamp="1710328190620">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state width="1478" height="205" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1710328190620" />
+  </component>
+</project>

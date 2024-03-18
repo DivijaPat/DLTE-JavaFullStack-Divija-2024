@@ -15,7 +15,7 @@ import java.io.IOException;
 
 @WebServlet("/createAccount/")
 public class AccountPost extends HttpServlet {
-    TransactionServices transactionService;
+    TransactionServices service;
 
 
     @Override
@@ -23,13 +23,13 @@ public class AccountPost extends HttpServlet {
         req.getReader().lines();
         Gson gson =new Gson();
         Account account = gson.fromJson(req.getReader(),Account.class);
-        transactionService.getAllAccounts();
+        service.addAccount(account);
         resp.getWriter().println("Account added to table");
     }
 
     @Override
     public void init() throws ServletException {
         StorageTarget storageTarget=new DatabaseTarget();
-        transactionService= new TransactionServices(storageTarget);
+        service= new TransactionServices(storageTarget);
     }
 }

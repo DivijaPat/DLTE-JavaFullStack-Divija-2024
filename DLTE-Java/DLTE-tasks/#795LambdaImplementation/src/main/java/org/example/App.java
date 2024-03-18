@@ -24,8 +24,13 @@ public class App
         Date StartDate = new Date("6/4/2024");
         Date EndDate = new Date("6/9/2024");
         //using lambda
-        MyBank myBank = (startDate, endDate) ->
-                loanList.stream().filter(loan -> loan.getLoanDate().after(startDate) && loan.getLoanDate().before(endDate)).forEach(loan -> System.out.println("Loan Number: " + loan.getLoanNumber() + ", Borrower: " + loan.getBorrowerName() + ", Loan Date: " + loan.getLoanDate()));
+        MyBank myBank = ((startDate, endDate)-> {
+            for (Loan loan : loanList) {
+                if (loan.getLoanDate().before(endDate) && loan.getLoanDate().after(startDate)) {
+                    System.out.println(loan);
+                }
+            }
+        });
 
 
         myBank.filterByRange(StartDate, EndDate);
