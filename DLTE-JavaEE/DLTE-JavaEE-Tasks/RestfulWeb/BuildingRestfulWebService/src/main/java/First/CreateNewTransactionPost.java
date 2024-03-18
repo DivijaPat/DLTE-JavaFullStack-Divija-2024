@@ -2,12 +2,13 @@ package First;
 
 
 import com.google.gson.Gson;
-import org.example.entity.Transaction;
+import org.example.exceptions.InsufficientFundsException;
+import org.example.exceptions.ReceiverNotFoundException;
 import org.example.middleware.DatabaseTarget;
 import org.example.remotes.StorageTarget;
 import org.example.services.TransactionServices;
-import org.omg.IOP.TransactionService;
-import org.example.middleware.UserDetailsDatabaseRepository;
+
+import javax.security.auth.login.AccountNotFoundException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -16,7 +17,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.time.LocalDateTime;
 
-class Transactions{
+class Transactions {
     private String sender;
     private String receiver;
     private double amount;
@@ -66,8 +67,16 @@ public class CreateNewTransactionPost extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.getReader().lines();
         Gson gson =new Gson();
-        Transaction transactions=gson.fromJson(req.getReader(),Transaction.class);
-        transactionService.transferFunds(transactions.getSender(),transactions.getReceiver(),transactions.getAmount(),transactions.getTransaction_timestamp());
+        Transactions transactions=gson.fromJson(req.getReader(), Transactions.class);
+        try {
+            transactionService.transferFunds(transactions.getSender(),transactions.getReceiver(),transactions.getAmount());
+        } catch (InsufficientFundsException e) {
+            e.printStackTrace();
+        } catch (ReceiverNotFoundException e) {
+            e.printStackTrace();
+        } catch (AccountNotFoundException e) {
+            e.printStackTrace();
+        }
         resp.getWriter().println("Transfer of amount "+transactions.getAmount()+" from "+transactions.getSender()+" to "+transactions.getReceiver());
         System.out.println("Transfer of amount "+transactions.getAmount()+" from "+transactions.getSender()+" to "+transactions.getReceiver());
     }

@@ -3,10 +3,12 @@ package First;
 import com.google.gson.Gson;
 import org.example.entity.Account;
 import org.example.entity.Transaction;
+import org.example.exceptions.TransactionNotFoundException;
 import org.example.middleware.DatabaseTarget;
 import org.example.remotes.StorageTarget;
 import org.example.services.TransactionServices;
 
+import javax.security.auth.login.AccountNotFoundException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -27,9 +29,16 @@ public class FindByUsernameGet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String username=req.getParameter("username");
         resp.setContentType("application/json");
-        Account account =service.getTransactionByUsername(username);
+        Transaction transaction= null;
+        try {
+            transaction = (Transaction) service.getTransactionByUsername(username);
+        } catch (TransactionNotFoundException e) {
+            e.printStackTrace();
+        } catch (AccountNotFoundException e) {
+            e.printStackTrace();
+        }
         Gson gson=new Gson();
-        String transactions=gson.toJson(account);
+        String transactions=gson.toJson(transaction);
         resp.getWriter().println(transactions);
     }
 }

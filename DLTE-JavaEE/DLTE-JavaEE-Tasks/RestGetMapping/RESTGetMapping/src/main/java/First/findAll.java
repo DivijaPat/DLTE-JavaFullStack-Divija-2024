@@ -27,7 +27,7 @@ public class FindAll extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("application/json");   //want result in json format
-        List<Transaction> transactionList=service.getAllAccounts();//find all users
+        List<Transaction> transactionList=service.getAllTransactions();//find all users
         Gson gson=new Gson();
         String transaction=gson.toJson(transactionList);//convert list to json
         resp.getWriter().println(transaction);

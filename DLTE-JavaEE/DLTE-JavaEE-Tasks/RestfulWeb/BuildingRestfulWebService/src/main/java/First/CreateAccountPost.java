@@ -23,7 +23,7 @@ public class CreateAccountPost extends HttpServlet {
         req.getReader().lines();
         Gson gson =new Gson();
         Account account = gson.fromJson(req.getReader(),Account.class);
-        transactionService.callAddAccounts(account);
+        transactionService.getAllAccounts();
         resp.getWriter().println("Account added to table");
     }
 
