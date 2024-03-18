@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @WebServlet("/createAccount/")
-public class CreateAccountPost extends HttpServlet {
+public class AccountPost extends HttpServlet {
     TransactionServices transactionService;
 
 
