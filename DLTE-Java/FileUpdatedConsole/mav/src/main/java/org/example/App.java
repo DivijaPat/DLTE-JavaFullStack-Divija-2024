@@ -1,14 +1,13 @@
 package org.example;
 
-import org.example.entity.Account;
-import org.example.exceptions.InsufficientFundsException;
-import org.example.exceptions.InvalidCredentialsException;
-import org.example.exceptions.ReceiverNotFoundException;
-import org.example.middleware.DatabaseTarget;
-import org.example.middleware.FileStorageTarget;
-import org.example.middleware.UserDetailsFileRepository;
-import org.example.remote.StorageTarget;
-import org.example.services.AccountServices;
+import org.example.Entity.Account;
+import org.example.Exceptions.InsufficientFundsException;
+import org.example.Exceptions.InvalidCredentialsException;
+import org.example.Exceptions.ReceiverNotFoundException;
+import org.example.Middleware.FileStorageTarget;
+import org.example.Middleware.UserDetailsFileRepository;
+import org.example.Remote.StorageTarget;
+import org.example.Services.AccountServices;
 //import org.slf4j.Logger;
 import javax.security.auth.login.AccountNotFoundException;
 import java.io.*;
@@ -18,6 +17,8 @@ import java.util.List;
 import java.util.ResourceBundle;
 import java.util.Scanner;
 import java.util.logging.Logger;
+import static java.lang.System.exit;
+import static java.lang.System.setOut;
 
 public class App {
     private static Account account;
@@ -52,19 +53,18 @@ public class App {
 //        }
 //    }
         int option;
-        boolean status=false;
+        boolean status = false;
         String username, password;
-        storageTarget = (StorageTarget) new DatabaseTarget();
-        //storageTarget = new FileStorageTarget();
+        storageTarget = new FileStorageTarget();
         services = new AccountServices(storageTarget);
 
         while (!status) {
             int attempts = 0;
             while (attempts < 3) {
                 System.out.println("Enter your username: ");
-                username = scanner.next();
+                username = scanner.nextLine();
                 System.out.println("Enter your password: ");
-                password = scanner.next();
+                password = scanner.nextLine();
                 try {
                     status = services.authenticate(username, password);
                     if (status) {
@@ -76,7 +76,7 @@ public class App {
                         System.out.println("Attempts left: " + (3 - attempts));
                     }
                 } catch (InvalidCredentialsException ex) {
-                    ex.printStackTrace();
+                    System.out.println("Invalid");;
                 } catch (SQLException ex) {
                     ex.printStackTrace();
                 }
@@ -86,13 +86,11 @@ public class App {
                 System.exit(0);
             }
         }
-
         while (status) {
             System.out.println("\nMenu:");
             System.out.println(resourceBundle.getString("app.menu"));
             int choice = scanner.nextInt();
             scanner.nextLine();
-
             switch (choice) {
                 case 1:
                     System.out.println("Enter receiver's username: ");
@@ -117,7 +115,7 @@ public class App {
                         System.out.println("Authentication successful!");
                         try {
                             services.transferFunds(username1, receiverUsername, amount);
-                           // System.out.println("Transaction successful!");
+                            System.out.println("Transaction successful!");
                         } catch (InsufficientFundsException | ReceiverNotFoundException | IOException e) {
                             System.out.println(e.getMessage());
                         } catch (AccountNotFoundException e) {
@@ -126,18 +124,23 @@ public class App {
                     }
                     break;
                 case 2:
+                    System.out.println(resourceBundle.getString("under.progress"));
+                    break;
                 case 3:
+                    System.out.println(resourceBundle.getString("under.progress"));
+                    break;
                 case 4:
+                    System.out.println(resourceBundle.getString("under.progress"));
+                    break;
                 case 5:
                     System.out.println(resourceBundle.getString("under.progress"));
                     break;
                 case 6:
                     System.out.println("Exiting...");
                     status = false;
-                    System.exit(0);
+                    break;
                 default:
                     System.out.println("Invalid choice. Please try again.");
-
             }
         }
     }

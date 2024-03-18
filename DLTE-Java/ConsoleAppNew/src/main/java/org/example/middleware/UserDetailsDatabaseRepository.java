@@ -190,7 +190,13 @@ public class UserDetailsDatabaseRepository implements UserDetailsRepository {
 //                    double balance = resultSet.getDouble("balance");
                 //return new Account(username, password, email, phoneNumber, balance);
             } else {
-                throw new InvalidCredentialsException("Invalid username or password");
+               int attempt=3;
+               while(attempt!=0) {
+                   throw new InvalidCredentialsException("Invalid username or password");
+                   attempt--;
+               }
+                System.out.println("Account blocked!!");
+               System.exit(0);
             }
 
         } catch (SQLException e) {
@@ -230,7 +236,7 @@ public class UserDetailsDatabaseRepository implements UserDetailsRepository {
                     insertTransactionStatement.setTimestamp(4, Timestamp.valueOf(LocalDateTime.now()));
                     insertTransactionStatement.executeUpdate();
 
-                    System.out.println("Transaction successful");
+                    //System.out.println("Transaction successful");
                 } else {
                     connection.rollback();
                     System.out.println("Transaction failed");

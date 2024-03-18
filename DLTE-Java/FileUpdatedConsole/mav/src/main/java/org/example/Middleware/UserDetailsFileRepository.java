@@ -1,15 +1,17 @@
-package org.example.middleware;
+package org.example.Middleware;
 
 
-import org.example.entity.Account;
-import org.example.exceptions.InsufficientFundsException;
-import org.example.exceptions.ReceiverNotFoundException;
-import org.example.remote.UserDetailsRepository;
-import org.example.exceptions.InvalidCredentialsException;
+import org.example.Entity.Account;
+import org.example.Exceptions.InsufficientFundsException;
+import org.example.Exceptions.ReceiverNotFoundException;
+import org.example.Remote.UserDetailsRepository;
+import org.example.Exceptions.InvalidCredentialsException;
+import org.example.Remote.UserDetailsRepository;
 
 
 import javax.security.auth.login.AccountNotFoundException;
 import java.io.*;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
@@ -89,12 +91,13 @@ public class UserDetailsFileRepository implements UserDetailsRepository {
                 .orElse(null);
         try {
             if (account == null) {
-                //System.out.println(resourceBundle.getString("username.not.found"));
+                System.out.println(resourceBundle.getString("username.not.found"));
                 logger.log(Level.WARNING, resourceBundle.getString("username.not.found"));
                 return false;
             } else if (!account.getPassword().equals(password)) {
                 logger.log(Level.WARNING, resourceBundle.getString("password.not.matched"));
-                //System.out.println(resourceBundle.getString("password.not.matched"));
+                System.out.println(resourceBundle.getString("password.not.matched"));
+                System.out.println("Renter the password");
                 throw new InvalidCredentialsException("Username or password is invalid");
             } else
                 return true;
@@ -114,6 +117,7 @@ public class UserDetailsFileRepository implements UserDetailsRepository {
                 }if(attempts>3) {
                     System.out.println(resourceBundle.getString("accounts.no.more.attempts"));
                     logger.log(Level.WARNING,resourceBundle.getString("accounts.no.more.attempts"));
+                    System.exit(0);
                 }
             }
         }
@@ -192,13 +196,13 @@ public class UserDetailsFileRepository implements UserDetailsRepository {
         String transactionInfo = String.format("Transferred %.2f from %s to %s", amount, sender.getUsername(), receiver.getUsername());
         System.out.println(transactionInfo);
         System.out.println("Remaining Balance: "+senders);
-        if (sender != null) {
-            sender.addToTransactionHistory(transactionInfo); // Add null check here
-        }
-
-        if (receiver != null) {
-            receiver.addToTransactionHistory(transactionInfo); // Add null check here
-        }
+//        if (sender != null) {
+//            sender.addToTransactionHistory(transactionInfo); // Add null check here
+//        }
+//
+//        if (receiver != null) {
+//            receiver.addToTransactionHistory(transactionInfo); // Add null check here
+//        }
 
         List<Account> account = getAllAccounts();
         updateAccounts(account);
