@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<transactionsWrapper>
+    <transaction>
+        <amount>500.0</amount>
+        <date>2024-03-18T07:27:21.364+05:30</date>
+        <receiver>Medhini</receiver>
+        <user>Divija</user>
+    </transaction>
+    <transaction>
+        <amount>200.0</amount>
+        <date>2024-03-18T07:27:21.364+05:30</date>
+        <receiver>Arjun</receiver>
+        <user>Avani</user>
+    </transaction>
+    <transaction>
+        <amount>350.0</amount>
+        <date>2024-03-18T07:27:21.364+05:30</date>
+        <receiver>Annapoorna</receiver>
+        <user>Akshira</user>
+    </transaction>
+</transactionsWrapper>
