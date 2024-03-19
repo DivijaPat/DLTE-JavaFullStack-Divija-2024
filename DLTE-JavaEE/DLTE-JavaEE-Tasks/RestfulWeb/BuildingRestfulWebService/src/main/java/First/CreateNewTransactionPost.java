@@ -5,7 +5,8 @@ import com.google.gson.Gson;
 import org.example.exceptions.InsufficientFundsException;
 import org.example.exceptions.ReceiverNotFoundException;
 import org.example.middleware.DatabaseTarget;
-import org.example.remotes.StorageTarget;
+import org.example.remote.StorageTarget;
+//import org.example.remotes.StorageTarget;
 import org.example.services.TransactionServices;
 
 import javax.security.auth.login.AccountNotFoundException;

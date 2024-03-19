@@ -5,7 +5,8 @@ import org.example.entity.Account;
 import org.example.entity.Transaction;
 import org.example.exceptions.TransactionNotFoundException;
 import org.example.middleware.DatabaseTarget;
-import org.example.remotes.StorageTarget;
+
+import org.example.remote.StorageTarget;
 import org.example.services.TransactionServices;
 
 import javax.security.auth.login.AccountNotFoundException;
@@ -26,7 +27,7 @@ public class FindByUsernameGet extends HttpServlet {
         service= new TransactionServices(storageTarget);
     }
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    public void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String username=req.getParameter("username");
         resp.setContentType("application/json");
         Transaction transaction= null;

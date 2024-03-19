@@ -3,7 +3,8 @@ package First;
 import com.google.gson.Gson;
 import org.example.entity.Account;
 import org.example.middleware.DatabaseTarget;
-import org.example.remotes.StorageTarget;
+//import org.example.remotes.StorageTarget;
+import org.example.remote.StorageTarget;
 import org.example.services.TransactionServices;
 
 import javax.servlet.ServletException;
@@ -19,7 +20,7 @@ public class AccountPost extends HttpServlet {
 
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    public void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.getReader().lines();
         Gson gson =new Gson();
         Account account = gson.fromJson(req.getReader(),Account.class);
