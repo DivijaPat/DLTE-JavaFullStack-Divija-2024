@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="439e6ecc-3a43-4e8a-83b2-2aa733fc9490" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/AnnapoornaOld/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/AnnapoornaOld/.idea/AnnapoornaOld.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/AnnapoornaOld/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/AnnapoornaOld/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/AnnapoornaOld/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/AnnapoornaOld/DLTE-Java-InternetBanking-ConsoleApp/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/AnnapoornaOld/DLTE-Java-InternetBanking-ConsoleApp/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/AnnapoornaOld/DLTE-Java-InternetBanking-ConsoleApp/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/AnnapoornaOld/DLTE-Java-InternetBanking-ConsoleApp/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/AnnapoornaOld/DLTE-Java-InternetBanking-ConsoleApp/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/AnnapoornaOld/DLTE-Java-InternetBanking-ConsoleApp/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/AnnapoornaOld/DLTE-Java-InternetBanking-ConsoleApp/DLTE-Java-InternetBanking-ConsoleApp.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/AnnapoornaOld/DLTE-Java-InternetBanking-ConsoleApp/User-details-logs.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/AnnapoornaOld/DLTE-Java-InternetBanking-ConsoleApp/User-details-logs.txt.1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/AnnapoornaOld/DLTE-Java-InternetBanking-ConsoleApp/User-details-logs.txt.lck" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/AnnapoornaOld/DLTE-Java-InternetBanking-ConsoleApp/credit-card-logs.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/AnnapoornaOld/DLTE-Java-InternetBanking-ConsoleApp/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/AnnapoornaOld/DLTE-Java-InternetBanking-ConsoleApp/src/main/java/org/example/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/AnnapoornaOld/DLTE-Java-InternetBanking-ConsoleApp/src/main/java/org/example/Entity/Transactions.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/AnnapoornaOld/DLTE-Java-InternetBanking-ConsoleApp/src/main/java/org/example/Entity/UserDetails.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/AnnapoornaOld/DLTE-Java-InternetBanking-ConsoleApp/src/main/java/org/example/Exceptions/UserDetailsException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/AnnapoornaOld/DLTE-Java-InternetBanking-ConsoleApp/src/main/java/org/example/Middleware/FileStorageTarget.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/AnnapoornaOld/DLTE-Java-InternetBanking-ConsoleApp/src/main/java/org/example/Middleware/UserDetailsFileRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/AnnapoornaOld/DLTE-Java-InternetBanking-ConsoleApp/src/main/java/org/example/Remote/StorageTarget.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/AnnapoornaOld/DLTE-Java-InternetBanking-ConsoleApp/src/main/java/org/example/Remote/UserDetailsRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/AnnapoornaOld/DLTE-Java-InternetBanking-ConsoleApp/src/main/java/org/example/Services/UserDetailsServices.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/AnnapoornaOld/DLTE-Java-InternetBanking-ConsoleApp/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/AnnapoornaOld/DLTE-Java-InternetBanking-ConsoleApp/src/main/resources/userdetails.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/AnnapoornaOld/DLTE-Java-InternetBanking-ConsoleApp/src/test/java/org/example/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/AnnapoornaOld/DLTE-Java-InternetBanking-ConsoleApp/target/DLTE-Java-InternetBanking-ConsoleApp-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/AnnapoornaOld/DLTE-Java-InternetBanking-ConsoleApp/target/classes/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/AnnapoornaOld/DLTE-Java-InternetBanking-ConsoleApp/target/classes/org/example/App.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/AnnapoornaOld/DLTE-Java-InternetBanking-ConsoleApp/target/classes/org/example/Entity/Transactions.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/AnnapoornaOld/DLTE-Java-InternetBanking-ConsoleApp/target/classes/org/example/Entity/UserDetails.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/AnnapoornaOld/DLTE-Java-InternetBanking-ConsoleApp/target/classes/org/example/Exceptions/UserDetailsException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/AnnapoornaOld/DLTE-Java-InternetBanking-ConsoleApp/target/classes/org/example/Middleware/FileStorageTarget.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/AnnapoornaOld/DLTE-Java-InternetBanking-ConsoleApp/target/classes/org/example/Middleware/UserDetailsFileRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/AnnapoornaOld/DLTE-Java-InternetBanking-ConsoleApp/target/classes/org/example/Remote/StorageTarget.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/AnnapoornaOld/DLTE-Java-InternetBanking-ConsoleApp/target/classes/org/example/Remote/UserDetailsRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/AnnapoornaOld/DLTE-Java-InternetBanking-ConsoleApp/target/classes/org/example/Services/UserDetailsServices.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/AnnapoornaOld/DLTE-Java-InternetBanking-ConsoleApp/target/classes/userdetails.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/AnnapoornaOld/DLTE-Java-InternetBanking-ConsoleApp/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/AnnapoornaOld/DLTE-Java-InternetBanking-ConsoleApp/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/AnnapoornaOld/DLTE-Java-InternetBanking-ConsoleApp/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/AnnapoornaOld/DLTE-Java-InternetBanking-ConsoleApp/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/AnnapoornaOld/DLTE-Java-InternetBanking-ConsoleApp/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/AnnapoornaOld/DLTE-Java-InternetBanking-ConsoleApp/target/surefire-reports/TEST-org.example.AppTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/AnnapoornaOld/DLTE-Java-InternetBanking-ConsoleApp/target/surefire-reports/org.example.AppTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/AnnapoornaOld/DLTE-Java-InternetBanking-ConsoleApp/target/test-classes/org/example/AppTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/AnnapoornaOld/DLTE-Java-InternetBanking-ConsoleApp/userdetail.doc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/ConsoleAppNew/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../DLTE-Java/ConsoleAppNew/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/ConsoleAppNew/src/main/java/org/example/middleware/UserDetailsDatabaseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../DLTE-Java/ConsoleAppNew/src/main/java/org/example/middleware/UserDetailsDatabaseRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/ConsoleAppNew/src/test/java/org/example/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../DLTE-Java/ConsoleAppNew/src/test/java/org/example/AppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/ConsoleAppNew/target/test-classes/org/example/AppTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../DLTE-Java/ConsoleAppNew/target/test-classes/org/example/AppTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/ConsoleAppOld/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/ConsoleAppOld/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/ConsoleAppOld/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/ConsoleAppOld/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/ConsoleAppOld/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/ConsoleAppOld/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/ConsoleAppOld/Console app.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/ConsoleAppOld/account.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/ConsoleAppOld/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/ConsoleAppOld/src/main/java/org/example/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/ConsoleAppOld/src/main/java/org/example/entity/Account.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/ConsoleAppOld/src/main/java/org/example/entity/Transaction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/ConsoleAppOld/src/main/java/org/example/exceptions/InsufficientFundsException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/ConsoleAppOld/src/main/java/org/example/exceptions/InvalidCredentialsException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/ConsoleAppOld/src/main/java/org/example/exceptions/ReceiverNotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/ConsoleAppOld/src/main/java/org/example/middleware/AuthenticationMiddleware.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/ConsoleAppOld/src/main/java/org/example/remotes/AccountService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/ConsoleAppOld/src/main/java/org/example/remotes/TransactionService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/ConsoleAppOld/src/main/java/org/example/services/FileAccountService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/ConsoleAppOld/src/main/java/org/example/services/TransactionServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/ConsoleAppOld/src/test/java/org/example/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/ConsoleAppOld/target/ConsoleAppOld-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/ConsoleAppOld/target/classes/org/example/App.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/ConsoleAppOld/target/classes/org/example/entity/Account.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/ConsoleAppOld/target/classes/org/example/entity/Transaction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/ConsoleAppOld/target/classes/org/example/exceptions/InsufficientFundsException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/ConsoleAppOld/target/classes/org/example/exceptions/InvalidCredentialsException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/ConsoleAppOld/target/classes/org/example/exceptions/ReceiverNotFoundException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/ConsoleAppOld/target/classes/org/example/middleware/AuthenticationMiddleware.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/ConsoleAppOld/target/classes/org/example/remotes/AccountService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/ConsoleAppOld/target/classes/org/example/remotes/FileAccountService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/ConsoleAppOld/target/classes/org/example/services/TransactionService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/ConsoleAppOld/target/classes/org/example/services/TransactionServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/ConsoleAppOld/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/ConsoleAppOld/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/ConsoleAppOld/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/ConsoleAppOld/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/ConsoleAppOld/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/ConsoleAppOld/target/surefire-reports/TEST-org.example.AppTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/ConsoleAppOld/target/surefire-reports/org.example.AppTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/ConsoleAppOld/target/test-classes/org/example/AppTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/DLTE-consoleApp/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/DLTE-consoleApp/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/DLTE-consoleApp/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/DLTE-consoleApp/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/DLTE-consoleApp/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/DLTE-consoleApp/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/DLTE-consoleApp/DLTE-consoleApp.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/DLTE-consoleApp/accountInfo.doc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/DLTE-consoleApp/accounts-logs.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/DLTE-consoleApp/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/DLTE-consoleApp/src/main/java/basics/service/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/DLTE-consoleApp/src/main/java/basics/service/entity/Accounts.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/DLTE-consoleApp/src/main/java/basics/service/middleware/FileStorageTarget.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/DLTE-consoleApp/src/main/java/basics/service/middleware/UserFileRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/DLTE-consoleApp/src/main/java/basics/service/remotes/StorageTarget.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/DLTE-consoleApp/src/main/java/basics/service/remotes/UserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/DLTE-consoleApp/src/main/java/basics/service/services/BankServices.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/DLTE-consoleApp/src/main/resources/Application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/DLTE-consoleApp/src/test/java/basics/service/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/DLTE-consoleApp/target/classes/Application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/DLTE-consoleApp/target/classes/META-INF/DLTE-consoleApp.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/DLTE-consoleApp/target/classes/basics/service/App.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/DLTE-consoleApp/target/classes/basics/service/entity/Accounts.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/DLTE-consoleApp/target/classes/basics/service/middleware/FileStorageTarget.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/DLTE-consoleApp/target/classes/basics/service/middleware/UserFileRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/DLTE-consoleApp/target/classes/basics/service/remotes/StorageTarget.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/DLTE-consoleApp/target/classes/basics/service/remotes/UserRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/DLTE-consoleApp/target/classes/basics/service/services/BankServices.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/DLTE-consoleApp/target/test-classes/basics/service/AppTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/DLTE-consoleAppPrev/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/Ethnic/ConsoleAppNew.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/Ethnic/ConsoleAppNew/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/Ethnic/ConsoleAppNew/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/Ethnic/ConsoleAppNew/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/Ethnic/ConsoleAppNew/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/Ethnic/ConsoleAppNew/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/Ethnic/ConsoleAppNew/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/Ethnic/ConsoleAppNew/Console app.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/Ethnic/ConsoleAppNew/account.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/Ethnic/ConsoleAppNew/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/Ethnic/ConsoleAppNew/src/main/java/org/example/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/Ethnic/ConsoleAppNew/src/main/java/org/example/entity/Account.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/Ethnic/ConsoleAppNew/src/main/java/org/example/entity/Transaction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/Ethnic/ConsoleAppNew/src/main/java/org/example/exceptions/InsufficientFundsException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/Ethnic/ConsoleAppNew/src/main/java/org/example/exceptions/InvalidCredentialsException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/Ethnic/ConsoleAppNew/src/main/java/org/example/exceptions/ReceiverNotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/Ethnic/ConsoleAppNew/src/main/java/org/example/middleware/AuthenticationMiddleware.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/Ethnic/ConsoleAppNew/src/main/java/org/example/remotes/AccountService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/Ethnic/ConsoleAppNew/src/main/java/org/example/remotes/TransactionService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/Ethnic/ConsoleAppNew/src/main/java/org/example/services/FileAccountService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/Ethnic/ConsoleAppNew/src/main/java/org/example/services/TransactionServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/Ethnic/ConsoleAppNew/src/test/java/org/example/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/Ethnic/ConsoleAppNew/target/ConsoleAppNew-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/Ethnic/ConsoleAppNew/target/classes/org/example/App.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/Ethnic/ConsoleAppNew/target/classes/org/example/entity/Account.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/Ethnic/ConsoleAppNew/target/classes/org/example/entity/Transaction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/Ethnic/ConsoleAppNew/target/classes/org/example/exceptions/InsufficientFundsException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/Ethnic/ConsoleAppNew/target/classes/org/example/exceptions/InvalidCredentialsException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/Ethnic/ConsoleAppNew/target/classes/org/example/exceptions/ReceiverNotFoundException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/Ethnic/ConsoleAppNew/target/classes/org/example/middleware/AuthenticationMiddleware.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/Ethnic/ConsoleAppNew/target/classes/org/example/remotes/AccountService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/Ethnic/ConsoleAppNew/target/classes/org/example/remotes/TransactionService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/Ethnic/ConsoleAppNew/target/classes/org/example/services/FileAccountService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/Ethnic/ConsoleAppNew/target/classes/org/example/services/TransactionServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/Ethnic/ConsoleAppNew/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/Ethnic/ConsoleAppNew/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/Ethnic/ConsoleAppNew/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/Ethnic/ConsoleAppNew/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/Ethnic/ConsoleAppNew/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/Ethnic/ConsoleAppNew/target/surefire-reports/TEST-org.example.AppTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/Ethnic/ConsoleAppNew/target/surefire-reports/org.example.AppTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/Ethnic/ConsoleAppNew/target/test-classes/org/example/AppTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/annapoorna/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/annapoorna/.idea/annapoorna.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/annapoorna/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/annapoorna/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/annapoorna/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/annapoorna/DLTE-JAVA-InternetBanking-ConsoleApp-DAO/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/annapoorna/DLTE-JAVA-InternetBanking-ConsoleApp-DAO/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/annapoorna/DLTE-JAVA-InternetBanking-ConsoleApp-DAO/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/annapoorna/DLTE-JAVA-InternetBanking-ConsoleApp-DAO/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/annapoorna/DLTE-JAVA-InternetBanking-ConsoleApp-DAO/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/annapoorna/DLTE-JAVA-InternetBanking-ConsoleApp-DAO/credit-card-logs.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/annapoorna/DLTE-JAVA-InternetBanking-ConsoleApp-DAO/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/annapoorna/DLTE-JAVA-InternetBanking-ConsoleApp-DAO/src/main/java/org/example/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/annapoorna/DLTE-JAVA-InternetBanking-ConsoleApp-DAO/src/main/java/org/example/Entity/UserDetails.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/annapoorna/DLTE-JAVA-InternetBanking-ConsoleApp-DAO/src/main/java/org/example/Exceptions/UserDetailsException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/annapoorna/DLTE-JAVA-InternetBanking-ConsoleApp-DAO/src/main/java/org/example/Middleware/DatabaseTarget.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/annapoorna/DLTE-JAVA-InternetBanking-ConsoleApp-DAO/src/main/java/org/example/Middleware/UserDetailsDatabaseRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/annapoorna/DLTE-JAVA-InternetBanking-ConsoleApp-DAO/src/main/java/org/example/Remote/StorageTarget.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/annapoorna/DLTE-JAVA-InternetBanking-ConsoleApp-DAO/src/main/java/org/example/Remote/UserDetailsRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/annapoorna/DLTE-JAVA-InternetBanking-ConsoleApp-DAO/src/main/java/org/example/Services/UserDetailsServices.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/annapoorna/DLTE-JAVA-InternetBanking-ConsoleApp-DAO/src/main/resources/database.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/annapoorna/DLTE-JAVA-InternetBanking-ConsoleApp-DAO/src/main/resources/userdetails.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/annapoorna/DLTE-JAVA-InternetBanking-ConsoleApp-DAO/src/test/java/org/example/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/annapoorna/DLTE-JAVA-InternetBanking-ConsoleApp-DAO/target/DLTE-JAVA-InternetBanking-ConsoleApp-DAO-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/annapoorna/DLTE-JAVA-InternetBanking-ConsoleApp-DAO/target/classes/database.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/annapoorna/DLTE-JAVA-InternetBanking-ConsoleApp-DAO/target/classes/org/example/App.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/annapoorna/DLTE-JAVA-InternetBanking-ConsoleApp-DAO/target/classes/org/example/Entity/UserDetails.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/annapoorna/DLTE-JAVA-InternetBanking-ConsoleApp-DAO/target/classes/org/example/Exceptions/UserDetailsException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/annapoorna/DLTE-JAVA-InternetBanking-ConsoleApp-DAO/target/classes/org/example/Middleware/DatabaseTarget.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/annapoorna/DLTE-JAVA-InternetBanking-ConsoleApp-DAO/target/classes/org/example/Middleware/UserDetailsDatabaseRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/annapoorna/DLTE-JAVA-InternetBanking-ConsoleApp-DAO/target/classes/org/example/Remote/StorageTarget.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/annapoorna/DLTE-JAVA-InternetBanking-ConsoleApp-DAO/target/classes/org/example/Remote/UserDetailsRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/annapoorna/DLTE-JAVA-InternetBanking-ConsoleApp-DAO/target/classes/org/example/Services/UserDetailsServices.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/annapoorna/DLTE-JAVA-InternetBanking-ConsoleApp-DAO/target/classes/userdetails.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/annapoorna/DLTE-JAVA-InternetBanking-ConsoleApp-DAO/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/annapoorna/DLTE-JAVA-InternetBanking-ConsoleApp-DAO/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/annapoorna/DLTE-JAVA-InternetBanking-ConsoleApp-DAO/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/annapoorna/DLTE-JAVA-InternetBanking-ConsoleApp-DAO/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/annapoorna/DLTE-JAVA-InternetBanking-ConsoleApp-DAO/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/annapoorna/DLTE-JAVA-InternetBanking-ConsoleApp-DAO/target/surefire-reports/TEST-org.example.AppTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/annapoorna/DLTE-JAVA-InternetBanking-ConsoleApp-DAO/target/surefire-reports/org.example.AppTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/annapoorna/DLTE-JAVA-InternetBanking-ConsoleApp-DAO/target/test-classes/org/example/AppTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/mav/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/mav/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/mav/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/mav/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/mav/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/mav/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/mav/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/mav/inputDetail.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/mav/inputDetail.txt.1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/mav/inputDetail.txt.1.lck" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/mav/inputDetail.txt.lck" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/mav/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/mav/src/main/java/org/example/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/mav/src/main/java/org/example/Entity/Account.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/mav/src/main/java/org/example/Entity/Transaction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/mav/src/main/java/org/example/Exceptions/InsufficientFundsException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/mav/src/main/java/org/example/Exceptions/InvalidCredentialsException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/mav/src/main/java/org/example/Exceptions/ReceiverNotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/mav/src/main/java/org/example/Middleware/FileStorageTarget.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/mav/src/main/java/org/example/Middleware/UserDetailsFileRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/mav/src/main/java/org/example/Remote/StorageTarget.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/mav/src/main/java/org/example/Remote/UserDetailsRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/mav/src/main/java/org/example/Services/AccountServices.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/mav/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/mav/src/main/resources/inputDetails.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/mav/src/test/java/org/example/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/mav/target/ConsoleAppFile-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/mav/target/classes/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/mav/target/classes/inputDetails.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/mav/target/classes/org/example/Entity/Account.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/mav/target/classes/org/example/Entity/Transaction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/mav/target/classes/org/example/Exceptions/InsufficientFundsException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/mav/target/classes/org/example/Exceptions/InvalidCredentialsException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/mav/target/classes/org/example/Exceptions/ReceiverNotFoundException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/mav/target/classes/org/example/Middleware/FileStorageTarget.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/mav/target/classes/org/example/Middleware/UserDetailsFileRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/mav/target/classes/org/example/Remote/UserDetailsRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/mav/target/classes/org/example/Services/AccountServices.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/mav/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/mav/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/mav/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/mav/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/mav/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/mav/target/surefire-reports/TEST-org.example.AppTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/mav/target/surefire-reports/org.example.AppTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java/mav/target/test-classes/org/example/AppTest.class" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="2dtRhG9MC7O21ZWuCQmllo1TN9l" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="439e6ecc-3a43-4e8a-83b2-2aa733fc9490" name="Default Changelist" comment="" />
+      <created>1710825505573</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1710825505573</updated>
+      <workItem from="1710825509811" duration="690000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="361" y="68" key="#Project_Structure" timestamp="1710825604539">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="361" y="68" key="#Project_Structure/0.0.1536.816@0.0.1536.816" timestamp="1710825604539" />
+  </component>
+</project>
