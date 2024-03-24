@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="SOAPForDAO:war">
+    <output-path>$PROJECT_DIR$/SOAPForDAO/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>SOAPForDAO</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="SOAPForDAO.war">
+      <element id="artifact" artifact-name="SOAPForDAO:war exploded" />
+    </root>
+  </artifact>
+</component>

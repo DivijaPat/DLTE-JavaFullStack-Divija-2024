@@ -17,20 +17,20 @@ import java.util.*;
 public class UserDetailsDatabaseRepository implements UserDetailsRepository {
     private Connection connection;
     private ResourceBundle resourceBundle = ResourceBundle.getBundle("application");
-   // private Logger logger = Logger.getLogger(UserDetailsDatabaseRepository.class.getName());
+    // private Logger logger = Logger.getLogger(UserDetailsDatabaseRepository.class.getName());
 
 
     public UserDetailsDatabaseRepository(Connection connection) {
-       // try{
-            this.connection=connection;
-           // FileHandler fileHandler=new FileHandler("credit-card-logs.txt",true);
-            //SimpleFormatter simpleFormatter=new SimpleFormatter();
-            //ileHandler.setFormatter(simpleFormatter);
-           // logger.addHandler(fileHandler);
-       // }
-       // catch (IOException ioException){
+        // try{
+        this.connection = connection;
+        // FileHandler fileHandler=new FileHandler("credit-card-logs.txt",true);
+        //SimpleFormatter simpleFormatter=new SimpleFormatter();
+        //ileHandler.setFormatter(simpleFormatter);
+        // logger.addHandler(fileHandler);
+        // }
+        // catch (IOException ioException){
         //    System.out.println(ioException);
-      //  }
+        //  }
     }
 
     public UserDetailsDatabaseRepository() {
@@ -99,23 +99,23 @@ public class UserDetailsDatabaseRepository implements UserDetailsRepository {
 
         String query = "SELECT * FROM accounts";
         try {
-            connection = DriverManager.getConnection(resourceBundle.getString("db.url"),resourceBundle.getString("db.user"),resourceBundle.getString("db.password"));
+            connection = DriverManager.getConnection(resourceBundle.getString("db.url"), resourceBundle.getString("db.user"), resourceBundle.getString("db.password"));
             connection.setAutoCommit(false);
-                PreparedStatement statement = connection.prepareStatement(query);
-     //           statement.setString(1, username);
-                ResultSet resultSet = statement.executeQuery(query);
-                while (resultSet.next()) {
-                    String username = resultSet.getString("username");
-                    String password = resultSet.getString("password");
-                    String email = resultSet.getString("email");
-                    long phoneNumber = resultSet.getLong("phoneNumber");
-                    double balance = resultSet.getDouble("balance");
+            PreparedStatement statement = connection.prepareStatement(query);
+            //           statement.setString(1, username);
+            ResultSet resultSet = statement.executeQuery(query);
+            while (resultSet.next()) {
+                String username = resultSet.getString("username");
+                String password = resultSet.getString("password");
+                String email = resultSet.getString("email");
+                long phoneNumber = resultSet.getLong("phoneNumber");
+                double balance = resultSet.getDouble("balance");
 
-                    // Create Account object and add it to the list
-                    Account account = new Account(username, password, email, phoneNumber, balance);
-                    accounts.add(account);
-                }
-            } catch (SQLException ex) {
+                // Create Account object and add it to the list
+                Account account = new Account(username, password, email, phoneNumber, balance);
+                accounts.add(account);
+            }
+        } catch (SQLException ex) {
             ex.printStackTrace();
         }
 //    } catch (SQLException sqlException) {
@@ -124,39 +124,39 @@ public class UserDetailsDatabaseRepository implements UserDetailsRepository {
 //            e.printStackTrace();
 //        }
         return accounts;
-        }
+    }
 //    } catch (SQLException e) {
 //            e.printStackTrace();
 //        }
 
-        @Override
-    public List<Transaction> getTransactionByUsername(String sender) throws TransactionNotFoundException,AccountNotFoundException {
-           // String query = "SELECT * FROM accounts WHERE username = ?";
-            List<Transaction> transactions = new ArrayList<>();
-            try {
-                connection = DriverManager.getConnection(resourceBundle.getString("db.url"),resourceBundle.getString("db.user"),resourceBundle.getString("db.password"));
-                connection.setAutoCommit(false);
-                PreparedStatement statement = connection.prepareStatement("SELECT * FROM transactions WHERE sender_username = ?");
-                statement.setString(1, sender);
-                ResultSet resultSet = statement.executeQuery();
-                while (resultSet.next()) {
-                            sender=resultSet.getString("sender_username");
-                            String receiver=resultSet.getString("receiver_username");
-                            double amount=resultSet.getDouble("amount");
-                            LocalDateTime transaction_date=resultSet.getTimestamp("transaction_date").toLocalDateTime();
-                    Transaction transaction = new Transaction(sender, receiver,amount, transaction_date);
-                   transactions.add(transaction);
-                   return transactions;
-                }
-
-
-            } catch (SQLException transactionNotFound) {
-                transactionNotFound.printStackTrace();
+    @Override
+    public List<Transaction> getTransactionByUsername(String sender) throws TransactionNotFoundException, AccountNotFoundException {
+        // String query = "SELECT * FROM accounts WHERE username = ?";
+        List<Transaction> transactions = new ArrayList<>();
+        try {
+            connection = DriverManager.getConnection(resourceBundle.getString("db.url"), resourceBundle.getString("db.user"), resourceBundle.getString("db.password"));
+            connection.setAutoCommit(false);
+            PreparedStatement statement = connection.prepareStatement("SELECT * FROM transactions WHERE sender_username = ?");
+            statement.setString(1, sender);
+            ResultSet resultSet = statement.executeQuery();
+            while (resultSet.next()) {
+                sender = resultSet.getString("sender_username");
+                String receiver = resultSet.getString("receiver_username");
+                double amount = resultSet.getDouble("amount");
+                LocalDateTime transaction_date = resultSet.getTimestamp("transaction_date").toLocalDateTime();
+                Transaction transaction = new Transaction(sender, receiver, amount, transaction_date);
+                transactions.add(transaction);
+                return transactions;
             }
-            return null;
-        }
 
-    public void updateAccountBalance(Account account)throws IOException,AccountNotFoundException {
+
+        } catch (SQLException transactionNotFound) {
+            transactionNotFound.printStackTrace();
+        }
+        return null;
+    }
+
+    public void updateAccountBalance(Account account) throws IOException, AccountNotFoundException {
         String query = "UPDATE accounts SET balance = ? WHERE username = ?";
         try (PreparedStatement statement = connection.prepareStatement(query)) {
             statement.setDouble(1, account.getBalance());
@@ -166,18 +166,19 @@ public class UserDetailsDatabaseRepository implements UserDetailsRepository {
             e.printStackTrace();
         }
     }
+
     public boolean authenticate(String username, String password) throws InvalidCredentialsException, SQLException {
 
         Connection connection;
-        connection= DriverManager.getConnection(resourceBundle.getString("db.url"),resourceBundle.getString("db.user"), resourceBundle.getString("db.password"));
+        connection = DriverManager.getConnection(resourceBundle.getString("db.url"), resourceBundle.getString("db.user"), resourceBundle.getString("db.password"));
         String query = "SELECT * FROM accounts WHERE username = ? AND password = ?";
         try {
-            PreparedStatement statement = connection.prepareStatement(query) ;
+            PreparedStatement statement = connection.prepareStatement(query);
             statement.setString(1, username);
             statement.setString(2, password);
             ResultSet resultSet = statement.executeQuery();
             if (resultSet.next()) {
-                Account account=new Account
+                Account account = new Account
                         (resultSet.getString("username"),
                                 resultSet.getString("password"),
                                 resultSet.getString("email"),
@@ -190,22 +191,25 @@ public class UserDetailsDatabaseRepository implements UserDetailsRepository {
 //                    double balance = resultSet.getDouble("balance");
                 //return new Account(username, password, email, phoneNumber, balance);
             } else {
-               int attempt=3;
-               while(attempt!=0) {
-                   throw new InvalidCredentialsException("Invalid username or password");
-                   attempt--;
-               }
+                int attempt = 3;
+                while (attempt != 0) {
+                    attempt--;
+                    throw new InvalidCredentialsException("Invalid username or password");
+
+                }
                 System.out.println("Account blocked!!");
-               System.exit(0);
+                System.exit(0);
             }
 
         } catch (SQLException e) {
             e.printStackTrace();
             throw new InvalidCredentialsException("Error authenticating user");
         }
+        return false;
     }
 
-    public void transferFunds(String senderUsername, String receiverUsername, double amount) {
+
+    public double transferFunds(String senderUsername, String receiverUsername, double amount) {
           //  Connection connection = null;
             try {
                 connection = DriverManager.getConnection(resourceBundle.getString("db.url"),resourceBundle.getString("db.user"),resourceBundle.getString("db.password"));
@@ -261,6 +265,7 @@ public class UserDetailsDatabaseRepository implements UserDetailsRepository {
                     e.printStackTrace();
                 }
             }
+            return amount;
         }
 
     @Override

@@ -17,7 +17,7 @@ public interface UserDetailsRepository {
 
     List<Transaction> getTransactionByUsername(String sender) throws AccountNotFoundException, TransactionNotFoundException;
 
-    void transferFunds(String senderUsername, String receiverUsername, double amount) throws InsufficientFundsException, ReceiverNotFoundException, IOException, AccountNotFoundException;
+    double transferFunds(String senderUsername, String receiverUsername, double amount) throws InsufficientFundsException, ReceiverNotFoundException, IOException, AccountNotFoundException;
 
     void updateAccountBalance(Account account) throws IOException, AccountNotFoundException;
 

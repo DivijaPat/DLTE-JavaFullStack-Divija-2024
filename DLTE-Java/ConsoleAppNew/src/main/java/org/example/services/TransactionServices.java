@@ -30,7 +30,8 @@ public class TransactionServices {
             for (Transaction transaction : transactions) {
                 System.out.println(transaction.toString());
             }
-            return null;
+
+            return transactions;
         }
         catch(TransactionNotFoundException transactionNotFoundException ) {
         throw transactionNotFoundException;
@@ -47,7 +48,8 @@ public class TransactionServices {
     public List<Transaction> getAllTransactions() {
         return userDetailsRepository.getAllTransactions();
     }
-    public void transferFunds(String senderUsername, String receiverUsername, double amount) throws InsufficientFundsException, ReceiverNotFoundException, IOException, AccountNotFoundException {
+
+    public double transferFunds(String senderUsername, String receiverUsername, double amount) throws InsufficientFundsException, ReceiverNotFoundException, IOException, AccountNotFoundException {
         try {
             userDetailsRepository.transferFunds(senderUsername, receiverUsername, amount);
         } catch (InsufficientFundsException insufficientFundsException) {
@@ -59,6 +61,7 @@ public class TransactionServices {
         } catch (AccountNotFoundException accountNotFoundException) {
             throw accountNotFoundException;
         }
+        return amount;
     }
 
     public void updateAccountBalance(Account account) throws IOException, AccountNotFoundException {

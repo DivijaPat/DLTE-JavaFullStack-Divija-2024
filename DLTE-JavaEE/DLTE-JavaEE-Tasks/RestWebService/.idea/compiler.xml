@@ -7,7 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="842RestWebService" />
-        <module name="RestWebService" />
+        <module name="RestChangedPath" />
       </profile>
     </annotationProcessing>
   </component>

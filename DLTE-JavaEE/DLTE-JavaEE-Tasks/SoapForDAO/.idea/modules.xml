@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/SOAPForDAO/SOAPForDAO.iml" filepath="$PROJECT_DIR$/SOAPForDAO/SOAPForDAO.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/SoapForDAO.iml" filepath="$PROJECT_DIR$/.idea/SoapForDAO.iml" />
+    </modules>
+  </component>
+</project>
