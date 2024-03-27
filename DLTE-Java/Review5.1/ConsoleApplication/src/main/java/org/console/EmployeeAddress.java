@@ -1,24 +1,28 @@
-package org.example.Details;
+package org.console;
 
 public class EmployeeAddress {
-    private String address;
+    private String street;
     private String houseName;
     private String state;
     private String city;
     private Integer pinCode;
 
-    public EmployeeAddress(String address, String houseName, String state, String city, Integer pinCode) {
-        this.address = address;
+    public EmployeeAddress(String street, String houseName, String state, String city, Integer pinCode) {
+        this.street = street;
         this.houseName = houseName;
         this.state = state;
         this.city = city;
         this.pinCode = pinCode;
     }
 
+    public EmployeeAddress() {
+
+    }
+
     @Override
     public String toString() {
         return "EmployeeAddress{" +
-                "address='" + address + '\'' +
+                "street='" + street + '\'' +
                 ", houseName='" + houseName + '\'' +
                 ", state='" + state + '\'' +
                 ", city='" + city + '\'' +
@@ -26,12 +30,12 @@ public class EmployeeAddress {
                 '}';
     }
 
-    public String getAddress() {
-        return address;
+    public String getStreet() {
+        return street;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
+    public void setStreet(String street) {
+        this.street = street;
     }
 
     public String getHouseName() {
@@ -66,3 +70,4 @@ public class EmployeeAddress {
         this.pinCode = pinCode;
     }
 }
+

@@ -1,15 +1,9 @@
-package Details;
+package backend.pojo;
 
-import org.example.Details.EmployeeAddress;
-import org.example.Details.EmployeeBasicDetails;
-
-public class EmployeeConsole {
+public class Employee {
     EmployeeBasicDetails employeeBasicDetails;
     EmployeeAddress employeePermanentAddress;
     EmployeeAddress employeeTemporaryAddress;
-
-    public EmployeeConsole() {
-    }
 
     @Override
     public String toString() {
@@ -60,7 +54,7 @@ public class EmployeeConsole {
         this.employeeTemporaryAddress = employeeTemporaryAddress;
     }
 
-    public EmployeeConsole(EmployeeBasicDetails employeeBasicDetails, EmployeeAddress employeePermanentAddress, EmployeeAddress employeeTemporaryAddress) {
+    public Employee(EmployeeBasicDetails employeeBasicDetails, EmployeeAddress employeePermanentAddress, EmployeeAddress employeeTemporaryAddress) {
         this.employeeBasicDetails = employeeBasicDetails;
         this.employeePermanentAddress = employeePermanentAddress;
         this.employeeTemporaryAddress = employeeTemporaryAddress;

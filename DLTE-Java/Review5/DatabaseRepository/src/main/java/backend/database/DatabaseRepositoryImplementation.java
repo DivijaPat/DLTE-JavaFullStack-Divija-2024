@@ -1,39 +1,26 @@
-package org.example;
-import exception.EmployeeNotFoundException;
-import oracle.jdbc.driver.OracleDriver;
-import org.example.Details.Employee;
-import org.example.Details.EmployeeAddress;
-import org.example.Details.EmployeeBasicDetails;
-import org.example.Details.InputEmployeeDetails;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
+package backend.database;
+import backend.pojo.Employee;
+import backend.pojo.EmployeeAddress;
+import backend.pojo.EmployeeBasicDetails;
+import backend.pojo.InputEmployeeDetails;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class DatabaseRepositoryImplementation implements InputEmployeeDetails {
-
-    Connection connection;
-    ResourceBundle resourceBundle= ResourceBundle.getBundle("Database");
+    ResourceBundle resourceBundle= ResourceBundle.getBundle("application");
+        ConnectionTarget connectionTarget=new ConnectionTarget();
     PreparedStatement preparedStatement;
+    Connection connection=connectionTarget.ConnectionApp();
     ResultSet resultSet;
-    Logger logger= LoggerFactory.getLogger(DatabaseRepositoryImplementation.class);
-    ResourceBundle resourceBundle1= ResourceBundle.getBundle("application");
-    public DatabaseRepositoryImplementation() {
-        try{
-            Driver driver=new OracleDriver();
-            DriverManager.registerDriver(driver);
-            connection= DriverManager.getConnection(resourceBundle.getString("db.url"),resourceBundle.getString("db.user"),resourceBundle.getString("db.pass"));
-        } catch (SQLException e) {
-            System.out.println(e);
-        }
-    }
 
-//    public boolean isEstablished(){
-//        return connection!=null;
-//    }
+
+    public boolean isEstablished(){
+        return connection!=null;
+    }
     @Override
     public void create(List<Employee> list) {
 
@@ -47,20 +34,22 @@ public class DatabaseRepositoryImplementation implements InputEmployeeDetails {
                 preparedStatement.setString(2,employee.getEmployeeBasicDetails().getEmployeeName());
                 int resultBasic=preparedStatement.executeUpdate();
 
-                String permanentaddress = "INSERT INTO EmployeeAddress (employeeId,permanentAddress, permanentHouseName,permanentCity, permanentState,permanentPinCode) VALUES (?, ?, ?, ?, ?, ?)";
+                String permanentaddress = "INSERT INTO EmployeePermanentAddress (employeeId,permanentStreet, permanentHouseName,permanentCity, permanentState,permanentPinCode) " +
+                        "VALUES (?, ?, ?, ?, ?, ?)";
                 preparedStatement=connection.prepareStatement(permanentaddress);
                 preparedStatement.setString(1,employeeID);
-                preparedStatement.setString(2,employee.getEmployeePermanentAddress().getAddress());
+                preparedStatement.setString(2,employee.getEmployeePermanentAddress().getStreet());
                 preparedStatement.setString(3,employee.getEmployeePermanentAddress().getHouseName());
                 preparedStatement.setString(4,employee.getEmployeePermanentAddress().getCity());
                 preparedStatement.setString(5,employee.getEmployeePermanentAddress().getState());
                 preparedStatement.setInt(6,employee.getEmployeePermanentAddress().getPinCode());
                 int resultPermanent=preparedStatement.executeUpdate();
 
-                String temporaryaddress = "INSERT INTO EmployeeTemporaryAddress(employeeId,temporaryAddress, temporaryHouseName,temporaryCity, temporaryState,temporaryPinCode) VALUES (?, ?, ?, ?, ?, ?)";
+                String temporaryaddress = "INSERT INTO EmployeeTemporaryAddress(employeeId,temporaryStreet, temporaryHouseName,temporaryCity, temporaryState,temporaryPinCode) " +
+                        "VALUES (?, ?, ?, ?, ?, ?)";
                 preparedStatement=connection.prepareStatement(temporaryaddress);
                 preparedStatement.setString(1,employeeID);
-                preparedStatement.setString(2,employee.getEmployeeTemporaryAddress().getAddress());
+                preparedStatement.setString(2,employee.getEmployeeTemporaryAddress().getStreet());
                 preparedStatement.setString(3,employee.getEmployeeTemporaryAddress().getHouseName());
                 preparedStatement.setString(4,employee.getEmployeeTemporaryAddress().getCity());
                 preparedStatement.setString(5,employee.getEmployeeTemporaryAddress().getState());
@@ -73,23 +62,18 @@ public class DatabaseRepositoryImplementation implements InputEmployeeDetails {
                 preparedStatement.setString(2,employee.getEmployeeBasicDetails().getEmailId());
                 preparedStatement.setLong(3,employee.getEmployeeBasicDetails().getPhoneNumber() );
                 int resultInformation=preparedStatement.executeUpdate();
-
-                System.out.println(resourceBundle1.getString("employee.add")+" " + employeeID +" "+resourceBundle1.getString("employeeAdd.success"));
+                System.out.println(resourceBundle.getString("employee.add")+" " + employeeID +" "+resourceBundle.getString("employeeAdd.success"));
 
             }catch (SQLException e) {
                 if (e instanceof SQLIntegrityConstraintViolationException) {
-                    logger.error(resourceBundle.getString("Fail.insert")+" "+employeeID  + " "+resourceBundle1.getString("employee.exists"));
-                    System.out.println(resourceBundle1.getString("Fail.insert") +" "+ employeeID + " "+resourceBundle1.getString("employee.exists"));
-
+                    System.out.println(resourceBundle.getString("fail.insert") +" "+ employeeID + " "+resourceBundle.getString("employee.exists"));
                 } else {
                     e.printStackTrace();
                 }
             }
-
         }
 
     }
-
 
     @Override
     public Employee displayBasedOnEmployeeId(String employeeId) {
@@ -111,25 +95,23 @@ public class DatabaseRepositoryImplementation implements InputEmployeeDetails {
                         resultSet.getLong("phoneNumber")
                 );
 
-                EmployeeAddress permanentAddr = new EmployeeAddress(
-                        resultSet.getString("permanentAddress"),
+                EmployeeAddress permanentAddress = new EmployeeAddress(
+                        resultSet.getString("permanentStreet"),
                         resultSet.getString("permanentHouseName"),
                         resultSet.getString("permanentState"),
                         resultSet.getString("permanentCity"),
                         resultSet.getInt("permanentPinCode")
                 );
 
-                EmployeeAddress temporaryAddr = new EmployeeAddress(
-                        resultSet.getString("temporaryAddress"),
+                EmployeeAddress temporaryAddress = new EmployeeAddress(
+                        resultSet.getString("temporaryStreet"),
                         resultSet.getString("temporaryHouseName"),
                         resultSet.getString("temporaryState"),
                         resultSet.getString("temporaryCity"),
                         resultSet.getInt("temporaryPinCode")
                 );
 
-                employee = new Employee(basicDetails, permanentAddr, temporaryAddr);
-            }else {
-                throw new EmployeeNotFoundException(resourceBundle1.getString("no.employee") + employeeId);
+                employee = new Employee(basicDetails, permanentAddress, temporaryAddress);
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -141,7 +123,11 @@ public class DatabaseRepositoryImplementation implements InputEmployeeDetails {
     public Employee displayBasedOnPinCode(int pinCode) {
         Employee employee = null;
         try {
-            String query = "SELECT * FROM employee emp INNER JOIN EmployeeAddress empPAdd ON emp.id = empPAdd.employeeId INNER JOIN EmployeeTemporaryAddress empTAdd ON emp.id = empTAdd.employeeId INNER JOIN EmployeeInformation empInfo ON emp.id = empInfo.employeeId WHERE empPAdd.permanentPinCode = ? OR empTAdd.temporaryPinCode = ?";
+            String query = "SELECT * FROM employee emp " +
+                    "INNER JOIN EmployeeAddress empPAdd ON emp.id = empPAdd.employeeId " +
+                    "INNER JOIN EmployeeTemporaryAddress empTAdd ON emp.id = empTAdd.employeeId " +
+                    "INNER JOIN EmployeeInformation empInfo ON emp.id = empInfo.employeeId " +
+                    "WHERE empPAdd.permanentPinCode = ? OR empTAdd.temporaryPinCode = ?";
             preparedStatement = connection.prepareStatement(query);
             preparedStatement.setInt(1, pinCode);
             preparedStatement.setInt(2, pinCode);
@@ -154,25 +140,23 @@ public class DatabaseRepositoryImplementation implements InputEmployeeDetails {
                         resultSet.getLong("phoneNumber")
                 );
 
-                EmployeeAddress permanentAddr = new EmployeeAddress(
-                        resultSet.getString("permanentAddress"),
+                EmployeeAddress permanentAddress = new EmployeeAddress(
+                        resultSet.getString("permanentStreet"),
                         resultSet.getString("permanentHouseName"),
                         resultSet.getString("permanentState"),
                         resultSet.getString("permanentCity"),
                         resultSet.getInt("permanentPinCode")
                 );
 
-                EmployeeAddress temporaryAddr = new EmployeeAddress(
-                        resultSet.getString("temporaryAddress"),
+                EmployeeAddress temporaryAddress = new EmployeeAddress(
+                        resultSet.getString("temporaryStreet"),
                         resultSet.getString("temporaryHouseName"),
                         resultSet.getString("temporaryState"),
                         resultSet.getString("temporaryCity"),
                         resultSet.getInt("temporaryPinCode")
                 );
 
-                employee = new Employee(basicDetails, permanentAddr, temporaryAddr);
-            }else {
-                throw new EmployeeNotFoundException(resourceBundle1.getString("no.pincode")+ pinCode);
+                employee = new Employee(basicDetails, permanentAddress, temporaryAddress);
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -184,20 +168,23 @@ public class DatabaseRepositoryImplementation implements InputEmployeeDetails {
     public List<Employee> read() {
         List<Employee> employees = new ArrayList<>();
         try {
-            String readAll = "SELECT * FROM employee emp INNER JOIN EmployeeAddress empPAdd ON emp.id = empPAdd.employeeId INNER JOIN EmployeeTemporaryAddress empTAdd ON emp.id = empTAdd.employeeId INNER JOIN EmployeeInformation empInfo ON emp.id = empInfo.employeeId";
-            preparedStatement = connection.prepareStatement(readAll);
+            String findAll = "SELECT * FROM employee emp " +
+                    "INNER JOIN EmployeeAddress empPAdd ON emp.id = empPAdd.employeeId " +
+                    "INNER JOIN EmployeeTemporaryAddress empTAdd ON emp.id = empTAdd.employeeId " +
+                    "INNER JOIN EmployeeInformation empInfo ON emp.id = empInfo.employeeId";
+            preparedStatement = connection.prepareStatement(findAll);
             resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
                 Employee employee = null;
                 EmployeeAddress permanentAddress = new EmployeeAddress(
-                        resultSet.getString("permanentAddress"),
+                        resultSet.getString("permanentStreet"),
                         resultSet.getString("permanentHouseName"),
                         resultSet.getString("permanentState"),
                         resultSet.getString("permanentCity"),
                         resultSet.getInt("permanentPinCode")
                 );
                 EmployeeAddress temporaryAddress = new EmployeeAddress(
-                        resultSet.getString("temporaryAddress"),
+                        resultSet.getString("temporaryStreet"),
                         resultSet.getString("temporaryHouseName"),
                         resultSet.getString("temporaryState"),
                         resultSet.getString("temporaryCity"),
@@ -217,22 +204,49 @@ public class DatabaseRepositoryImplementation implements InputEmployeeDetails {
         }
         return employees;
     }
-
-
     public void closeConnections() {
         try {
-            if (resultSet != null)
+            if (resultSet != null) {
                 resultSet.close();
-
-            if (preparedStatement != null)
+            }
+            if (preparedStatement != null) {
                 preparedStatement.close();
-
-            if (connection != null)
+            }
+            if (connection != null) {
                 connection.close();
             }
-     catch (SQLException e) {
+        } catch (SQLException e) {
             e.printStackTrace();
         }
     }
 
+    @Override
+    public boolean DataValidation(List<Employee> employees) {
+        for (Employee employee : employees) {
+            if (!isValidEmail(employee.getEmployeeBasicDetails().getEmailId()) ||
+                    !isValidPhoneNumber(employee.getEmployeeBasicDetails().getPhoneNumber()) ||
+                    !isValidPin(employee.getEmployeePermanentAddress().getPinCode()) ||
+                    !isValidPin(employee.getEmployeeTemporaryAddress().getPinCode())) {
+                return false;
+            }
+        }
+        return true;
+    }
+    // Validation methods
+    public static boolean isValidEmail(String email) {
+        String regex = "^(.+)@(.+)$";
+        Pattern pattern = Pattern.compile(regex);
+        Matcher matcher = pattern.matcher(email);
+        return matcher.matches();
+    }
+    public static boolean isValidPhoneNumber(long phoneNumber) {
+        String regex = "0*(\\d{10})"; // Optional zeros followed by 10 digits
+        Pattern pattern = Pattern.compile(regex);
+        Matcher matcher = pattern.matcher(Long.toString(phoneNumber));
+        return matcher.matches();
+    }
+    public static boolean isValidPin(int pin) {
+        String pinString = String.valueOf(pin);
+        return pinString.length() == 6;
+    }
 }

@@ -1,22 +1,18 @@
-package org.console;
+package backend.pojo;
 
-public class EmployeeAddressConsole {
+public class EmployeeAddress {
     private String street;
     private String houseName;
     private String state;
     private String city;
     private Integer pinCode;
 
-    public EmployeeAddressConsole(String street, String houseName, String state, String city, Integer pinCode) {
+    public EmployeeAddress(String street, String houseName, String state, String city, Integer pinCode) {
         this.street = street;
         this.houseName = houseName;
         this.state = state;
         this.city = city;
         this.pinCode = pinCode;
-    }
-
-    public EmployeeAddressConsole() {
-
     }
 
     @Override
@@ -70,4 +66,3 @@ public class EmployeeAddressConsole {
         this.pinCode = pinCode;
     }
 }
-

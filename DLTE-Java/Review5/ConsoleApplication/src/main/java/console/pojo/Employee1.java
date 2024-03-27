@@ -1,9 +1,9 @@
-package org.example.Details;
+package console.pojo;
 
-public class Employee {
-    EmployeeBasicDetails employeeBasicDetails;
-    EmployeeAddress employeePermanentAddress;
-    EmployeeAddress employeeTemporaryAddress;
+public class Employee1 {
+    EmployeeBasicDetails1 employeeBasicDetails;
+    EmployeeAddress1 employeePermanentAddress;
+    EmployeeAddress1 employeeTemporaryAddress;
 
     @Override
     public String toString() {
@@ -14,47 +14,47 @@ public class Employee {
                 '}';
     }
     public String displayEmployeeDetails() {
-        return "Employee ID: " + employeeBasicDetails.getEmployeeId() +
-                "\nName: " + employeeBasicDetails.getEmployeeName() +
-                "\nEmail: " + employeeBasicDetails.getEmailId() +
+        return "Employee ID: " + employeeBasicDetails.getId() +
+                "\nName: " + employeeBasicDetails.getName() +
+                "\nEmail: " + employeeBasicDetails.getEmail() +
                 "\nPhone Number: " + employeeBasicDetails.getPhoneNumber() +
-                "\nPermanent Address: " + employeePermanentAddress.getAddress() +
+                "\nPermanent Street: " + employeePermanentAddress.getStreet() +
                 "\nPermanent House Name: " + employeePermanentAddress.getHouseName() +
                 "\nPermanent City: " + employeePermanentAddress.getCity() +
                 "\nPermanent State: " + employeePermanentAddress.getState() +
                 "\nPermanent Pin Code: " + employeePermanentAddress.getPinCode() +
-                "\nTemporary Address: " + employeeTemporaryAddress.getAddress() +
+                "\nTemporary Street: " + employeeTemporaryAddress.getStreet() +
                 "\nTemporary House Name: " + employeeTemporaryAddress.getHouseName() +
                 "\nTemporary City: " + employeeTemporaryAddress.getCity() +
                 "\nTemporary State: " + employeeTemporaryAddress.getState() +
                 "\nTemporary Pin Code: " + employeeTemporaryAddress.getPinCode();
     }
 
-    public EmployeeBasicDetails getEmployeeBasicDetails() {
+    public EmployeeBasicDetails1 getEmployeeBasicDetails() {
         return employeeBasicDetails;
     }
 
-    public void setEmployeeBasicDetails(EmployeeBasicDetails employeebasicDetails) {
+    public void setEmployeeBasicDetails(EmployeeBasicDetails1 employeebasicDetails) {
         this.employeeBasicDetails = employeebasicDetails;
     }
 
-    public EmployeeAddress getEmployeePermanentAddress() {
+    public EmployeeAddress1 getEmployeePermanentAddress() {
         return employeePermanentAddress;
     }
 
-    public void setEmployeePermanentAddress(EmployeeAddress employeePermanentAddress) {
+    public void setEmployeePermanentAddress(EmployeeAddress1 employeePermanentAddress) {
         this.employeePermanentAddress = employeePermanentAddress;
     }
 
-    public EmployeeAddress getEmployeeTemporaryAddress() {
+    public EmployeeAddress1 getEmployeeTemporaryAddress() {
         return employeeTemporaryAddress;
     }
 
-    public void setEmployeeTemporaryAddress(EmployeeAddress employeeTemporaryAddress) {
+    public void setEmployeeTemporaryAddress(EmployeeAddress1 employeeTemporaryAddress) {
         this.employeeTemporaryAddress = employeeTemporaryAddress;
     }
 
-    public Employee(EmployeeBasicDetails employeeBasicDetails, EmployeeAddress employeePermanentAddress, EmployeeAddress employeeTemporaryAddress) {
+    public Employee1(EmployeeBasicDetails1 employeeBasicDetails, EmployeeAddress1 employeePermanentAddress, EmployeeAddress1 employeeTemporaryAddress) {
         this.employeeBasicDetails = employeeBasicDetails;
         this.employeePermanentAddress = employeePermanentAddress;
         this.employeeTemporaryAddress = employeeTemporaryAddress;

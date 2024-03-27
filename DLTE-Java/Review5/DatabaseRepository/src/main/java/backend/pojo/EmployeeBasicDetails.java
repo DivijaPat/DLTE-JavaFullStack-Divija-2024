@@ -1,4 +1,4 @@
-package org.example.Details;
+package backend.pojo;
 
 public class EmployeeBasicDetails {
     private String employeeName;

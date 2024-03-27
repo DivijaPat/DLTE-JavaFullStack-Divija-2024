@@ -1,6 +1,10 @@
-package org.example;
+package console.frontend;
 
+import console.pojo.Employee1;
+import console.pojo.EmployeeAddress1;
+import console.pojo.EmployeeBasicDetails1;
 import exception.EmployeeNotFoundException;
+import org.example.DatabaseRepositoryImplementation;
 import org.example.Details.Employee;
 import org.example.Details.EmployeeAddress;
 import org.example.Details.EmployeeBasicDetails;
@@ -24,7 +28,7 @@ public class ConsoleApp {
             Logger logger= LoggerFactory.getLogger(ConsoleApp.class);
             Validation validation=new Validation();
             try {
-                System.out.println(resourceBundle.getString("greet"));
+                System.out.println(resourceBundle.getString("greeting.user"));
                 List<Employee> employees = new ArrayList<>();
                 while (true) {
                     System.out.println(resourceBundle.getString("menu.display"));
@@ -56,7 +60,7 @@ public class ConsoleApp {
                             }
 
                             System.out.println(resourceBundle.getString("enter.permanentAddress"));
-                            System.out.print(resourceBundle.getString("enter.address"));
+                            System.out.print(resourceBundle.getString("enter.street"));
                             String permanentAddress = scanner.nextLine();
 
                             System.out.print(resourceBundle.getString("enter.HouseName"));
@@ -97,11 +101,11 @@ public class ConsoleApp {
                                 break;
                             }
 
-                            EmployeeBasicDetails basicDetails = new EmployeeBasicDetails(name, id, email, phoneNumber);
-                            EmployeeAddress permanentAddr = new EmployeeAddress(permanentAddress, permanentHouseName, permanentState, permanentCity, permanentPinCode);
-                            EmployeeAddress temporaryAddr = new EmployeeAddress(temporaryAddress, temporaryHouseName, temporaryState, temporaryCity, temporaryPinCode);
+                            EmployeeBasicDetails1 basicDetails = new EmployeeBasicDetails1(name, id, email, phoneNumber);
+                            EmployeeAddress1 permanentAddress1 = new EmployeeAddress1(permanentAddress, permanentHouseName, permanentState, permanentCity, permanentPinCode);
+                            EmployeeAddress1 temporaryAddress1 = new EmployeeAddress1(temporaryAddress, temporaryHouseName, temporaryState, temporaryCity, temporaryPinCode);
 
-                            Employee employee = new Employee(basicDetails, permanentAddr, temporaryAddr);
+                            Employee1 employee = new Employee(basicDetails, permanentAddress1, temporaryAddress1);
                             List<Employee> employeeInfo = new ArrayList<>();
                             employeeInfo.add(employee);
                             inputEmployeeDetails.create(employeeInfo);
@@ -152,6 +156,7 @@ public class ConsoleApp {
             } finally {
 
                 inputEmployeeDetails.closeConnections();
+                scanner.close();
             }
         }
     }
