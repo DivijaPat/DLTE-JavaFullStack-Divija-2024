@@ -4,15 +4,15 @@ import java.util.Date;
 
 public class Transaction {
     private Long transactionId;
-//    private Date transactionDate;
+    private Date transactionDate;
     private String transactionBy;
     private String transactionTo;
     private Integer transactionAmount;
     private String transactionRemarks;
 
-    public Transaction(Long transactionId,  String transactionBy, String transactionTo, Integer transactionAmount, String transactionRemarks) {
+    public Transaction(Long transactionId, Date transactionDate, String transactionBy, String transactionTo, Integer transactionAmount, String transactionRemarks) {
         this.transactionId = transactionId;
-//        this.transactionDate = transactionDate;
+        this.transactionDate = transactionDate;
         this.transactionBy = transactionBy;
         this.transactionTo = transactionTo;
         this.transactionAmount = transactionAmount;
@@ -26,7 +26,7 @@ public class Transaction {
     public String toString() {
         return "Transaction{" +
                 "transactionId=" + transactionId +
-               // ", transactionDate=" + transactionDate +
+                ", transactionDate=" + transactionDate +
                 ", transactionBy='" + transactionBy + '\'' +
                 ", transactionTo='" + transactionTo + '\'' +
                 ", transactionAmount=" + transactionAmount +
@@ -42,13 +42,13 @@ public class Transaction {
         this.transactionId = transactionId;
     }
 
-//    public Date getTransactionDate() {
-//        return transactionDate;
-//    }
+    public Date getTransactionDate() {
+        return transactionDate;
+    }
 
-//    public void setTransactionDate(Date transactionDate) {
-//        this.transactionDate = transactionDate;
-//    }
+    public void setTransactionDate(Date transactionDate) {
+        this.transactionDate = transactionDate;
+    }
 
     public String getTransactionBy() {
         return transactionBy;
