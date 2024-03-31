@@ -16,10 +16,10 @@ public class TransactionServices {
 
 
     public Transaction apiSave(Transaction transaction){
-        int acknowledge=jdbcTemplate.update("insert into transactions_table values(?,?,?,?,?,?)",
+        int acknowledge=jdbcTemplate.update("insert into transactions_table values(?,?,?,?,?)",
                 new Object[]{
                         transaction.getTransactionId(),
-                        transaction.getTransactionDate(),
+                       // transaction.getTransactionDate(),
                         transaction.getTransactionBy(),
                         transaction.getTransactionTo(),
                         transaction.getTransactionAmount(),
