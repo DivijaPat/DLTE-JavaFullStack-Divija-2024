@@ -16,6 +16,19 @@ public class MyBankUsers implements UserDetails {
     private  long aadhaar;
     private String role;
 
+    @Override
+    public String toString() {
+        return "MyBankUsers{" +
+                "name='" + name + '\'' +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", email='" + email + '\'' +
+                ", contact=" + contact +
+                ", aadhaar=" + aadhaar +
+                ", role='" + role + '\'' +
+                '}';
+    }
+
     public String getRole() {
         return role;
     }

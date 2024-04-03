@@ -1,12 +1,11 @@
-package task.jdbctemplate.demo.services;
+package transaction.jdbc.demo.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
-import task.jdbctemplate.demo.entity.Transaction;
-
-
+import transaction.jdbc.demo.entity.Transaction;
+import java.util.Date;
 import java.util.List;
 
 @Service
@@ -16,19 +15,17 @@ public class TransactionServices {
 
 
     public Transaction apiSave(Transaction transaction){
-        int acknowledge=jdbcTemplate.update("insert into transactions_table values(?,?,?,?,?,?)",
+        int acknowledge=jdbcTemplate.update("insert into Transaction values(?,?,?,?,?,?)",
                 new Object[]{
                         transaction.getTransactionId(),
-                        transaction.getTransactionBy(),
+                        transaction.getTransactionDate(),
                         transaction.getTransactionTo(),
                         transaction.getTransactionAmount(),
                         transaction.getTransactionRemarks(),
-                        transaction.getTransactionDate()
+                        transaction.getTransactionBy(),
                 });
-        if(acknowledge!=0)
-            return transaction;
-        else
-            return null;
+        if(acknowledge!=0) return transaction;
+        else return null;
     }
 
     public List<Transaction> apiFindBySender(String sender){
@@ -53,4 +50,22 @@ public class TransactionServices {
         return myCards;
     }
 
+
+    public Transaction updateTransaction(Transaction transaction){
+        int acknowledge=jdbcTemplate.update("update transactions_table set transaction_remarks=? where transaction_id=?",
+                new Object[]{transaction.getTransactionRemarks(),transaction.getTransactionId()}
+        );
+        if(acknowledge!=0) return transaction;
+        else  return null;
+    }
+
+    public String deleteTransaction(Date startDate, Date endDate){
+        int acknowledge= jdbcTemplate.update("delete from transaction where transaction_date between ? and ?",
+                new Object[]{startDate,endDate}
+        );
+        if(acknowledge!=0) return "Transaction deleted";
+        else return "Failed to delete transaction";
+    }
+
+    
 }

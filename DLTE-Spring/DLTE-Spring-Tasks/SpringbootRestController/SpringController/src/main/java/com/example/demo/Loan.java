@@ -1,5 +1,6 @@
 package com.example.demo;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 public class Loan {
@@ -7,12 +8,14 @@ public class Loan {
     private Integer loanAmount;
     private Date loanDate;
     private String loanStatus;
+    private ArrayList<Integer> number;
 
-    public Loan(Long loanNumber, Integer loanAmount, Date loanDate, String loanStatus) {
+    public Loan(Long loanNumber, Integer loanAmount, Date loanDate, String loanStatus, ArrayList number) {
         this.loanNumber = loanNumber;
         this.loanAmount = loanAmount;
         this.loanDate = loanDate;
         this.loanStatus = loanStatus;
+        this.number=number;
     }
 
     @Override
@@ -22,7 +25,16 @@ public class Loan {
                 ", loanAmount=" + loanAmount +
                 ", loanDate='" + loanDate + '\'' +
                 ", loanStatus='" + loanStatus + '\'' +
+                ",number='"+number+'\''+
                 '}';
+    }
+
+    public ArrayList getNumber() {
+        return number;
+    }
+
+    public void setNumber(ArrayList number) {
+        this.number = number;
     }
 
     public Long getLoanNumber() {

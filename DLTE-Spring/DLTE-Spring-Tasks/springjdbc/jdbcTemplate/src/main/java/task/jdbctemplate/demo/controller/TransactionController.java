@@ -2,6 +2,7 @@ package task.jdbctemplate.demo.controller;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.TransactionException;
 import org.springframework.web.bind.annotation.*;
 import task.jdbctemplate.demo.entity.Transaction;
 import task.jdbctemplate.demo.services.TransactionServices;
@@ -16,7 +17,13 @@ public class TransactionController {
 
     @PostMapping("/add")
     public Transaction addTransaction(@RequestBody Transaction transaction){
-        Transaction transaction1=transactionServices.apiSave(transaction);
+        Transaction transaction1=null;
+        try{
+            transaction1=transactionServices.apiSave(transaction);
+        }catch(TransactionException transactionException){
+            System.out.println(transactionException.toString());
+
+        }
         return transaction1;
     }
 

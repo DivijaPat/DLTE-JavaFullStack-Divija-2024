@@ -1,4 +1,4 @@
-package task.jdbctemplate.demo.entity;
+package transaction.jdbc.demo.entity;
 
 import java.util.Date;
 
@@ -10,7 +10,7 @@ public class Transaction {
     private String transactionRemarks;
     private Date transactionDate;
 
-    public Transaction(Long transactionId, String transactionBy, String transactionTo, Integer transactionAmount, String transactionRemarks, Date transactionDate) {
+    public Transaction(Long transactionId, String transactionBy, String transactionTo, Integer transactionAmount, String transactionRemarks,Date transactionDate) {
         this.transactionId = transactionId;
         this.transactionBy = transactionBy;
         this.transactionTo = transactionTo;
