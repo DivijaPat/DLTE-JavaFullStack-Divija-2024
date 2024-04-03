@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, sans-serif;
+    margin-left: 500px;
+    padding: 20px;
+    margin-bottom: 400px; 
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: fit-content;
+}
+
+form {
+    width: 90%;
+    max-width: 700px; 
+    max-height:min-content;
+    padding: 50px;
+    border: 6px solid #1c0f5e;
+    border-radius: 2px;
+    box-shadow: 0 0 10px rgba(138, 124, 244, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+   
+  
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="date"],
+textarea,
+select,
+input[type="tel"],
+input[type="email"] {
+    width: 100%;
+    padding: 8px;
+    border: 2px solid #959af4;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input[type="file"] {
+    width: 100%;
+    padding: 8px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #07294d;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #368fef;
+}
