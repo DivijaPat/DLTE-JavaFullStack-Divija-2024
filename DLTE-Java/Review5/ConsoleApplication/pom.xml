@@ -4,7 +4,7 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>org.example</groupId>
+  <groupId>console.frontend</groupId>
   <artifactId>ConsoleApplication</artifactId>
   <version>2.0-SNAPSHOT</version>
 
@@ -36,8 +36,15 @@
       <artifactId>slf4j-api</artifactId>
       <version>2.0.7</version>
     </dependency>
+    <!-- https://mvnrepository.com/artifact/org.mockito/mockito-core -->
     <dependency>
-      <groupId>org.example</groupId>
+      <groupId>org.mockito</groupId>
+      <artifactId>mockito-core</artifactId>
+      <version>4.5.1</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>backend.database</groupId>
       <artifactId>DatabaseRepository</artifactId>
       <version>1.0-SNAPSHOT</version>
     </dependency>

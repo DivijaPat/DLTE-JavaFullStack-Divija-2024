@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ece20e1c-b4ef-442b-a257-1917819baa62" name="Default Changelist" comment="" />
+    <list default="true" id="ece20e1c-b4ef-442b-a257-1917819baa62" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -69,7 +71,9 @@
       <updated>1710822308573</updated>
       <workItem from="1710822311982" duration="1748000" />
       <workItem from="1710907880860" duration="663000" />
-      <workItem from="1711292348374" duration="3118000" />
+      <workItem from="1711292348374" duration="3694000" />
+      <workItem from="1711297294463" duration="294000" />
+      <workItem from="1711297611929" duration="827000" />
     </task>
     <servers />
   </component>
@@ -101,9 +105,13 @@
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state x="299" y="64" key="Maven.ArtifactSearchDialog/0.0.1536.816@0.0.1536.816" timestamp="1711293334799" />
-    <state x="209" y="111" key="new project wizard" timestamp="1710825505486">
+    <state x="465" y="234" key="com.intellij.ide.util.TipDialog" timestamp="1711297611929">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state x="209" y="111" key="new project wizard/0.0.1536.816@0.0.1536.816" timestamp="1710825505486" />
+    <state x="465" y="234" key="com.intellij.ide.util.TipDialog/0.0.1536.816@0.0.1536.816" timestamp="1711297611929" />
+    <state x="209" y="111" key="new project wizard" timestamp="1711297807975">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="209" y="111" key="new project wizard/0.0.1536.816@0.0.1536.816" timestamp="1711297807975" />
   </component>
 </project>

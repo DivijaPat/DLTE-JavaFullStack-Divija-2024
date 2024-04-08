@@ -34,7 +34,7 @@ public class TransactionSecurity {
         httpSecurity.authorizeRequests().antMatchers("/transaction/receive/*").hasAnyAuthority("customer");
         httpSecurity.authorizeRequests().antMatchers("/transaction/amount/*").hasAnyAuthority("customer");
         httpSecurity.authorizeRequests().antMatchers(HttpMethod.PUT).hasAnyAuthority("manager","admin");
-        //httpSecurity.authorizeRequests().antMatchers("/transaction/deleteBasedOnRangeOfDate").hasAnyAuthority("manger","admin");
+        httpSecurity.authorizeRequests().antMatchers("/transaction/deleteBasedOnRangeOfDate").hasAnyAuthority("manger","admin");
         httpSecurity.authorizeRequests().antMatchers(HttpMethod.DELETE).hasAnyAuthority("admin");
 
         AuthenticationManagerBuilder builder=httpSecurity.

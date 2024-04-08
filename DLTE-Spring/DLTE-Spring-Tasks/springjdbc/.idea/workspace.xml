@@ -2,6 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="30669ef5-e0c0-45a0-8ffe-f0c6e2dc3b6f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-Frontend/DLTE-Frontend-Tasks/Files/1111.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-Frontend/DLTE-Frontend-Tasks/Files/download1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-Frontend/DLTE-Frontend-Tasks/Files/download3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-Frontend/DLTE-Frontend-Tasks/Files/download4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-Frontend/DLTE-Frontend-Tasks/Files/video1.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-Frontend/DLTE-Frontend-Tasks/css/media.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-Frontend/DLTE-Frontend-Tasks/htmlForm.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-Frontend/DLTE-Frontend-Tasks/mediaText.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../DLTE-Java/Review5.1/ConsoleApplication/src/main/java/org/console/ConsoleApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DLTE-Java/Review5.1/ConsoleApplication/src/main/java/org/console/ConsoleApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../DLTE-Java/Review5.1/src/main/java/org/dbRepository/DatabaseRepositoryImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DLTE-Java/Review5.1/src/main/java/org/dbRepository/DatabaseRepositoryImplementation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../DLTE-Java/Review5.1/src/main/java/org/dbRepository/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DLTE-Java/Review5.1/src/main/java/org/dbRepository/Employee.java" afterDir="false" />
@@ -56,17 +64,9 @@
       <change beforePath="$PROJECT_DIR$/../../../DLTE-JavaEE/DLTE-JavaEE-Tasks/SOAPWebService/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DLTE-JavaEE/DLTE-JavaEE-Tasks/SOAPWebService/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../DLTE-JavaEE/DLTE-JavaEE-Tasks/SoapForDAO/SOAPForDAO/target/classes/org/example/MyEndPoint.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../DLTE-JavaEE/DLTE-JavaEE-Tasks/SoapForDAO/SOAPForDAO/target/classes/org/example/WebServiceDAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SpringbootRestController/SpringController/src/main/java/com/example/demo/Loan.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringbootRestController/SpringController/src/main/java/com/example/demo/Loan.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SpringbootRestController/SpringController/src/main/java/com/example/demo/LoanRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringbootRestController/SpringController/src/main/java/com/example/demo/LoanRestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jdbcAutowiring/src/main/java/com/example/demo/interfaces/LoanInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/../jdbcAutowiring/src/main/java/com/example/demo/interfaces/LoanInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jdbcAutowiring/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../jdbcAutowiring/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jdbcTemplate/src/main/java/task/jdbctemplate/demo/controller/TransactionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/jdbcTemplate/src/main/java/task/jdbctemplate/demo/controller/TransactionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jdbcTemplate/src/main/java/task/jdbctemplate/demo/entity/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/jdbcTemplate/src/main/java/task/jdbctemplate/demo/entity/Transaction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jdbcTemplate/src/main/java/task/jdbctemplate/demo/security/MyBankUsers.java" beforeDir="false" afterPath="$PROJECT_DIR$/jdbcTemplate/src/main/java/task/jdbctemplate/demo/security/MyBankUsers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jdbcTemplate/src/main/java/task/jdbctemplate/demo/services/TransactionServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/jdbcTemplate/src/main/java/task/jdbctemplate/demo/services/TransactionServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jdbcTemplate/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/jdbcTemplate/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jdbcTemplate/src/test/java/task/jdbctemplate/demo/EndPointTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/jdbcTemplate/src/test/java/task/jdbctemplate/demo/EndPointTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jdbcTemplate/src/test/java/task/jdbctemplate/demo/JdbctemplateApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/jdbcTemplate/src/test/java/task/jdbctemplate/demo/JdbctemplateApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JdbcTransactionSoap/JdbcTransactionSoap/src/main/java/transaction/jdbc/demo/configs/SoapPhase.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JdbcTransactionSoap/JdbcTransactionSoap/src/main/java/transaction/jdbc/demo/configs/SoapPhase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdbcTemplate/src/main/java/task/jdbctemplate/demo/security/TransactionSecurity.java" beforeDir="false" afterPath="$PROJECT_DIR$/jdbcTemplate/src/main/java/task/jdbctemplate/demo/security/TransactionSecurity.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +87,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/jdbcTemplate" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -112,6 +112,7 @@
       <option name="presentableId" value="Default" />
       <updated>1712125830187</updated>
       <workItem from="1712125831394" duration="75000" />
+      <workItem from="1712169684679" duration="539000" />
     </task>
     <servers />
   </component>

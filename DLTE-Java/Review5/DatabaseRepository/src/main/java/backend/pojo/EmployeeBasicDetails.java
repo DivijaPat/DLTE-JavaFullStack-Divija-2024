@@ -1,50 +1,43 @@
 package backend.pojo;
 
 public class EmployeeBasicDetails {
-    private String employeeName;
-    private String employeeId;
-    private String emailId;
+    private String name;
+    private String id;
+    private String email;
     private long phoneNumber;
 
-    public EmployeeBasicDetails(String employeeName, String employeeId, String emailId, long phoneNumber) {
-        this.employeeName = employeeName;
-        this.employeeId = employeeId;
-        this.emailId = emailId;
+    public EmployeeBasicDetails() {
+    }
+
+    public EmployeeBasicDetails(String name, String id, String email, long phoneNumber) {
+        this.name = name;
+        this.id = id;
+        this.email = email;
         this.phoneNumber = phoneNumber;
     }
 
-    @Override
-    public String toString() {
-        return "EmployeebasicDetails{" +
-                "employeeName='" + employeeName + '\'' +
-                ", employeeId='" + employeeId + '\'' +
-                ", emailId='" + emailId + '\'' +
-                ", phoneNumber=" + phoneNumber +
-                '}';
+    public String getName() {
+        return name;
     }
 
-    public String getEmployeeName() {
-        return employeeName;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public void setEmployeeName(String employeeName) {
-        this.employeeName = employeeName;
+    public String getId() {
+        return id;
     }
 
-    public String getEmployeeId() {
-        return employeeId;
+    public void setId(String id) {
+        this.id = id;
     }
 
-    public void setEmployeeId(String employeeId) {
-        this.employeeId = employeeId;
+    public String getEmail() {
+        return email;
     }
 
-    public String getEmailId() {
-        return emailId;
-    }
-
-    public void setEmailId(String emailId) {
-        this.emailId = emailId;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public long getPhoneNumber() {

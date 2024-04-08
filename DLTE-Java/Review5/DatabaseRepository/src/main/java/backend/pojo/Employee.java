@@ -14,16 +14,16 @@ public class Employee {
                 '}';
     }
     public String displayEmployeeDetails() {
-        return "Employee ID: " + employeeBasicDetails.getEmployeeId() +
-                "\nName: " + employeeBasicDetails.getEmployeeName() +
-                "\nEmail: " + employeeBasicDetails.getEmailId() +
+        return "Employee ID: " + employeeBasicDetails.getId() +
+                "\nName: " + employeeBasicDetails.getName() +
+                "\nEmail: " + employeeBasicDetails.getEmail() +
                 "\nPhone Number: " + employeeBasicDetails.getPhoneNumber() +
-                "\nPermanent Address: " + employeePermanentAddress.getAddress() +
+                "\nPermanent Street: " + employeePermanentAddress.getStreet() +
                 "\nPermanent House Name: " + employeePermanentAddress.getHouseName() +
                 "\nPermanent City: " + employeePermanentAddress.getCity() +
                 "\nPermanent State: " + employeePermanentAddress.getState() +
                 "\nPermanent Pin Code: " + employeePermanentAddress.getPinCode() +
-                "\nTemporary Address: " + employeeTemporaryAddress.getAddress() +
+                "\nTemporary Street: " + employeeTemporaryAddress.getStreet() +
                 "\nTemporary House Name: " + employeeTemporaryAddress.getHouseName() +
                 "\nTemporary City: " + employeeTemporaryAddress.getCity() +
                 "\nTemporary State: " + employeeTemporaryAddress.getState() +

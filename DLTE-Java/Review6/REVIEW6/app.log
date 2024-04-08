@@ -1,0 +1,6 @@
+07:56:15.152 [main] WARN  org.consoleapp.console.ConsoleApp - null
+08:02:07.415 [main] WARN  org.consoleapp.console.ConsoleApp - null
+08:04:17.196 [main] WARN  org.consoleapp.console.ConsoleApp - null
+08:12:45.492 [main] WARN  org.consoleapp.console.ConsoleApp - No employees found for pin code:145
+08:16:55.264 [main] WARN  org.consoleapp.console.ConsoleApp - No employees found for pin code:16
+08:17:04.525 [main] WARN  org.consoleapp.console.ConsoleApp - No employees found for pin code:456

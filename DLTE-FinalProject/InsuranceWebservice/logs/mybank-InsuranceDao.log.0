@@ -1,0 +1,4 @@
+[2024-04-05 00:44:25.797] - 22704 INFO [restartedMain] --- org.apache.catalina.core.StandardService: Starting service [Tomcat]
+[2024-04-05 00:44:25.797] - 22704 INFO [restartedMain] --- org.apache.catalina.core.StandardEngine: Starting Servlet engine: [Apache Tomcat/9.0.73]
+[2024-04-05 00:44:25.923] - 22704 INFO [restartedMain] --- org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]: Initializing Spring embedded WebApplicationContext
+[2024-04-05 00:44:56.177] - 22704 INFO [http-nio-8082-exec-1] --- org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]: Initializing Spring MessageDispatcherServlet 'messageDispatcherServlet'

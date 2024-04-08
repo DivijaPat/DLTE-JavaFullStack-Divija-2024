@@ -1,0 +1,15 @@
+soap\service\EmployeeDetails.class
+soap\service\ObjectFactory.class
+org\consoleapp\pojo\EmployeeConsole.class
+org\consoleapp\console\ConsoleApp.class
+org\consoleapp\console\Validation.class
+soap\service\GroupOfEmployee.class
+org\consoleapp\interfaces\EmployeeInputConsole.class
+soap\service\EmployeeAddress.class
+org\consoleapp\App.class
+org\consoleapp\pojo\EmployeeDetailsConsole.class
+soap\service\EmployeeWebImplementation.class
+soap\service\package-info.class
+soap\service\EmployeeWebImplementationService.class
+org\consoleapp\pojo\EmployeeAddressConsole.class
+soap\service\Employee.class

@@ -7,6 +7,9 @@ public class EmployeeAddress {
     private String city;
     private Integer pinCode;
 
+    public EmployeeAddress() {
+    }
+
     public EmployeeAddress(String street, String houseName, String state, String city, Integer pinCode) {
         this.street = street;
         this.houseName = houseName;
