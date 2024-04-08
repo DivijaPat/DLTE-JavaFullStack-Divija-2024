@@ -1,0 +1,12 @@
+com\mybank\dao\insurance\exceptions\InsuranceAvailedException.class
+com\mybank\dao\insurance\remotes\InsuranceRepository.class
+com\mybank\dao\insurance\entity\Customer.class
+com\mybank\dao\insurance\exceptions\NoDataFoundException.class
+com\mybank\dao\insurance\entity\InsuranceAvailed.class
+com\mybank\dao\insurance\services\InsuranceServices$CardMapper.class
+com\mybank\dao\insurance\InsuranceDaoApplication.class
+com\mybank\dao\insurance\exceptions\InsuranceAvailableException.class
+com\mybank\dao\insurance\services\InsuranceServices.class
+com\mybank\dao\insurance\ServletInitializer.class
+com\mybank\dao\insurance\entity\InsuranceAvailable.class
+com\mybank\dao\insurance\exceptions\CustomerException.class

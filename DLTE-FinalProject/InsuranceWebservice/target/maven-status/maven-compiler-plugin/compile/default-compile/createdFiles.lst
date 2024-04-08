@@ -1,0 +1,10 @@
+mybank\insurance\webservice\ServletInitializer.class
+mybank\insurance\webservice\soap\endpoint\InsuranceAvailableEndpoint.class
+services\insurance\CallAllInsuranceAvailableRequest.class
+services\insurance\ServiceStatus.class
+mybank\insurance\webservice\soap\configs\SoapServiceConfiguration.class
+services\insurance\InsuranceAvailable.class
+mybank\insurance\webservice\WebserviceApplication.class
+services\insurance\ObjectFactory.class
+services\insurance\CallAllInsuranceAvailableResponse.class
+services\insurance\package-info.class
