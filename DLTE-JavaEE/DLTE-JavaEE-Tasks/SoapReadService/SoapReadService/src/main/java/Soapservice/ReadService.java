@@ -1,5 +1,6 @@
 package Soapservice;
 
+
 import javax.jws.WebMethod;
 import javax.jws.WebResult;
 import javax.jws.WebService;
@@ -12,7 +13,7 @@ import java.util.List;
 @SOAPBinding(style = SOAPBinding.Style.RPC)
 public class ReadService {
     TransactionGroup transactionGroup=new TransactionGroup();
-    AccountService accountService;
+    TransactionService accountService;
 
     public ReadService() {
         accountService=new AccountService(new DatabaseTarget());
