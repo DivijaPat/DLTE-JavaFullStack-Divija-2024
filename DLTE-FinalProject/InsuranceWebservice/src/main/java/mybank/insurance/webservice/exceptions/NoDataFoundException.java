@@ -1,4 +1,4 @@
-package com.mybank.dao.insurance.exceptions;
+package mybank.insurance.webservice.exceptions;
 
 public class NoDataFoundException extends Throwable {
     public NoDataFoundException(String message){

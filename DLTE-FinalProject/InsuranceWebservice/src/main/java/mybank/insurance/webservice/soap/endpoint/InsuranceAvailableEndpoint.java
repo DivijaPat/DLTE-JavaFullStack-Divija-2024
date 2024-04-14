@@ -2,6 +2,7 @@ package mybank.insurance.webservice.soap.endpoint;
 
 
 import com.mybank.dao.insurance.entity.InsuranceAvailable;
+import com.mybank.dao.insurance.exceptions.NoDataFoundException;
 import com.mybank.dao.insurance.remotes.InsuranceRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -54,7 +55,7 @@ public class InsuranceAvailableEndpoint {
             serviceStatus.setMessage(resourceBundle.getString("soap.status.ok"));
             LOGGER.info(resourceBundle.getString("soap.status.ok")+HttpServletResponse.SC_OK);
             availableResponse.getInsurance().addAll(actualInsurance);
-        } catch (SQLSyntaxErrorException e) {
+        } catch (SQLSyntaxErrorException | NoDataFoundException e) {
             serviceStatus.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
             LOGGER.error(resourceBundle.getString("soap.sql.error") + e + HttpServletResponse.SC_INTERNAL_SERVER_ERROR );
             serviceStatus.setMessage(resourceBundle.getString("soap.db.error"));

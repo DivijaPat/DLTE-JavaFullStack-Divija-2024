@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Insurance Filter</title>
+<link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <h1>INSURANCE</h1>
+    <label for="minCoverage">Minimum Coverage:</label>
+    <input type="number" id="minCoverage" placeholder="Enter minimum coverage">
+    <label for="maxCoverage">Maximum Coverage:</label>
+    <input type="number" id="maxCoverage" placeholder="Enter maximum coverage">
+    
+    <div id="policyContainer"></div>
+
+    <div class="footer">
+        <button onclick="filterPolicies()">Filter</button>
+        <button onclick="listAllPolicies()">List All</button>
+    </div>
+    <script src="script.js"></script>
+
+</body>
+</html>

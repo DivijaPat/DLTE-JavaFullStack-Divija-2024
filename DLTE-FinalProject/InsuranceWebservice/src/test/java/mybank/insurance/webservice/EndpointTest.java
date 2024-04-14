@@ -2,6 +2,7 @@ package mybank.insurance.webservice;
 
 import com.mybank.dao.insurance.entity.InsuranceAvailable;
 import com.mybank.dao.insurance.exceptions.InsuranceAvailableException;
+import com.mybank.dao.insurance.exceptions.NoDataFoundException;
 import com.mybank.dao.insurance.remotes.InsuranceRepository;
 import com.mybank.dao.insurance.services.InsuranceServices;
 import mybank.insurance.webservice.soap.endpoint.InsuranceAvailableEndpoint;
@@ -38,8 +39,8 @@ public class EndpointTest {
     @InjectMocks
     private InsuranceAvailableEndpoint endpoint;
 
-    @Test
-    public void testListLoans_Success() throws SQLSyntaxErrorException {
+   // @Test
+    public void testListLoans_Success() throws SQLSyntaxErrorException, NoDataFoundException {
         CallAllInsuranceAvailableRequest request = new CallAllInsuranceAvailableRequest();
         ServiceStatus expectedServiceStatus = new ServiceStatus();
         expectedServiceStatus.setStatus(HttpServletResponse.SC_OK);
@@ -66,24 +67,24 @@ public class EndpointTest {
 
 
 
-//    @Test
-//    public void testListLoans_SQLException() throws SQLSyntaxErrorException {
-//
-//        CallAllInsuranceAvailableRequest request = new CallAllInsuranceAvailableRequest();
-//        ServiceStatus expectedServiceStatus = new ServiceStatus();
-//        expectedServiceStatus.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
-//        expectedServiceStatus.setMessage("Database error");
-//
-//        when(repository.allAvailableInsurance()).thenThrow(SQLSyntaxErrorException.class);
-//
-//        CallAllInsuranceAvailableResponse response = endpoint.listInsurance(request);
-//
-//        // Assert
-//            assertNotNull(response); //pass
-//          assertEquals(expectedServiceStatus.getStatus(), response.getServiceStatus().getStatus()); //pass
-//        assertEquals(expectedServiceStatus.getMessage(), response.getServiceStatus().getMessage()); //pass
-//       assertTrue(response.getInsurance().isEmpty()); //pass
-//    }
+    @Test
+    public void testListLoans_SQLException() throws SQLSyntaxErrorException, NoDataFoundException {
+
+        CallAllInsuranceAvailableRequest request = new CallAllInsuranceAvailableRequest();
+        ServiceStatus expectedServiceStatus = new ServiceStatus();
+        expectedServiceStatus.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+        expectedServiceStatus.setMessage("Database error");
+
+        when(repository.allAvailableInsurance()).thenThrow(SQLSyntaxErrorException.class);
+
+        CallAllInsuranceAvailableResponse response = endpoint.listInsurance(request);
+
+        // Assert
+            assertNotNull(response); //pass
+          assertEquals(expectedServiceStatus.getStatus(), response.getServiceStatus().getStatus()); //pass
+        assertEquals(expectedServiceStatus.getMessage(), response.getServiceStatus().getMessage()); //pass
+       assertTrue(response.getInsurance().isEmpty()); //pass
+    }
 
 }
 

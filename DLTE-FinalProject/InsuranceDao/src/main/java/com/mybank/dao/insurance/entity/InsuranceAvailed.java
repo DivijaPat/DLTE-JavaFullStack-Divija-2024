@@ -1,12 +1,14 @@
 package com.mybank.dao.insurance.entity;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import javax.validation.constraints.Digits;
 import javax.validation.constraints.NotNull;
 
 public class InsuranceAvailed {
     @NotNull(message = "{availed.insuranceAvailedId.null}")
     @Digits(integer = 8, fraction = 0, message = "{user.customerId.null}")
-    private Integer insuranceAvailedId;
+    private int insuranceAvailedId;
     @NotNull(message = "{availed.customerId.null}")
     @Digits(integer = 8, fraction = 0, message = "{user.customerId.null}")
     private Integer customerId;
@@ -15,6 +17,8 @@ public class InsuranceAvailed {
     private Integer insuranceId;
     @NotNull(message = "{availed.insuranceCoverage.null}")
     @Digits(integer = Integer.MAX_VALUE, fraction = Integer.MAX_VALUE, message = "{availed.insuranceCoverage.invalid}")
+
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private Double insuranceCoverage;
     @NotNull(message = "{availed.insurancePremium.null}")
     @Digits(integer = Integer.MAX_VALUE, fraction = Integer.MAX_VALUE, message = "{availed.insuranceCoverage.invalid}")
@@ -31,7 +35,7 @@ public class InsuranceAvailed {
 
 
 
-    public InsuranceAvailed(Integer insuranceAvailedId, Integer customerId, Integer insuranceId, Double insuranceCoverage, Double insurancePremium, String insuranceType, String insuranceName, String insuranceKeyBenefits, Integer insuranceLifetime) {
+    public InsuranceAvailed(int insuranceAvailedId, Integer customerId, Integer insuranceId, Double insuranceCoverage, Double insurancePremium, String insuranceType, String insuranceName, String insuranceKeyBenefits, Integer insuranceLifetime) {
         this.insuranceAvailedId = insuranceAvailedId;
         this.customerId = customerId;
         this.insuranceId = insuranceId;
@@ -46,11 +50,11 @@ public class InsuranceAvailed {
     public InsuranceAvailed() {
     }
 
-    public Integer getInsuranceAvailedId() {
+    public int getInsuranceAvailedId() {
         return insuranceAvailedId;
     }
 
-    public void setInsuranceAvailedId(Integer insuranceAvailedId) {
+    public void setInsuranceAvailedId(int insuranceAvailedId) {
         this.insuranceAvailedId = insuranceAvailedId;
     }
 

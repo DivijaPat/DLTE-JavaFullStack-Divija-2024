@@ -1,4 +1,19 @@
 -------------------------------------------------------------------------------
 Test set: com.mybank.dao.insurance.InsuranceDaoApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.915 s - in com.mybank.dao.insurance.InsuranceDaoApplicationTests
+Tests run: 4, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 7.384 s <<< FAILURE! - in com.mybank.dao.insurance.InsuranceDaoApplicationTests
+callAllInsuranceAvailable_NoDataFound  Time elapsed: 0.184 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: Unexpected exception type thrown ==> expected: <com.mybank.dao.insurance.exceptions.InsuranceAvailableException> but was: <com.mybank.dao.insurance.exceptions.NoDataFoundException>
+	at com.mybank.dao.insurance.InsuranceDaoApplicationTests.callAllInsuranceAvailable_NoDataFound(InsuranceDaoApplicationTests.java:88)
+Caused by: com.mybank.dao.insurance.exceptions.NoDataFoundException: Requested data not found
+	at com.mybank.dao.insurance.InsuranceDaoApplicationTests.lambda$callAllInsuranceAvailable_NoDataFound$0(InsuranceDaoApplicationTests.java:88)
+	at com.mybank.dao.insurance.InsuranceDaoApplicationTests.callAllInsuranceAvailable_NoDataFound(InsuranceDaoApplicationTests.java:88)
+
+testAllAvailableInsurance  Time elapsed: 0.016 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <jeevan> but was: <sathi>
+	at com.mybank.dao.insurance.InsuranceDaoApplicationTests.testAllAvailableInsurance(InsuranceDaoApplicationTests.java:63)
+
+testAllAvailableInsuranceFail  Time elapsed: 0.004 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <home> but was: <life>
+	at com.mybank.dao.insurance.InsuranceDaoApplicationTests.testAllAvailableInsuranceFail(InsuranceDaoApplicationTests.java:78)
+
