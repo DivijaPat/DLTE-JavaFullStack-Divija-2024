@@ -1,4 +1,5 @@
 C:\DLTE-JavaFullStack-Divija-2024\DLTE-FinalProject\InsuranceWebservice\src\main\java\mybank\insurance\webservice\rest\controller\InsuranceController.java
+C:\DLTE-JavaFullStack-Divija-2024\DLTE-FinalProject\InsuranceWebservice\src\main\java\mybank\insurance\webservice\security\MyBankUsersServices.java
 C:\DLTE-JavaFullStack-Divija-2024\DLTE-FinalProject\InsuranceWebservice\src\main\java\mybank\insurance\webservice\WebserviceApplication.java
 C:\DLTE-JavaFullStack-Divija-2024\DLTE-FinalProject\InsuranceWebservice\src\main\java\mybank\insurance\webservice\soap\configs\SoapServiceConfiguration.java
 C:\DLTE-JavaFullStack-Divija-2024\DLTE-FinalProject\InsuranceWebservice\src\main\java\mybank\insurance\webservice\security\MyBankApi.java
@@ -15,5 +16,6 @@ C:\DLTE-JavaFullStack-Divija-2024\DLTE-FinalProject\InsuranceWebservice\src\main
 C:\DLTE-JavaFullStack-Divija-2024\DLTE-FinalProject\InsuranceWebservice\src\main\java\services\insurance\ServiceStatus.java
 C:\DLTE-JavaFullStack-Divija-2024\DLTE-FinalProject\InsuranceWebservice\src\main\java\mybank\insurance\webservice\exceptions\InsuranceAvailableException.java
 C:\DLTE-JavaFullStack-Divija-2024\DLTE-FinalProject\InsuranceWebservice\src\main\java\mybank\insurance\webservice\security\OfficialsSuccessHandler.java
+C:\DLTE-JavaFullStack-Divija-2024\DLTE-FinalProject\InsuranceWebservice\src\main\java\mybank\insurance\webservice\security\MyBankUsers.java
 C:\DLTE-JavaFullStack-Divija-2024\DLTE-FinalProject\InsuranceWebservice\src\main\java\mybank\insurance\webservice\exceptions\NoDataFoundException.java
 C:\DLTE-JavaFullStack-Divija-2024\DLTE-FinalProject\InsuranceWebservice\src\main\java\services\insurance\CallAllInsuranceAvailableResponse.java

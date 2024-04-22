@@ -27,7 +27,6 @@ public class InsuranceDaoApplication {
 
         ConfigurableApplicationContext context = SpringApplication.run(InsuranceDaoApplication.class, args);
         InsuranceRepository availableDbRepo = context.getBean(InsuranceRepository.class);
-//        System.out.println(availableDbRepo.findByInsuranceCoverage(140,30000,50000));
-        //System.out.println(availableDbRepo.allAvailableInsurance());
+
     }
 }

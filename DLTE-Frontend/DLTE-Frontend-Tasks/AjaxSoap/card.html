@@ -19,10 +19,10 @@
     </style>
     <script>
         const getAllCards = () => {
-        let soapRequest = `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:deb="http://insurance.links">
+        let soapRequest = `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:insure="http://insurance.services">
             <soapenv:Header/>
             <soapenv:Body>
-                <deb:viewAllInsuranceRequest/>
+                <insure:callAllInsuranceAvailableRequest/>
             </soapenv:Body>
         </soapenv:Envelope>`;
 
@@ -32,7 +32,7 @@
             dataType: "xml",
             beforeSend: function(handler) {
                 handler.setRequestHeader("Authorization", "Basic " + btoa("Diya:123"));
-                handler.setRequestHeader("SOAPAction", "viewAllInsuranceRequest");
+                handler.setRequestHeader("SOAPAction", "callAllInsuranceAvailableRequest");
             },
             contentType: "text/xml;charset=utf-8",
             data: soapRequest,
@@ -41,13 +41,13 @@
                 $('#viewSection').empty();
                 
                 // Parse XML response
-                $(response).find('ns2\\:debitCard').each(function() {
+                $(response).find('ns2\\:insurance').each(function() {
                     // Extract debit card details
-                    const depositId = $(this).find('ns2\\:depositId').text();
-                    const depositName = $(this).find('ns2\\:depositName').text();
-                    const depositRoi = $(this).find('ns2\\:depositRoi').text();
-                    const depositType = $(this).find('ns2\\:depositType').text();
-                    const depositDescription = $(this).find('ns2\\:depositDescription').text();
+                    const insuranceId = $(this).find('ns2\\:insuranceId').text();
+                    const insuranceType = $(this).find('ns2\\:insuranceType').text();
+                    const insuranceName = $(this).find('ns2\\:insuranceName').text();
+                    const insuranceKeyBenefits = $(this).find('ns2\\:insuranceKeyBenefits').text();
+                    const insuranceLifetime = $(this).find('ns2\\:insuranceLifetime').text();
                     
                     // Create card HTML
                     const cardHtml = `
@@ -55,7 +55,7 @@
                             <div class="card">
                                 <div class="card-body">
                                     <h5 class="card-title">${insuranceId}</h5>
-                                    <p class="card-text">deposit name: ${depositType}</p>
+                                    <p class="card-text">deposit name: ${insuranceType}</p>
                                     <p class="card-text">deposit roi: ${insuranceName}</p>
                                     <p class="card-text">deposit type: ${insuranceKeyBenefits}</p>
                                     <p class="card-text">deposit description: ${insuranceLifetime}</p>

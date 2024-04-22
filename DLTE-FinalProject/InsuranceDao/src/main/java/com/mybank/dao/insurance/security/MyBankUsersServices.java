@@ -42,7 +42,7 @@ public class MyBankUsersServices implements UserDetailsService {
                 new BeanPropertyRowMapper<>(MyBankUsers.class));
         return customer;
     }
-    
+
     public MyBankUsers findByUsernameStream(String username) {
         List<MyBankUsers> customerList = findByUsername();
         MyBankUsers customer = customerList.stream()
