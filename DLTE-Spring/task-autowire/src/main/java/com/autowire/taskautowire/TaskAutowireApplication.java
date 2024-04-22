@@ -13,6 +13,10 @@ public class TaskAutowireApplication {
        for(String str:appContext.getBeanDefinitionNames()){
            System.out.println(str);
        }
+
+
+        UserService userService = appContext.getBean(UserService.class);
+        userService.performTask();
     }
 
 }

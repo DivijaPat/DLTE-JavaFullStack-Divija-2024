@@ -1,14 +1,58 @@
-2024-04-12 16:41:54 [restartedMain] INFO  m.i.webservice.WebserviceApplication - Starting WebserviceApplication using Java 1.8.0_292 on WPF45DYX2 with PID 2992 (started by xxnlnnnd in C:\DLTE-JavaFullStack-Divija-2024\DLTE-FinalProject\InsuranceWebservice)
-2024-04-12 16:41:54 [restartedMain] INFO  m.i.webservice.WebserviceApplication - No active profile set, falling back to 1 default profile: "default"
-2024-04-12 16:41:55 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$a323f761] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-04-12 16:41:55 [restartedMain] INFO  o.s.w.s.a.s.AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
-2024-04-12 16:41:55 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
-2024-04-12 16:41:55 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2024-04-12 16:41:55 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
-2024-04-12 16:41:55 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2024-04-12 16:41:55 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 777 ms
-2024-04-12 16:41:55 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
-2024-04-12 16:41:55 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path ''
-2024-04-12 16:41:55 [restartedMain] INFO  m.i.webservice.WebserviceApplication - Started WebserviceApplication in 1.282 seconds (JVM running for 229.909)
-2024-04-12 16:41:57 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 2 class path changes (2 additions, 0 deletions, 0 modifications)
-2024-04-12 16:41:57 [Thread-16] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2024-04-18 17:51:31 [restartedMain] INFO  m.i.webservice.WebserviceApplication - Starting WebserviceApplication using Java 1.8.0_292 on WPF45DYX2 with PID 21548 (started by xxnlnnnd in C:\DLTE-JavaFullStack-Divija-2024\DLTE-FinalProject\InsuranceWebservice)
+2024-04-18 17:51:31 [restartedMain] INFO  m.i.webservice.WebserviceApplication - No active profile set, falling back to 1 default profile: "default"
+2024-04-18 17:51:31 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-04-18 17:51:31 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 1 ms. Found 0 JDBC repository interfaces.
+2024-04-18 17:51:31 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$cdc6ea5d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-04-18 17:51:31 [restartedMain] INFO  o.s.w.s.a.s.AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-04-18 17:51:31 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2024-04-18 17:51:31 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-04-18 17:51:31 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+2024-04-18 17:51:31 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-04-18 17:51:31 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 490 ms
+2024-04-18 17:51:32 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2024-04-18 17:51:32 [restartedMain] WARN  c.z.hikari.util.DriverDataSource - Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2024-04-18 17:51:32 [restartedMain] INFO  com.zaxxer.hikari.pool.PoolBase - HikariPool-2 - Driver does not support get/set network timeout for connections. (oracle.jdbc.driver.T4CConnection.getNetworkTimeout()I)
+2024-04-18 17:51:32 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2024-04-18 17:51:32 [restartedMain] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: cbf7abd5-03fe-402e-a4ff-ac22c6b022ca
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-04-18 17:51:32 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@323304f3, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@26032675, org.springframework.security.web.context.SecurityContextPersistenceFilter@6fb114bd, org.springframework.security.web.header.HeaderWriterFilter@36a9a954, org.springframework.security.web.csrf.CsrfFilter@c4521ea, org.springframework.security.web.authentication.logout.LogoutFilter@1bf8df5d, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@723e6adc, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@7e6d5d61, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@276ad0e3, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@28e8fa1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@22341a11, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@592cf40a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@516fb028, org.springframework.security.web.session.SessionManagementFilter@13c6841a, org.springframework.security.web.access.ExceptionTranslationFilter@6fd44391, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@a290d0]
+2024-04-18 17:51:32 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-04-18 17:51:32 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path ''
+2024-04-18 17:51:32 [restartedMain] INFO  m.i.webservice.WebserviceApplication - Started WebserviceApplication in 1.356 seconds (JVM running for 134.004)
+2024-04-18 17:51:34 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 21 class path changes (21 additions, 0 deletions, 0 modifications)
+2024-04-18 17:51:34 [Thread-22] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2024-04-18 17:51:34 [Thread-22] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+2024-04-18 17:51:34 [Thread-22] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+2024-04-18 18:22:44 [restartedMain] INFO  m.i.webservice.WebserviceApplication - Starting WebserviceApplication using Java 1.8.0_292 on WPF45DYX2 with PID 6388 (started by xxnlnnnd in C:\DLTE-JavaFullStack-Divija-2024\DLTE-FinalProject\InsuranceWebservice)
+2024-04-18 18:22:44 [restartedMain] INFO  m.i.webservice.WebserviceApplication - No active profile set, falling back to 1 default profile: "default"
+2024-04-18 18:22:44 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-04-18 18:22:44 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 0 ms. Found 0 JDBC repository interfaces.
+2024-04-18 18:22:44 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$57a5a86a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-04-18 18:22:44 [restartedMain] INFO  o.s.w.s.a.s.AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-04-18 18:22:44 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2024-04-18 18:22:44 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-04-18 18:22:44 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+2024-04-18 18:22:44 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-04-18 18:22:44 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 332 ms
+2024-04-18 18:22:45 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2024-04-18 18:22:45 [restartedMain] WARN  c.z.hikari.util.DriverDataSource - Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2024-04-18 18:22:45 [restartedMain] INFO  com.zaxxer.hikari.pool.PoolBase - HikariPool-2 - Driver does not support get/set network timeout for connections. (oracle.jdbc.driver.T4CConnection.getNetworkTimeout()I)
+2024-04-18 18:22:45 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2024-04-18 18:22:45 [restartedMain] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: eb3eb1e2-5c9a-4511-99bb-40d9874655d7
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-04-18 18:22:45 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@385c82aa, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@27ce83ee, org.springframework.security.web.context.SecurityContextPersistenceFilter@3e116150, org.springframework.security.web.header.HeaderWriterFilter@76f24d1, org.springframework.security.web.csrf.CsrfFilter@272eb595, org.springframework.security.web.authentication.logout.LogoutFilter@27cd677e, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@6c0b124e, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@7cf59d0a, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@13636c3b, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@382e348c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2a088e1e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@543f6e22, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5aa0a08f, org.springframework.security.web.session.SessionManagementFilter@553fbbb4, org.springframework.security.web.access.ExceptionTranslationFilter@162bdf9, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6533bd4]
+2024-04-18 18:22:45 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-04-18 18:22:45 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path ''
+2024-04-18 18:22:45 [restartedMain] INFO  m.i.webservice.WebserviceApplication - Started WebserviceApplication in 0.802 seconds (JVM running for 52.1)
+2024-04-18 18:22:46 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 21 class path changes (21 additions, 0 deletions, 0 modifications)
+2024-04-18 18:22:46 [Thread-22] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2024-04-18 18:22:46 [Thread-22] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+2024-04-18 18:22:46 [Thread-22] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.

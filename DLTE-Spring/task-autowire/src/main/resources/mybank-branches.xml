@@ -13,7 +13,7 @@
         <property name="ifsCode" value="ABD23434"/>
     </bean>
 
-    <bean id="branch5" class="com.ioc.Branch">
+    <bean id="branch5" class="com.ioc.Branch" lazy-init="true">
         <constructor-arg index="4" value="1234532343"/>
         <constructor-arg index="2" value="124"/>
         <constructor-arg index="3" value="MyBank"/>

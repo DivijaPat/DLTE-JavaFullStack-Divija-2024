@@ -1,5 +1,6 @@
 package mybank.insurance.webservice.security;//package com.payment.webservices.security;
 
+import com.mybank.dao.insurance.security.MyBankUsersServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -36,12 +37,13 @@ public class TransactionSecurity {
 
     @Bean
     protected SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
-        httpSecurity.csrf().disable();
+
         httpSecurity.httpBasic();
         httpSecurity.formLogin().usernameParameter("username").failureHandler(officialsFailureHandler).successHandler(officialsSuccessHandler);
         httpSecurity.authorizeRequests().antMatchers("/profiles/register").permitAll();
-        httpSecurity.authorizeRequests().antMatchers(HttpMethod.POST, "/transactions/new").permitAll();
-
+        httpSecurity.authorizeRequests().antMatchers("/v3/api-docs").permitAll();
+        //httpSecurity.authorizeRequests().antMatchers(HttpMethod.GET, "/module/insurance").permitAll();
+        httpSecurity.csrf().disable();
         httpSecurity.authorizeRequests().anyRequest().authenticated();
 
         // 3rd layer

@@ -11,7 +11,6 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
-
 @Configuration
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 public class TransactionSecurity {
@@ -21,10 +20,9 @@ public class TransactionSecurity {
     AuthenticationManager manager;
 
     @Bean
-    public PasswordEncoder passwordEncoder() {
+    public PasswordEncoder passwordEncoder(){
         return new BCryptPasswordEncoder();
     }
-
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
         httpSecurity.csrf().disable();
@@ -35,14 +33,15 @@ public class TransactionSecurity {
 
 
         // 3rd layer
-        AuthenticationManagerBuilder builder = httpSecurity.
+        AuthenticationManagerBuilder builder=httpSecurity.
                 getSharedObject(AuthenticationManagerBuilder.class);
         builder.userDetailsService(services);
-        manager = builder.build();
+        manager=builder.build();
         httpSecurity.authenticationManager(manager);
 
         return httpSecurity.build();
     }
-}
 
+
+}
 

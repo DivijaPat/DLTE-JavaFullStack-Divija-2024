@@ -1,5 +1,7 @@
 package mybank.insurance.webservice.security;
 
+import com.mybank.dao.insurance.security.MyBankUsers;
+import com.mybank.dao.insurance.security.MyBankUsersServices;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,9 +26,9 @@ public class OfficialsFailureHandler extends SimpleUrlAuthenticationFailureHandl
     @Override
     public void onAuthenticationFailure(HttpServletRequest request, HttpServletResponse response, AuthenticationException exception) throws IOException, ServletException {
         String username = request.getParameter("username");
-        MyBankUsers myBankUsers = service.findByUsername(username);
+        MyBankUsers myBankUsers = service.findByUsernameStream(username);
         if(myBankUsers!=null){
-            if(myBankUsers.getStatus()!=0){
+            if(myBankUsers.getCustomerStatus().equalsIgnoreCase("active")){
                 if(myBankUsers.getAttempts()< myBankUsers.getMaxAttempts()){
                     myBankUsers.setAttempts(myBankUsers.getAttempts()+1);
                     service.updateAttempts(myBankUsers);

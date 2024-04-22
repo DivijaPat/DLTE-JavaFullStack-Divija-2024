@@ -30,9 +30,9 @@ public class TransactionSecurity {
         httpSecurity.formLogin();
         httpSecurity.authorizeRequests().antMatchers("/profile/register").permitAll();
         httpSecurity.authorizeRequests().antMatchers("/transaction/add").hasAnyAuthority("admin");
-        httpSecurity.authorizeRequests().antMatchers("/transaction/send/*").hasAnyAuthority("customer");
-        httpSecurity.authorizeRequests().antMatchers("/transaction/receive/*").hasAnyAuthority("customer");
-        httpSecurity.authorizeRequests().antMatchers("/transaction/amount/*").hasAnyAuthority("customer");
+        httpSecurity.authorizeRequests().antMatchers("/transaction/send/*").hasAnyAuthority("admin");
+        httpSecurity.authorizeRequests().antMatchers("/transaction/receive/*").hasAnyAuthority("admin");
+        httpSecurity.authorizeRequests().antMatchers("/transaction/amount/*").hasAnyAuthority("admin");
         httpSecurity.authorizeRequests().antMatchers(HttpMethod.PUT).hasAnyAuthority("manager","admin");
         httpSecurity.authorizeRequests().antMatchers("/transaction/deleteBasedOnRangeOfDate").hasAnyAuthority("manger","admin");
         httpSecurity.authorizeRequests().antMatchers(HttpMethod.DELETE).hasAnyAuthority("admin");

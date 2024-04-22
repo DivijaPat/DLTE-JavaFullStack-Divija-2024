@@ -3,9 +3,10 @@ C:\DLTE-JavaFullStack-Divija-2024\DLTE-FinalProject\InsuranceDao\src\main\java\c
 C:\DLTE-JavaFullStack-Divija-2024\DLTE-FinalProject\InsuranceDao\src\main\java\com\mybank\dao\insurance\exceptions\InsuranceAvailableException.java
 C:\DLTE-JavaFullStack-Divija-2024\DLTE-FinalProject\InsuranceDao\src\main\java\com\mybank\dao\insurance\entity\Customer.java
 C:\DLTE-JavaFullStack-Divija-2024\DLTE-FinalProject\InsuranceDao\src\main\java\com\mybank\dao\insurance\exceptions\InsuranceAvailedException.java
+C:\DLTE-JavaFullStack-Divija-2024\DLTE-FinalProject\InsuranceDao\src\main\java\com\mybank\dao\insurance\security\MyBankUsersServices.java
 C:\DLTE-JavaFullStack-Divija-2024\DLTE-FinalProject\InsuranceDao\src\main\java\com\mybank\dao\insurance\entity\InsuranceAvailable.java
 C:\DLTE-JavaFullStack-Divija-2024\DLTE-FinalProject\InsuranceDao\src\main\java\com\mybank\dao\insurance\InsuranceDaoApplication.java
-C:\DLTE-JavaFullStack-Divija-2024\DLTE-FinalProject\InsuranceDao\src\main\java\com\mybank\dao\insurance\ServletInitializer.java
+C:\DLTE-JavaFullStack-Divija-2024\DLTE-FinalProject\InsuranceDao\src\main\java\com\mybank\dao\insurance\security\MyBankUsers.java
 C:\DLTE-JavaFullStack-Divija-2024\DLTE-FinalProject\InsuranceDao\src\main\java\com\mybank\dao\insurance\services\InsuranceServices.java
 C:\DLTE-JavaFullStack-Divija-2024\DLTE-FinalProject\InsuranceDao\src\main\java\com\mybank\dao\insurance\entity\InsuranceAvailed.java
 C:\DLTE-JavaFullStack-Divija-2024\DLTE-FinalProject\InsuranceDao\src\main\java\com\mybank\dao\insurance\exceptions\NoDataFoundException.java

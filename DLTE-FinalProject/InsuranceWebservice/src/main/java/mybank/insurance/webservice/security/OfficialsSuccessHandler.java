@@ -1,5 +1,7 @@
 package mybank.insurance.webservice.security;
 
+import com.mybank.dao.insurance.security.MyBankUsers;
+import com.mybank.dao.insurance.security.MyBankUsersServices;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,15 +24,15 @@ public class OfficialsSuccessHandler extends SimpleUrlAuthenticationSuccessHandl
     @Override
     public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication) throws IOException, ServletException {
         MyBankUsers myBankUsers= (MyBankUsers) authentication.getPrincipal();
-        if(myBankUsers.getAttempts()!=0){
+        if(myBankUsers.getCustomerStatus().equals("active")){
             if(myBankUsers.getAttempts()>1){
                 myBankUsers.setAttempts(1);
                 service.updateAttempts(myBankUsers);
             }
-            super.setDefaultTargetUrl("http://localhost:8082/insurancerepo/insurance.wsdl");
+            super.setDefaultTargetUrl("/insurancerepo/insurance.wsdl");
         }
         else{
-            logger.warn("Max attempts reached contact admin");
+            logger.warn("contact admin to activate");
             super.setDefaultTargetUrl("/login");
         }
         super.onAuthenticationSuccess(request, response, authentication);

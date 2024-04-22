@@ -1,5 +1,7 @@
 package mybank.insurance.webservice.security;
 
+import com.mybank.dao.insurance.security.MyBankUsers;
+import com.mybank.dao.insurance.security.MyBankUsersServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.PostMapping;

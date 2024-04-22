@@ -27,8 +27,9 @@ public class Customer {
     @NotNull(message = "{user.password.null}")
     @Size(min = 8, message = "{user.password.invalid}")
     private String password;
+    private Integer attempts;
 
-    public Customer(int customerId, String customerName, String customerAddress, String customerStatus, long customerContact, String username, String password) {
+    public Customer(int customerId, String customerName, String customerAddress, String customerStatus, long customerContact, String username, String password,Integer attempts) {
         this.customerId = customerId;
         this.customerName = customerName;
         this.customerAddress = customerAddress;
@@ -36,6 +37,15 @@ public class Customer {
         this.customerContact = customerContact;
         this.username = username;
         this.password = password;
+        this.attempts=attempts;
+    }
+
+    public Integer getAttempts() {
+        return attempts;
+    }
+
+    public void setAttempts(Integer attempts) {
+        this.attempts = attempts;
     }
 
     public int getCustomerId() {

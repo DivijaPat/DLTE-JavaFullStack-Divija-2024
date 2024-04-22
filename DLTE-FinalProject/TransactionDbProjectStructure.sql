@@ -155,3 +155,28 @@ alter table MYBANK_APP_Payee add constraint payee_seq  primary key(payee_id);
 ALTER TABLE  MYBANK_APP_Transaction ADD FOREIGN KEY(TRANSACTION_FROM) REFERENCES  MYBANK_APP_ACCOUNT(ACCOUNT_NUMBER) ON DELETE CASCADE;
  
 ALTER TABLE  MYBANK_APP_Transaction ADD FOREIGN KEY(TRANSACTION_TO) REFERENCES  MYBANK_APP_ACCOUNT(ACCOUNT_NUMBER) ON DELETE CASCADE;
+
+
+
+
+
+insert into Mybank_app_insuranceavailed(insurance_avail_id, 
+    customer_id, 
+    insurance_id, 
+    insurance_coverage,
+    insurance_premium, 
+    insurance_type, 
+    insurance_name, 
+    insurance_key_benefits, 
+    insurance_lifetime
+) values(INSURANCE_AVAIL_ID_SEQ.nextval,140,120,30000,1500,'Life insurance','LIC','Lifetime insurance coverage',10);
+
+insert into Mybank_app_insuranceavailed values(INSURANCE_AVAIL_ID_SEQ.nextval,141,121,45000,3000,'Health insurance','Reliance','Accidental death coverage',5);
+
+insert into Mybank_app_insuranceavailed values(INSURANCE_AVAIL_ID_SEQ.nextval,142,122,55000,5500,'Vehicle insurance','Bajaj','protection for unforeseen events',3);
+
+insert into Mybank_app_insuranceavailed values(INSURANCE_AVAIL_ID_SEQ.nextval,123,123,63000,3300,'Travel insurance','Explorer Elite Plan','Trip Cancellation Coverage',1);
+insert into Mybank_app_insuranceavailed values(INSURANCE_AVAIL_ID_SEQ.nextval,140,123,40000,3300,'Travel insurance','Explorer Elite Plan','Trip Cancellation Coverage',1);
+
+
+select * from mybank_app_customer;
