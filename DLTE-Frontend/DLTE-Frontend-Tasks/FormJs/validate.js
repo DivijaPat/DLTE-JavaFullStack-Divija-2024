@@ -11,7 +11,7 @@ function validateForm() {
     }
 
     let accountHolder = document.getElementById("accountHolder").value;
-    if (!/^[a-zA-Z\s]*$/.test(accountHolder)) {
+    if (!/^[a-zA-Z\s]+$/.test(accountHolder)) {
         document.getElementById("accountHolderError").innerText = "Account Holder must contain only letters";
         valid = false;
     } else {
