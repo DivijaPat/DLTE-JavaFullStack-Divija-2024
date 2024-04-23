@@ -67,12 +67,12 @@
 //        mockMvc = MockMvcBuilders.standaloneSetup(insuranceController).build();
 //        // Setup mocks
 //        List<InsuranceAvailed> mockInsuranceList = new ArrayList<>();
-//        mockInsuranceList.add(new InsuranceAvailed()); // Populate this with actual or dummy data
+//        mockInsuranceList.add(new InsuranceAvailed());
 //
-//        when(insuranceRepository.findByInsuranceCoverage(1000.0, 2000.0))
+//        when(insuranceRepository.findByInsuranceCoverage(101, 1000.0,2000.0))
 //                .thenReturn(mockInsuranceList);
-////        when(insuranceRepository.findByInsuranceCoverage(3000.0, 4000.0))
-////                .thenReturn(new ArrayList<>());
+//        when(insuranceRepository.findByInsuranceCoverage(101,3000.0, 4000.0))
+//                .thenReturn(new ArrayList<>());
 //    }
 //
 //    @Test

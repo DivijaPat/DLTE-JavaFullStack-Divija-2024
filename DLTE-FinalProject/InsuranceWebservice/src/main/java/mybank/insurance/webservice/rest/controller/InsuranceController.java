@@ -36,11 +36,8 @@ public class InsuranceController {
     MyBankUsersServices services;
     Logger logger = LoggerFactory.getLogger(InsuranceController.class);
     ResourceBundle resourceBundle = ResourceBundle.getBundle("application");
-
     public InsuranceController(InsuranceRepository insuranceRepository) {
     }
-
-
 
     @GetMapping("/insurance/{startLimit}/{endLimit}")
     public ResponseEntity<?> findByInsuranceCoverage(@PathVariable("startLimit") double startLimit, @PathVariable("endLimit") double endLimit) {
@@ -51,7 +48,7 @@ public class InsuranceController {
         try {
             insurance = insuranceRepository.findByInsuranceCoverage(customer.getCustomerId(), startLimit, endLimit);
             if (insurance.size() == 0) {
-                return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("no data found");
+                return ResponseEntity.status(HttpStatus.NOT_FOUND).body("no data found");
             }
             return ResponseEntity.ok(insurance);
         }catch (InsuranceAvailedException | SQLException noDataFound) {

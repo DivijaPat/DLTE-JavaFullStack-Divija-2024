@@ -29,13 +29,13 @@ public class MyBankUsersServices implements UserDetailsService {
         return myBankUsers;
     }
 
-//    public MyBankUsers findByUsername(String username){
-//        MyBankUsers myBankUsers = jdbcTemplate.queryForObject("select * from MYBANK_APP_CUSTOMER where username=?",
-//                new Object[]{username},new BeanPropertyRowMapper<>(MyBankUsers.class));
-//        return myBankUsers;
-//    }
-
-
+    @Override
+    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+        MyBankUsers users = findByUsernameStream(username);
+        if(users==null)
+            throw new UsernameNotFoundException(username);
+        return users;
+    }
 
     public List<MyBankUsers> findByUsername(){
         List<MyBankUsers> customer = jdbcTemplate.query("select * from MYBANK_APP_CUSTOMER",
@@ -51,7 +51,6 @@ public class MyBankUsersServices implements UserDetailsService {
     }
 
 
-
     public void updateAttempts(MyBankUsers myBankUsers){
         jdbcTemplate.update("update MYBANK_APP_CUSTOMER set attempts=? where username=?",
                 new Object[]{myBankUsers.getAttempts(),myBankUsers.getUsername()});
@@ -63,13 +62,6 @@ public class MyBankUsersServices implements UserDetailsService {
                 new Object[]{myBankUsers.getUsername()});
         logger.info("Status has changed");
     }
-    @Override
-    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        MyBankUsers users = findByUsernameStream(username);
-        if(users==null)
-            throw new UsernameNotFoundException(username);
-        return users;
-    }
 
     public List<Integer> getAccountNumberByCustomerId(int customerId) {
         String sql = "SELECT a.ACCOUNT_NUMBER " +
@@ -78,9 +70,8 @@ public class MyBankUsersServices implements UserDetailsService {
                 "WHERE c.CUSTOMER_ID = ?";
         try {
             return jdbcTemplate.queryForList(sql, new Object[]{customerId}, Integer.class);
-        } catch (Exception e) {
-            // Handle exceptions
-            e.printStackTrace();
+        } catch (Exception exception) {
+            exception.printStackTrace();
             return null;
         }
     }

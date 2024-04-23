@@ -75,27 +75,6 @@
 //        assertEquals(expectedServiceStatus.getMessage(), response.getServiceStatus().getMessage()); //pass
 //       assertTrue(response.getInsurance().isEmpty()); //pass
 //    }
-//
-//
-//
-//
-//
-//
-//
 //}
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+

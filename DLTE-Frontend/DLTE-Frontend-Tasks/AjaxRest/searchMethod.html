@@ -25,12 +25,11 @@
             })
     
             $("#search").click(()=>{
-                
+              
                 const startLimit = parseFloat($("#startLimit").val());
-                const endLimit=parseFloat($("#endLimit").val());
-                
+                const endLimit=  parseFloat($("#endLimit").val());
                 $.ajax({
-                    url:`http://localhost:8082/module/insurance/{double:startLimit}/{double:endLimit}`,    
+                    url:`http://localhost:8082/module/insurance/${startLimit}/${endLimit}`,    
                     type:"GET",
                     dataType:"json",
                     //Authorization
@@ -70,7 +69,7 @@
                 </div>
                 
                 <div class="m-5 row justify-content-around">
-                    <button id="search" class="col-1 btn btn-outline-primary"><p class="display-6 bi bi-search"></p></button>
+                    <button id="search" class="col-1 btn btn-outline-secondary"><p class="display-6 bi bi-search"></p></button>
                 </div>
             </div>
         </div>

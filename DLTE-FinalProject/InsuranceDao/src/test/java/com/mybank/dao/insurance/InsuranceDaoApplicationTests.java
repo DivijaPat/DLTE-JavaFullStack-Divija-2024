@@ -85,6 +85,7 @@
 //    }
 //    @Test
 //    public void testFindAllByCoverage() throws SQLException, NoDataFoundException {
+//        int customerId=1;
 //        Double startLimit = 20000D;
 //        Double endLimit = 40000D;
 //
@@ -93,10 +94,10 @@
 //
 //        List<InsuranceAvailed> expectedList = Stream.of(insuranceAvailed1, insuranceAvailed2).collect(Collectors.toList());
 //
-//        when(insuranceRepository.findByInsuranceCoverage(startLimit, endLimit)).thenReturn(expectedList);
+//        when(insuranceRepository.findByInsuranceCoverage(customerId,startLimit, endLimit)).thenReturn(expectedList);
 //
 //        // Call the method under test
-//        List<InsuranceAvailed> actualList = insuranceRepository.findByInsuranceCoverage(startLimit, endLimit);
+//        List<InsuranceAvailed> actualList = insuranceRepository.findByInsuranceCoverage(customerId,startLimit, endLimit);
 //
 //        assertNotNull(actualList, "The returned list should not be null"); //Pass
 //        assertEquals(expectedList.size(), actualList.size(), "The sizes of the expected and actual lists should match"); //Pass
@@ -104,6 +105,7 @@
 //    }
 //    @Test
 //    public void testFindAllByCoverageFailure() throws SQLException, NoDataFoundException {
+//        int customerId=1;
 //        Double startLimit = 20000D;
 //        Double endLimit = 40000D;
 //
@@ -112,13 +114,13 @@
 //
 //        List<InsuranceAvailed> expectedList = Stream.of(insuranceAvailed1, insuranceAvailed2).collect(Collectors.toList());
 //
-//        when(insuranceRepository.findByInsuranceCoverage(startLimit, endLimit)).thenReturn(expectedList);
+//        when(insuranceRepository.findByInsuranceCoverage(customerId,startLimit, endLimit)).thenReturn(expectedList);
 //
 //        // Call the method under test
-//        List<InsuranceAvailed> actualList = insuranceRepository.findByInsuranceCoverage(startLimit, endLimit);
+//        List<InsuranceAvailed> actualList = insuranceRepository.findByInsuranceCoverage(customerId,startLimit, endLimit);
 //
 //        assertNull(actualList);    //Fail
-//        verify(insuranceRepository, times(2)).findByInsuranceCoverage(startLimit, endLimit); //Fail
+//        verify(insuranceRepository, times(2)).findByInsuranceCoverage(customerId,startLimit, endLimit); //Fail
 //    }
 //
 //}

@@ -27,7 +27,6 @@ import java.util.stream.Collectors;
 @Service
 public class InsuranceServices implements InsuranceRepository {
     ResourceBundle resourceBundle = ResourceBundle.getBundle("application");
-
     Logger logger = LoggerFactory.getLogger(InsuranceRepository.class);
 
     @Autowired
@@ -77,16 +76,16 @@ public class InsuranceServices implements InsuranceRepository {
 
 
         try {
-            CallableStatementCreator csc = conn -> {
-                CallableStatement stmt = conn.prepareCall("{call fetch_insurance_data(?, ?, ?,?)}");
-                stmt.setDouble(1, startLimit);
-                stmt.setDouble(2, endLimit);
-                stmt.setInt(3, customerId);
-                stmt.registerOutParameter(4, OracleTypes.CURSOR);
-                return stmt;
+            CallableStatementCreator callableStatement = conn -> {
+                CallableStatement statement = conn.prepareCall("{call fetch_insurance_data(?, ?, ?,?)}");
+                statement.setDouble(1, startLimit);
+                statement.setDouble(2, endLimit);
+                statement.setInt(3, customerId);
+                statement.registerOutParameter(4, OracleTypes.CURSOR);
+                return statement;
             };
 
-            Map<String, Object> returnedExecution = jdbcTemplate.call(csc, Arrays.asList(
+            Map<String, Object> returnedExecution = jdbcTemplate.call(callableStatement, Arrays.asList(
                     new SqlParameter[]{
                             new SqlParameter(Types.NUMERIC),
                             new SqlParameter(Types.NUMERIC),
