@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg" style="background:linear-gradient(90deg,lavenderblush,lavender);">
+    <div class="container-fluid">
+        <a class="navbar-brand text-danger display-6 text-uppercase" style="font-weight: bold; font-size: larger" href="#">MyBank</a>
+        <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#myBankMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="myBankMenu">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/insurance/viewall}" style=" color: darkblue" href="#"><span class="bi bi-list-columns"></span> View All</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/insurance/viewbycoverage}" style=" color: darkblue" href="#"><span class="bi bi-list-columns"></span> View By Coverage Amount</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/insurance/logout}" style=" color: darkblue" href="#"><span class="bi bi-door-open"></span> Logout</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container mt-3">
+    <iframe id="dashboardFrame" name="dashboard" width="100%" height="600px" frameborder="0"></iframe>
+</div>
+</body>
+</html>

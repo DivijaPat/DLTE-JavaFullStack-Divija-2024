@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            /* gray background */
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            /* White background */
+            background-color: #fff;
+            border-radius: 8px;
+            /* Box shadow */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .message {
+            margin-top: 20px;
+            padding: 10px;
+            /* Success message background color */
+            background-color: #d4edda;
+            /* Success message text color */
+            color: #155724;
+            border-radius: 4px;
+        }
+
+        a {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        a:hover {
+            /* Darker blue on hover */
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <a th:href="@{/transactions/new}">New Transactions</a>
+    <div th:if="${message}" th:text="${message}" class="message"></div>
+</div>
+</body>
+</html>
