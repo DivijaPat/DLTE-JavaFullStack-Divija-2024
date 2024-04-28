@@ -27,29 +27,6 @@ const insuranceAvailed = [
         InsuranceLifetime: '3'
     }
 ];
-const insuranceAvailable = [
-    {
-        id: 1,
-        InsuranceType: 'Life',
-        InsuranceName: 'LIC',
-        InsuranceBenefits: 'Lifetime risk cover',
-        InsuranceLifetime: '10'
-    },
-    {
-        id: 2,
-        InsuranceType: 'Health',
-        InsuranceName: 'Reliance',
-        InsuranceBenefits: 'Accidental death cover',
-        InsuranceLifetime: '5'
-    },
-    {
-        id: 3,
-        InsuranceType: 'Vehicle',
-        InsuranceName: 'Bajaj',
-        InsuranceBenefits: 'Cashless claim settlement',
-        InsuranceLifetime: '3'
-    }
-];
 
 function createCard(insurance) {
     const card = document.createElement('div');
@@ -76,14 +53,6 @@ function filterPolicies() {
     );
 
     filteredPolicies.forEach(insurance => {
-        policyContainer.appendChild(createCard(insurance));
-    });
-}
-
-function listAllPolicies() {
-    const policyContainer = document.getElementById('policyContainer');
-    policyContainer.innerHTML = '';
-    insuranceAvailable.forEach(insurance => {
         policyContainer.appendChild(createCard(insurance));
     });
 }
