@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #161f65;
+    }
+
+    .login-form {
+      width: 340px;
+      margin: 250px auto;
+      font-size: 15px;
+      margin-right: 50px;
+     
+    }
+
+    .login-form form {
+      margin-bottom: 15px;
+      background: rgba(255, 255, 255, 0.2);
+      padding: 30px;
+      border-radius: 30px;
+      box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+    }
+
+    .login-form h2 {
+      margin: 0 0 30px;
+      color: white;
+    }
+
+    .form-control, .btn {
+      min-height: 38px;
+      border-radius: 20px;
+    }
+
+    .btn {
+      font-size: 15px;
+      width: 120px;
+      font-weight: bold;
+      border-radius: 30px;
+
+    }
+
+    .btn-primary {
+      background-color: #007bff;
+      border-color: #007bff;
+    }
+
+    .btn-primary:hover {
+      background-color: #0069d9;
+      border-color: #0062cc;
+    }
+
+    .bottom-text {
+      margin-top: 15px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-form">
+    <form  method="post">
+      <h2 class="text-center">Sign in</h2>
+      <div class="form-group">
+        <label>USERNAME</label>
+        <input type="text" class="form-control" placeholder="Username" required="required">
+      </div>
+      <div class="form-group">
+        <label>PASSWORD</label>
+        <input type="password" class="form-control" placeholder="Password" required="required">
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary btn-block">Login</button>
+      </div>    
+    </form>
+  </div>
+</body>
+</html>
