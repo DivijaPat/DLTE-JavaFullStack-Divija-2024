@@ -47,6 +47,9 @@ public class MyBankUsersServices implements UserDetailsService {
         List<MyBankUsers> customerList = findByUsername();
         MyBankUsers customer = customerList.stream()
                 .filter(customer1 -> customer1.getUsername().equals(username)).findFirst().orElse(null);
+        if(customer==null){
+            throw new UsernameNotFoundException(username);
+        }
         return customer;
     }
 

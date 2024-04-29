@@ -33,7 +33,6 @@ public class TransactionSecurity {
     OfficialsFailureHandler officialsFailureHandler;
     @Autowired
     OfficialsSuccessHandler officialsSuccessHandler;
-
     @Bean
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
@@ -43,9 +42,14 @@ public class TransactionSecurity {
     protected SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
 
         httpSecurity.httpBasic();
-        httpSecurity.formLogin().usernameParameter("username").failureHandler(officialsFailureHandler).successHandler(officialsSuccessHandler);
-        httpSecurity.authorizeRequests().antMatchers("/profiles/register").permitAll();
+        httpSecurity.formLogin().loginPage("/login/").
+                usernameParameter("username").
+                failureHandler(officialsFailureHandler).
+                successHandler(officialsSuccessHandler);        httpSecurity.authorizeRequests().antMatchers("/profiles/register").permitAll();
         httpSecurity.authorizeRequests().antMatchers("/v3/api-docs").permitAll();
+        httpSecurity.authorizeRequests().antMatchers("/login/**").permitAll();
+        httpSecurity.authorizeRequests().antMatchers("/pictures/**").permitAll();
+        httpSecurity.authorizeRequests().antMatchers("/styles/**").permitAll();
         httpSecurity.csrf().disable();
         httpSecurity.authorizeRequests().anyRequest().authenticated();
 

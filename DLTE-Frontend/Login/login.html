@@ -1,27 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login Page</title>
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <style>
+    .logo {
+      margin-left: 20px;
+      margin-top: 20px;
+      width: 70px;  
+      height: auto; 
+    }
     body {
-      background-color: #161f65;
+      background-color: #272d56;
+    }
+
+    header {
+      font-size: 30px; 
+      color: #ffffff;
+    }
+
+    .middle-left-text {
+      color: #ffffff;
+      font-size: 36px;
+      font-weight: bold;
+      top: 30%;
+      left: 20%;
+      position: absolute;
     }
 
     .login-form {
       width: 340px;
-      margin: 250px auto;
+      margin: 110px auto;
       font-size: 15px;
-      margin-right: 50px;
-     
+      margin-right: 130px;
     }
 
     .login-form form {
       margin-bottom: 15px;
       background: rgba(255, 255, 255, 0.2);
-      padding: 30px;
+      padding: 50px;
       border-radius: 30px;
       box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
     }
@@ -37,16 +56,17 @@
     }
 
     .btn {
+      margin-top: 40px;   
+      margin-left:60px;
       font-size: 15px;
-      width: 120px;
-      font-weight: bold;
+      width: 130px;
       border-radius: 30px;
-
+      font-weight: bold;
     }
 
     .btn-primary {
-      background-color: #007bff;
-      border-color: #007bff;
+      background-color: #df6b1d;
+      border-color: #df6b1d;
     }
 
     .btn-primary:hover {
@@ -61,21 +81,36 @@
   </style>
 </head>
 <body>
+    <div class="container">
+        <h1 th:if="${param.error}" style="text-align: center; margin-bottom: 20px;">
+            <span style="font-size: 20px; color: Red;" th:text="${session?.SPRING_SECURITY_LAST_EXCEPTION?.message}"></span>
+        </h1>
+  <header>
+    <img class="logo" src="image.png" alt="Logo">
+    <label>MY BANK</label>
+  </header>
+  <div class="container">
+    <div class="middle-left-text">
+      Login</br>
+      sign in to continue
+    </div>
+  </div>
   <div class="login-form">
-    <form  method="post">
+    <form th:action="@{/login}" method="post">
       <h2 class="text-center">Sign in</h2>
       <div class="form-group">
-        <label>USERNAME</label>
-        <input type="text" class="form-control" placeholder="Username" required="required">
+        <label for="username" class="text-white">USERNAME</label>
+        <input type="text" class="form-control" placeholder="Username" th:name="username" required="required">
       </div>
       <div class="form-group">
-        <label>PASSWORD</label>
-        <input type="password" class="form-control" placeholder="Password" required="required">
+        <label for="password" class="text-white">PASSWORD</label>
+        <input type="password" class="form-control" placeholder="Password" th:name="password" required="required">
       </div>
       <div class="form-group">
         <button type="submit" class="btn btn-primary btn-block">Login</button>
       </div>    
     </form>
   </div>
+    </div>
 </body>
 </html>

@@ -24,16 +24,17 @@ public class OfficialsSuccessHandler extends SimpleUrlAuthenticationSuccessHandl
     @Override
     public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication) throws IOException, ServletException {
         MyBankUsers myBankUsers= (MyBankUsers) authentication.getPrincipal();
-        if(myBankUsers.getCustomerStatus().equals("active")){
+        if(myBankUsers.getCustomerStatus().equalsIgnoreCase("active")){
             if(myBankUsers.getAttempts()>1){
                 myBankUsers.setAttempts(1);
                 service.updateAttempts(myBankUsers);
             }
-            super.setDefaultTargetUrl("/insurancerepo/insurance.wsdl");
+//            super.setDefaultTargetUrl("/insurancerepo/insurance.wsdl");
+            super.setDefaultTargetUrl("/login/dashboard");
         }
         else{
             logger.warn("contact admin to activate");
-            super.setDefaultTargetUrl("/login");
+            super.setDefaultTargetUrl("/login/?error="+"Account suspended contact admin to redeem\n");
         }
         super.onAuthenticationSuccess(request, response, authentication);
     }
