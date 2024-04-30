@@ -15,13 +15,14 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.ResourceBundle;
 
 @Component
 public class OfficialsFailureHandler extends SimpleUrlAuthenticationFailureHandler {
 
     @Autowired
     MyBankUsersServices service;
-
+    ResourceBundle resourceBundle= ResourceBundle.getBundle("app");
     Logger logger = LoggerFactory.getLogger(OfficialsFailureHandler.class);
 
     @Override
@@ -34,31 +35,28 @@ public class OfficialsFailureHandler extends SimpleUrlAuthenticationFailureHandl
                     if (myBankUsers.getAttempts() < myBankUsers.getMaxAttempts()) {
                         myBankUsers.setAttempts(myBankUsers.getAttempts() + 1);
                         service.updateAttempts(myBankUsers);
-                        logger.warn("Invalid credentials and attempts taken");
-                        exception = new LockedException((4 - myBankUsers.getAttempts()) + " Attempts remaining");
+                        logger.warn(resourceBundle.getString("invalid.credential"));
+                        exception = new LockedException((4 - myBankUsers.getAttempts()) + resourceBundle.getString("attempts.remain"));
                         String err = myBankUsers.getAttempts().toString() + " " + exception.getMessage();
                         logger.warn(err);
                         super.setDefaultFailureUrl("/login/?error=" + err);
 
                     } else {
                         service.updateStatus(myBankUsers);
-                        logger.warn("account suspended");
-                        exception = new LockedException("Max Attempts reached account is suspended");
+                        logger.warn(resourceBundle.getString("account.suspend"));
+                        exception = new LockedException(resourceBundle.getString("max.attempts"));
                         super.setDefaultFailureUrl("/login/?error=" + exception.getMessage());
 
                     }
                 }
-//            else{
-//                logger.warn("Account suspended contact admin to redeem");
-//            }
                 else {
-                    super.setDefaultFailureUrl("/login/?error=User not exists");
+                    super.setDefaultFailureUrl("/login/?error="+resourceBundle.getString("user.not.exists"));
                 }
             }
         } catch (UsernameNotFoundException e) {
             logger.info(e.toString());
-            logger.warn("account suspended");
-            exception = new LockedException("Username not found");
+            logger.warn(resourceBundle.getString("account.suspend"));
+            exception = new LockedException(resourceBundle.getString("username.not.found"));
             super.setDefaultFailureUrl("/login/?error=" + exception.getMessage());
         }
         super.onAuthenticationFailure(request, response, exception);

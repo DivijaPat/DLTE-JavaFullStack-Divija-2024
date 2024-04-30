@@ -21,6 +21,7 @@ import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 
 import java.util.Arrays;
+import java.util.ResourceBundle;
 import java.util.function.Predicate;
 
 @Configuration
@@ -37,7 +38,7 @@ public class TransactionSecurity {
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
-
+    ResourceBundle resourceBundle=ResourceBundle.getBundle("app");
     @Bean
     protected SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
 
@@ -66,7 +67,7 @@ public class TransactionSecurity {
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
-        configuration.setAllowedOriginPatterns(Arrays.asList("http://127.0.0.1:5500"));
+        configuration.setAllowedOriginPatterns(Arrays.asList(resourceBundle.getString("security.url")));
 
         configuration.addAllowedMethod("*");
         configuration.addAllowedHeader("*");

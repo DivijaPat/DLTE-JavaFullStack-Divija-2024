@@ -35,7 +35,7 @@ public class InsuranceController {
     @Autowired
     MyBankUsersServices services;
     Logger logger = LoggerFactory.getLogger(InsuranceController.class);
-    ResourceBundle resourceBundle = ResourceBundle.getBundle("application");
+    ResourceBundle resourceBundle = ResourceBundle.getBundle("app");
     public InsuranceController(InsuranceRepository insuranceRepository) {
     }
 
@@ -48,12 +48,12 @@ public class InsuranceController {
         try {
             insurance = insuranceRepository.findByInsuranceCoverage(customer.getCustomerId(), startLimit, endLimit);
             if (insurance.size() == 0) {
-                return ResponseEntity.status(HttpStatus.NOT_FOUND).body("no data found");
+                return ResponseEntity.status(HttpStatus.NOT_FOUND).body(resourceBundle.getString("insurance.data.null"));
             }
             return ResponseEntity.ok(insurance);
         }catch (InsuranceAvailedException | SQLException noDataFound) {
             logger.warn(resourceBundle.getString("insurance.data.null"));
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("no data found");
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(resourceBundle.getString("insurance.data.null"));
         }
         catch (Exception exception ) {
             logger.error(resourceBundle.getString("insurance.sql.error"));

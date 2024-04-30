@@ -11,6 +11,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.ResourceBundle;
 
 @Service
 public class MyBankUsersServices implements UserDetailsService {
@@ -18,6 +19,7 @@ public class MyBankUsersServices implements UserDetailsService {
     @Autowired
     private JdbcTemplate jdbcTemplate;
     Logger logger= LoggerFactory.getLogger(MyBankUsersServices.class);
+   ResourceBundle resourceBundle=ResourceBundle.getBundle("application");
 
     public MyBankUsers signUp(MyBankUsers myBankUsers){
        jdbcTemplate.update("insert into  MYBANK_APP_CUSTOMER values(CUSTOMERID_SEQ.nextval,?,?,?,?,?,?,?)",new Object[]{
@@ -57,13 +59,13 @@ public class MyBankUsersServices implements UserDetailsService {
     public void updateAttempts(MyBankUsers myBankUsers){
         jdbcTemplate.update("update MYBANK_APP_CUSTOMER set attempts=? where username=?",
                 new Object[]{myBankUsers.getAttempts(),myBankUsers.getUsername()});
-      logger.info("Attempts are updated");
+      logger.info(resourceBundle.getString("attempts.update"));
     }
 
     public void updateStatus(MyBankUsers myBankUsers){
         jdbcTemplate.update("update MYBANK_APP_CUSTOMER set CUSTOMER_STATUS='inactive' where username=?",
                 new Object[]{myBankUsers.getUsername()});
-        logger.info("Status has changed");
+        logger.info(resourceBundle.getString("status.change"));
     }
 
     public List<Integer> getAccountNumberByCustomerId(int customerId) {

@@ -13,12 +13,13 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.ResourceBundle;
 
 @Component
 public class OfficialsSuccessHandler extends SimpleUrlAuthenticationSuccessHandler {
     @Autowired
     MyBankUsersServices service;
-
+    ResourceBundle resourceBundle=ResourceBundle.getBundle("app");
     Logger logger= LoggerFactory.getLogger(OfficialsSuccessHandler.class);
 
     @Override
@@ -29,12 +30,11 @@ public class OfficialsSuccessHandler extends SimpleUrlAuthenticationSuccessHandl
                 myBankUsers.setAttempts(1);
                 service.updateAttempts(myBankUsers);
             }
-//            super.setDefaultTargetUrl("/insurancerepo/insurance.wsdl");
             super.setDefaultTargetUrl("/login/dashboard");
         }
         else{
-            logger.warn("contact admin to activate");
-            super.setDefaultTargetUrl("/login/?error="+"Account suspended contact admin to redeem\n");
+            logger.warn(resourceBundle.getString("contact.to.activate"));
+            super.setDefaultTargetUrl("/login/?errors="+resourceBundle.getString("contact.admin"));
         }
         super.onAuthenticationSuccess(request, response, authentication);
     }

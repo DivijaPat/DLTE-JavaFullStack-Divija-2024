@@ -27,7 +27,7 @@ import java.util.ResourceBundle;
 @Endpoint
 @ComponentScan("com.mybank.dao.insurance.remotes.InsuranceRepository")
 public class InsuranceAvailableEndpoint {
-    ResourceBundle resourceBundle = ResourceBundle.getBundle("application");
+    ResourceBundle resourceBundle = ResourceBundle.getBundle("app");
     Logger LOGGER = LoggerFactory.getLogger(InsuranceRepository.class);
     private final String url="http://insurance.services";
     //http://localhost:8082/insurancerepo/insurance.wsdl

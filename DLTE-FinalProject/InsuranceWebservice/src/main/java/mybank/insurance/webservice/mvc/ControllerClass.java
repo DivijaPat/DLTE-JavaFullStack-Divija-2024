@@ -11,24 +11,21 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import java.util.ResourceBundle;
 @Controller
 @RequestMapping("/login")
 class ControllerClass {
     @Autowired
     MyBankUsersServices myBankService;
 
-    Logger logger= LoggerFactory.getLogger(ControllerClass.class);
-
-    ResourceBundle bundle=ResourceBundle.getBundle("application");
-
     @GetMapping("/")
-    public String landing(){
+    public String landing()
+    {
         return "index";
     }
 
     @RequestMapping(value="/dashboard", method = RequestMethod.GET)
-    public String homePage(){
+    public String homePage()
+    {
         return "dashboard";
     }
 
