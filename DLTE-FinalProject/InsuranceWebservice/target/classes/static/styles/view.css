@@ -1,0 +1,108 @@
+.card {
+    background-color: rgba(11, 26, 123,0.7);
+    border-radius: 10px;
+
+}
+.card-container .card:hover{
+    transition: 0.3s;
+    transform: scale(1.1);
+}
+.card-header {
+    background-color: rgba(11, 26, 123, 0.2);
+}
+
+.form-group label {
+    font-weight: bold;
+}
+
+.card-content p {
+    max-height: 13em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.fst-poppins {
+    font-family: 'Poppins', sans-serif;
+}
+.fst-montserrat{
+    font-family: 'Montserrat', sans-serif;
+}
+.page-number {
+    cursor: pointer;
+    padding: 0.5rem 0.75rem;
+    margin: 0 2px;
+    color: #007bff;
+    background-color: #fff;
+    border: 2px solid #f25c19;
+
+    border-radius: 0.25rem;
+}
+
+.page-number:hover {
+    z-index: 2;
+    text-decoration: none;
+    background-color: #e9ecef;
+    border-color: #182052;
+}
+
+.card-container {
+    height: 400px; /* Fixed height for the card container */
+    overflow-y: auto; /* Add vertical scrollbar if content exceeds container height */
+    border: 1px solid #0000; /* Add border to the container */
+    border-radius: 10px; /* Optional: Add border radius for rounded corners */
+    padding: 15px; /* Adjust scrollbar width */
+}
+.page-number {
+    border-radius: 50%; /* Makes the container circular */
+    width: 40px; /* Set width to control the size of the container */
+    height: 40px; /* Set height to match the width for a perfect circle */
+    border: 1px solid #182052; /* Optional: Add border to the container */
+    display: flex; /* Optional: Use flexbox to center content vertically */
+    justify-content: center; /* Optional: Center content horizontally */
+    align-items: center;
+    color: #182052;
+    font-weight: bold;/* Optional: Center content vertically */
+}
+.page-item{
+    padding-right: 3px;
+    padding-left: 3px;
+
+}
+#prevPage,#nextPage {
+    display: flex;
+    justify-content: center; /* Horizontally center the icon */
+    align-items: center;
+    -webkit-text-fill-color: white;/* Vertically center the icon */
+    height: 40px; /* Set the height of the container */
+    width: 40px; /* Set the width of the container */
+    border-radius: 50%; /* Make the container circular */
+    background-color: #182052;
+}
+#prevPage,#nextPage:hover {
+
+    -webkit-text-fill-color: #182052;
+    background-color: white;
+    border: 2px solid #182052;
+}
+button {
+    background-color: #182052;
+    color: white;
+}
+button:hover {
+    background-color: orange;
+    border: 1px solid darkorange;
+}
+
+.apply {
+    background-color: #182052;
+    border:1px solid white;
+    border-radius: 10px;
+    font-weight: bold;
+    padding: 10px;
+}
+.apply:hover {
+    background-color: #f5854d;
+    border: 1px solid white;
+}

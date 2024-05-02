@@ -30,11 +30,11 @@ public class OfficialsSuccessHandler extends SimpleUrlAuthenticationSuccessHandl
                 myBankUsers.setAttempts(1);
                 service.updateAttempts(myBankUsers);
             }
-            super.setDefaultTargetUrl("/login/dashboard");
+            super.setDefaultTargetUrl("/web/dashboard");
         }
         else{
             logger.warn(resourceBundle.getString("contact.to.activate"));
-            super.setDefaultTargetUrl("/login/?errors="+resourceBundle.getString("contact.admin"));
+            super.setDefaultTargetUrl("/web/?errors="+resourceBundle.getString("contact.admin"));
         }
         super.onAuthenticationSuccess(request, response, authentication);
     }

@@ -75,14 +75,14 @@
 //                .thenReturn(new ArrayList<>());
 //    }
 //
-////    @Test
+//    @Test
 //    public void testFindByInsuranceCoverageReturnsData() throws Exception {
 //        mockMvc.perform(get("/module/insurance/{startLimit}/{endLimit}", 1000.0, 2000.0))
 //                .andExpect(status().isOk())
 //                .andExpect(jsonPath("$[0]").exists()); // Verify that the first element in the response exists
 //    }
 //
-////    @Test
+//    @Test
 //    public void testSearch() throws Exception {
 //        double start = 1000;
 //        double end=2000;
@@ -92,7 +92,7 @@
 //                .andExpect(status().isOk());
 //    }
 //
-////    @Test
+//    @Test
 //    public void testFindByInsuranceCoverageSuccess() throws Exception, NoDataFoundException {
 //        List<InsuranceAvailed> mockInsuranceList = Arrays.asList(new InsuranceAvailed());
 //

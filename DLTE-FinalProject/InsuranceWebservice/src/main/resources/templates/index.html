@@ -32,7 +32,7 @@
                 <h1 th:if="${param.errors}" style="font-family: 'Poppins', sans-serif;text-align: center;font-size: 5px;">
                     <span style="font-size:15px;color:red;" th:text="${param.errors}"></span>
                 </h1>
-                <form id="loginForm"  action="#" th:action="@{'/login/'}" method="post" >
+                <form id="loginForm"  action="#" th:action="@{'/web/'}" method="post" >
                     <div class="form-group">
                         <label for="username">Username</label>
                         <input type="text" name="username" class="form-control" id="username" placeholder="Enter Username" required>

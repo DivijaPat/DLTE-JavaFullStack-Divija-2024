@@ -59,7 +59,6 @@ public class InsuranceAvailable {
     public void setInsuranceKeyBenefits(String insuranceKeyBenefits) {
         this.insuranceKeyBenefits = insuranceKeyBenefits;
     }
-
     public Integer getInsuranceLifetime() {
         return insuranceLifetime;
     }

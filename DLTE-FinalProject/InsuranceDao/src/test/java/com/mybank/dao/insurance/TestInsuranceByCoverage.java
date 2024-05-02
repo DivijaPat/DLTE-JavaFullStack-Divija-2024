@@ -40,40 +40,41 @@
 //
 //
 //    @Test
-//    public void testFindAllByCoverage() throws SQLException, NoDataFoundException {
+//    public void testFindAllByCoverage() throws SQLException {
 //        Double startLimit = 20000D;
 //        Double endLimit = 40000D;
-//
+//        int id=101;
 //        InsuranceAvailed insuranceAvailed1 = new InsuranceAvailed(1, 1, 1, 20500D, 1400D, "life", "LIC", "lifetime risk coverage", 10);
 //        InsuranceAvailed insuranceAvailed2 = new InsuranceAvailed(2, 2, 2, 30000D, 1400D, "health", "reliance", "accidental death", 5);
 //
 //        List<InsuranceAvailed> expectedList = Stream.of(insuranceAvailed1, insuranceAvailed2).collect(Collectors.toList());
 //
-//        when(insuranceRepository.findByInsuranceCoverage(startLimit, endLimit)).thenReturn(expectedList);
+//        when(insuranceRepository.findByInsuranceCoverage(id,startLimit, endLimit)).thenReturn(expectedList);
 //
 //        // Call the method under test
-//        List<InsuranceAvailed> actualList = insuranceRepository.findByInsuranceCoverage(startLimit, endLimit);
+//        List<InsuranceAvailed> actualList = insuranceRepository.findByInsuranceCoverage(id,startLimit, endLimit);
 //
 //        assertNotNull(actualList, "The returned list should not be null"); //Pass
 //        assertEquals(expectedList.size(), actualList.size(), "The sizes of the expected and actual lists should match"); //Pass
 //        assertEquals(expectedList.get(0).getInsuranceAvailedId(), actualList.get(0).getInsuranceAvailedId(), "The IDs of the first elements should match"); //Pass
 //    }
 //    @Test
-//    public void testFindAllByCoverageFailure() throws SQLException, NoDataFoundException {
+//    public void testFindAllByCoverageFailure() throws SQLException {
 //        Double startLimit = 20000D;
 //        Double endLimit = 40000D;
-//
+//        int id=102;
 //        InsuranceAvailed insuranceAvailed1 = new InsuranceAvailed(1, 1, 1, 20500D, 1400D, "life", "LIC", "lifetime risk coverage", 10);
 //        InsuranceAvailed insuranceAvailed2 = new InsuranceAvailed(2, 2, 2, 30000D, 1400D, "health", "reliance", "accidental death", 5);
 //
 //        List<InsuranceAvailed> expectedList = Stream.of(insuranceAvailed1, insuranceAvailed2).collect(Collectors.toList());
 //
-//        when(insuranceRepository.findByInsuranceCoverage(startLimit, endLimit)).thenReturn(expectedList);
+//        when(insuranceRepository.findByInsuranceCoverage(id,startLimit, endLimit)).thenReturn(expectedList);
 //
 //        // Call the method under test
-//        List<InsuranceAvailed> actualList = insuranceRepository.findByInsuranceCoverage(startLimit, endLimit);
+//        List<InsuranceAvailed> actualList = insuranceRepository.findByInsuranceCoverage(id,startLimit, endLimit);
 //
-//        assertNull(actualList);    //Fail
-//        verify(insuranceRepository, times(2)).findByInsuranceCoverage(startLimit, endLimit); //Fail
+//        assertNotNull(actualList);    //Fail
+//        verify(insuranceRepository, times(1)).findByInsuranceCoverage(id,startLimit, endLimit); //Fail
 //    }
 //}
+//

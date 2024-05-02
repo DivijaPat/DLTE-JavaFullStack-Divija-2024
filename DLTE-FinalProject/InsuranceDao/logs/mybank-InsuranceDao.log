@@ -1,189 +1,66 @@
-2024-04-22 14:17:37 [restartedMain] INFO  c.m.d.i.InsuranceDaoApplication - Starting InsuranceDaoApplication using Java 1.8.0_292 on WPF45DYX2 with PID 2900 (C:\DLTE-JavaFullStack-Divija-2024\DLTE-FinalProject\InsuranceDao\target\classes started by xxnlnnnd in C:\DLTE-JavaFullStack-Divija-2024\DLTE-FinalProject\InsuranceDao)
-2024-04-22 14:17:37 [restartedMain] INFO  c.m.d.i.InsuranceDaoApplication - No active profile set, falling back to 1 default profile: "default"
-2024-04-22 14:17:37 [restartedMain] INFO  o.s.b.d.restart.ChangeableUrls - The Class-Path manifest attribute in C:\Users\xxnlnnnd\.m2\repository\com\oracle\database\security\oraclepki\21.5.0.0\oraclepki-21.5.0.0.jar referenced one or more files that do not exist: file:/C:/Users/xxnlnnnd/.m2/repository/com/oracle/database/security/oraclepki/21.5.0.0/osdt_core.jar,file:/C:/Users/xxnlnnnd/.m2/repository/com/oracle/database/security/oraclepki/21.5.0.0/osdt_cert.jar,file:/C:/Users/xxnlnnnd/.m2/repository/com/oracle/database/security/oraclepki/oracle.osdt/osdt_core.jar,file:/C:/Users/xxnlnnnd/.m2/repository/com/oracle/database/security/oraclepki/oracle.osdt/osdt_cert.jar
-2024-04-22 14:17:37 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2024-04-22 14:17:38 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-2024-04-22 14:17:38 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 15 ms. Found 0 JDBC repository interfaces.
-2024-04-22 14:17:39 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2024-04-22 14:17:39 [restartedMain] WARN  c.z.hikari.util.DriverDataSource - Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
-2024-04-22 14:17:39 [restartedMain] INFO  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Driver does not support get/set network timeout for connections. (oracle.jdbc.driver.T4CConnection.getNetworkTimeout()I)
-2024-04-22 14:17:39 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2024-04-22 14:17:39 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
-2024-04-22 14:17:39 [restartedMain] INFO  c.m.d.i.InsuranceDaoApplication - Started InsuranceDaoApplication in 2.597 seconds (JVM running for 3.717)
-2024-04-22 14:17:39 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2024-04-22 14:17:39 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2024-04-22 20:35:36 [restartedMain] INFO  c.m.d.i.InsuranceDaoApplication - Starting InsuranceDaoApplication using Java 1.8.0_292 on WPF45DYX2 with PID 3020 (C:\DLTE-JavaFullStack-Divija-2024\DLTE-FinalProject\InsuranceDao\target\classes started by xxnlnnnd in C:\DLTE-JavaFullStack-Divija-2024\DLTE-FinalProject\InsuranceDao)
-2024-04-22 20:35:36 [restartedMain] INFO  c.m.d.i.InsuranceDaoApplication - No active profile set, falling back to 1 default profile: "default"
-2024-04-22 20:35:36 [restartedMain] INFO  o.s.b.d.restart.ChangeableUrls - The Class-Path manifest attribute in C:\Users\xxnlnnnd\.m2\repository\com\oracle\database\security\oraclepki\21.5.0.0\oraclepki-21.5.0.0.jar referenced one or more files that do not exist: file:/C:/Users/xxnlnnnd/.m2/repository/com/oracle/database/security/oraclepki/21.5.0.0/osdt_core.jar,file:/C:/Users/xxnlnnnd/.m2/repository/com/oracle/database/security/oraclepki/21.5.0.0/osdt_cert.jar,file:/C:/Users/xxnlnnnd/.m2/repository/com/oracle/database/security/oraclepki/oracle.osdt/osdt_core.jar,file:/C:/Users/xxnlnnnd/.m2/repository/com/oracle/database/security/oraclepki/oracle.osdt/osdt_cert.jar
-2024-04-22 20:35:36 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2024-04-22 20:35:36 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2024-04-22 20:35:37 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-2024-04-22 20:35:37 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 16 ms. Found 0 JDBC repository interfaces.
-2024-04-22 20:35:38 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
-2024-04-22 20:35:38 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2024-04-22 20:35:38 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
-2024-04-22 20:35:38 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2024-04-22 20:35:38 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1859 ms
-2024-04-22 20:35:38 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2024-04-22 20:35:38 [restartedMain] WARN  c.z.hikari.util.DriverDataSource - Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
-2024-04-22 20:35:38 [restartedMain] INFO  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Driver does not support get/set network timeout for connections. (oracle.jdbc.driver.T4CConnection.getNetworkTimeout()I)
-2024-04-22 20:35:38 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2024-04-22 20:35:39 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@d7de678, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@57d20458, org.springframework.security.web.context.SecurityContextPersistenceFilter@a3aba6b, org.springframework.security.web.header.HeaderWriterFilter@3c669615, org.springframework.security.web.csrf.CsrfFilter@60e9176d, org.springframework.security.web.authentication.logout.LogoutFilter@590528b2, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@100dffb7, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@1e56858c, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@23deed1, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@4ed61d7d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@57cf558b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@28ad9ca6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3718017d, org.springframework.security.web.session.SessionManagementFilter@3a309f2d, org.springframework.security.web.access.ExceptionTranslationFilter@f8fd0df, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4f57b3be]
-2024-04-22 20:35:39 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
-2024-04-22 20:35:39 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path ''
-2024-04-22 20:35:39 [restartedMain] INFO  c.m.d.i.InsuranceDaoApplication - Started InsuranceDaoApplication in 3.568 seconds (JVM running for 4.656)
-2024-04-22 20:36:03 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 17 class path changes (0 additions, 16 deletions, 1 modification)
-2024-04-22 20:36:03 [Thread-14] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
-2024-04-22 20:36:03 [Thread-14] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2024-04-22 20:36:03 [Thread-14] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2024-04-22 20:36:03 [restartedMain] INFO  c.m.d.i.InsuranceDaoApplication - Starting InsuranceDaoApplication using Java 1.8.0_292 on WPF45DYX2 with PID 3020 (C:\DLTE-JavaFullStack-Divija-2024\DLTE-FinalProject\InsuranceDao\target\classes started by xxnlnnnd in C:\DLTE-JavaFullStack-Divija-2024\DLTE-FinalProject\InsuranceDao)
-2024-04-22 20:36:03 [restartedMain] INFO  c.m.d.i.InsuranceDaoApplication - No active profile set, falling back to 1 default profile: "default"
-2024-04-22 20:36:03 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-2024-04-22 20:36:03 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 1 ms. Found 0 JDBC repository interfaces.
-2024-04-22 20:36:03 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
-2024-04-22 20:36:03 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2024-04-22 20:36:03 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
-2024-04-22 20:36:04 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2024-04-22 20:36:04 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 308 ms
-2024-04-22 20:36:04 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
-2024-04-22 20:36:04 [restartedMain] WARN  c.z.hikari.util.DriverDataSource - Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
-2024-04-22 20:36:04 [restartedMain] INFO  com.zaxxer.hikari.pool.PoolBase - HikariPool-2 - Driver does not support get/set network timeout for connections. (oracle.jdbc.driver.T4CConnection.getNetworkTimeout()I)
-2024-04-22 20:36:04 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
-2024-04-22 20:36:04 [restartedMain] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
-
-Using generated security password: 4c9718d2-d87f-4049-859e-88a199682d00
-
-This generated password is for development use only. Your security configuration must be updated before running your application in production.
-
-2024-04-22 20:36:04 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@16933d3d, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@73f922e0, org.springframework.security.web.context.SecurityContextPersistenceFilter@7b25d42c, org.springframework.security.web.header.HeaderWriterFilter@4b4ffb51, org.springframework.security.web.csrf.CsrfFilter@1f679276, org.springframework.security.web.authentication.logout.LogoutFilter@570ee43b, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@54c2c6e1, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@cdf304f, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@31ce07b0, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@2b08e072, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@700fd036, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@442e2815, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5da97a8b, org.springframework.security.web.session.SessionManagementFilter@58721976, org.springframework.security.web.access.ExceptionTranslationFilter@33f70ad4, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1e5f6a0d]
-2024-04-22 20:36:04 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
-2024-04-22 20:36:04 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path ''
-2024-04-22 20:36:04 [restartedMain] INFO  c.m.d.i.InsuranceDaoApplication - Started InsuranceDaoApplication in 0.638 seconds (JVM running for 29.755)
-2024-04-22 20:36:04 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation delta:
-
-
-==========================
-CONDITION EVALUATION DELTA
-==========================
-
-
-Positive matches:
------------------
-
-   UserDetailsServiceAutoConfiguration matched:
-      - @ConditionalOnClass found required class 'org.springframework.security.authentication.AuthenticationManager' (OnClassCondition)
-      - @ConditionalOnBean (types: org.springframework.security.config.annotation.ObjectPostProcessor; SearchStrategy: all) found bean 'objectPostProcessor'; @ConditionalOnMissingBean (types: org.springframework.security.authentication.AuthenticationManager,org.springframework.security.authentication.AuthenticationProvider,org.springframework.security.core.userdetails.UserDetailsService,org.springframework.security.authentication.AuthenticationManagerResolver,org.springframework.security.oauth2.jwt.JwtDecoder,org.springframework.security.oauth2.server.resource.introspection.OpaqueTokenIntrospector,org.springframework.security.oauth2.client.registration.ClientRegistrationRepository,org.springframework.security.saml2.provider.service.registration.RelyingPartyRegistrationRepository; SearchStrategy: all) did not find any beans (OnBeanCondition)
-
-
-Negative matches:
------------------
-
-    None
-
-
-Exclusions:
------------
-
-    None
-
-
-Unconditional classes:
-----------------------
-
-    None
-
-
-
-2024-04-22 20:36:05 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 5 class path changes (5 additions, 0 deletions, 0 modifications)
-2024-04-22 20:36:05 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2024-04-22 20:36:05 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2024-04-22 20:36:05 [restartedMain] INFO  c.m.d.i.InsuranceDaoApplication - Starting InsuranceDaoApplication using Java 1.8.0_292 on WPF45DYX2 with PID 3020 (C:\DLTE-JavaFullStack-Divija-2024\DLTE-FinalProject\InsuranceDao\target\classes started by xxnlnnnd in C:\DLTE-JavaFullStack-Divija-2024\DLTE-FinalProject\InsuranceDao)
-2024-04-22 20:36:05 [restartedMain] INFO  c.m.d.i.InsuranceDaoApplication - No active profile set, falling back to 1 default profile: "default"
-2024-04-22 20:36:05 [Thread-20] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
-2024-04-22 20:36:05 [Thread-20] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
-2024-04-22 20:36:05 [Thread-20] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
-2024-04-22 20:36:06 [restartedMain] INFO  c.m.d.i.InsuranceDaoApplication - Starting InsuranceDaoApplication using Java 1.8.0_292 on WPF45DYX2 with PID 3020 (C:\DLTE-JavaFullStack-Divija-2024\DLTE-FinalProject\InsuranceDao\target\classes started by xxnlnnnd in C:\DLTE-JavaFullStack-Divija-2024\DLTE-FinalProject\InsuranceDao)
-2024-04-22 20:36:06 [restartedMain] INFO  c.m.d.i.InsuranceDaoApplication - No active profile set, falling back to 1 default profile: "default"
-2024-04-22 20:36:06 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-2024-04-22 20:36:06 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 4 ms. Found 0 JDBC repository interfaces.
-2024-04-22 20:36:06 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-2024-04-22 20:36:06 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 3 ms. Found 0 JDBC repository interfaces.
-2024-04-22 20:36:06 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
-2024-04-22 20:36:06 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2024-04-22 20:36:06 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
-2024-04-22 20:36:06 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2024-04-22 20:36:06 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 654 ms
-2024-04-22 20:36:06 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
-2024-04-22 20:36:06 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2024-04-22 20:36:06 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
-2024-04-22 20:36:06 [restartedMain] INFO  o.a.c.c.C.[Tomcat-1].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2024-04-22 20:36:06 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 345 ms
-2024-04-22 20:36:06 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Starting...
-2024-04-22 20:36:06 [restartedMain] WARN  c.z.hikari.util.DriverDataSource - Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
-2024-04-22 20:36:06 [restartedMain] INFO  com.zaxxer.hikari.pool.PoolBase - HikariPool-3 - Driver does not support get/set network timeout for connections. (oracle.jdbc.driver.T4CConnection.getNetworkTimeout()I)
-2024-04-22 20:36:06 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Start completed.
-2024-04-22 20:36:06 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'springApplicationAdminRegistrar' defined in class path resource [org/springframework/boot/autoconfigure/admin/SpringApplicationAdminJmxAutoConfiguration.class]: Invocation of init method failed; nested exception is javax.management.InstanceAlreadyExistsException: org.springframework.boot:type=Admin,name=SpringApplication
-2024-04-22 20:36:06 [restartedMain] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
-2024-04-22 20:36:06 [restartedMain] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
-
-Using generated security password: 89609ea2-3301-4675-953f-02d1f3445209
-
-This generated password is for development use only. Your security configuration must be updated before running your application in production.
-
-2024-04-22 20:36:06 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2024-04-22 20:36:06 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@94ecb1d, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@46826944, org.springframework.security.web.context.SecurityContextPersistenceFilter@56abfecb, org.springframework.security.web.header.HeaderWriterFilter@2ffb276e, org.springframework.security.web.csrf.CsrfFilter@302904a0, org.springframework.security.web.authentication.logout.LogoutFilter@2a153dbb, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@722baaa2, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@20e514e5, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@69d3b58c, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@1d0d3230, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7c09ced, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@71761b2c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1d3b8634, org.springframework.security.web.session.SessionManagementFilter@2edff3b4, org.springframework.security.web.access.ExceptionTranslationFilter@f6bda21, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@46013040]
-2024-04-22 20:36:06 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
-2024-04-22 20:36:06 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path ''
-2024-04-22 20:36:06 [restartedMain] INFO  c.m.d.i.InsuranceDaoApplication - Started InsuranceDaoApplication in 0.958 seconds (JVM running for 32.171)
-2024-04-22 20:36:06 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
-2024-04-22 20:36:06 [restartedMain] ERROR o.s.boot.SpringApplication - Application run failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'springApplicationAdminRegistrar' defined in class path resource [org/springframework/boot/autoconfigure/admin/SpringApplicationAdminJmxAutoConfiguration.class]: Invocation of init method failed; nested exception is javax.management.InstanceAlreadyExistsException: org.springframework.boot:type=Admin,name=SpringApplication
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804) ~[spring-beans-5.3.26.jar:5.3.26]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.26.jar:5.3.26]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.26.jar:5.3.26]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.26.jar:5.3.26]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.26.jar:5.3.26]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.26.jar:5.3.26]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.26.jar:5.3.26]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955) ~[spring-beans-5.3.26.jar:5.3.26]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:920) ~[spring-context-5.3.26.jar:5.3.26]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.26.jar:5.3.26]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.10.jar:2.7.10]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731) [spring-boot-2.7.10.jar:2.7.10]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) [spring-boot-2.7.10.jar:2.7.10]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307) [spring-boot-2.7.10.jar:2.7.10]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) [spring-boot-2.7.10.jar:2.7.10]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) [spring-boot-2.7.10.jar:2.7.10]
-	at com.mybank.dao.insurance.InsuranceDaoApplication.main(InsuranceDaoApplication.java:28) [classes/:na]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_292]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_292]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_292]
-	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_292]
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-2.7.10.jar:2.7.10]
-Caused by: javax.management.InstanceAlreadyExistsException: org.springframework.boot:type=Admin,name=SpringApplication
-	at com.sun.jmx.mbeanserver.Repository.addMBean(Repository.java:437) ~[na:1.8.0_292]
-	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerWithRepository(DefaultMBeanServerInterceptor.java:1898) ~[na:1.8.0_292]
-	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerDynamicMBean(DefaultMBeanServerInterceptor.java:966) ~[na:1.8.0_292]
-	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerObject(DefaultMBeanServerInterceptor.java:900) ~[na:1.8.0_292]
-	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerMBean(DefaultMBeanServerInterceptor.java:324) ~[na:1.8.0_292]
-	at com.sun.jmx.mbeanserver.JmxMBeanServer.registerMBean(JmxMBeanServer.java:522) ~[na:1.8.0_292]
-	at org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar.afterPropertiesSet(SpringApplicationAdminMXBeanRegistrar.java:129) ~[spring-boot-2.7.10.jar:2.7.10]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.26.jar:5.3.26]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.26.jar:5.3.26]
-	... 21 common frames omitted
-2024-04-22 20:36:54 [restartedMain] INFO  c.m.d.i.InsuranceDaoApplication - Starting InsuranceDaoApplication using Java 1.8.0_292 on WPF45DYX2 with PID 6776 (C:\DLTE-JavaFullStack-Divija-2024\DLTE-FinalProject\InsuranceDao\target\classes started by xxnlnnnd in C:\DLTE-JavaFullStack-Divija-2024\DLTE-FinalProject\InsuranceDao)
-2024-04-22 20:36:54 [restartedMain] INFO  c.m.d.i.InsuranceDaoApplication - No active profile set, falling back to 1 default profile: "default"
-2024-04-22 20:36:54 [restartedMain] INFO  o.s.b.d.restart.ChangeableUrls - The Class-Path manifest attribute in C:\Users\xxnlnnnd\.m2\repository\com\oracle\database\security\oraclepki\21.5.0.0\oraclepki-21.5.0.0.jar referenced one or more files that do not exist: file:/C:/Users/xxnlnnnd/.m2/repository/com/oracle/database/security/oraclepki/21.5.0.0/osdt_core.jar,file:/C:/Users/xxnlnnnd/.m2/repository/com/oracle/database/security/oraclepki/21.5.0.0/osdt_cert.jar,file:/C:/Users/xxnlnnnd/.m2/repository/com/oracle/database/security/oraclepki/oracle.osdt/osdt_core.jar,file:/C:/Users/xxnlnnnd/.m2/repository/com/oracle/database/security/oraclepki/oracle.osdt/osdt_cert.jar
-2024-04-22 20:36:54 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2024-04-22 20:36:55 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-2024-04-22 20:36:55 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 6 ms. Found 0 JDBC repository interfaces.
-2024-04-22 20:36:55 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2024-04-22 20:36:55 [restartedMain] WARN  c.z.hikari.util.DriverDataSource - Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
-2024-04-22 20:36:55 [restartedMain] INFO  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Driver does not support get/set network timeout for connections. (oracle.jdbc.driver.T4CConnection.getNetworkTimeout()I)
-2024-04-22 20:36:55 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2024-04-22 20:36:55 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
-2024-04-22 20:36:55 [restartedMain] INFO  c.m.d.i.InsuranceDaoApplication - Started InsuranceDaoApplication in 1.542 seconds (JVM running for 2.916)
-2024-04-22 20:36:55 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2024-04-22 20:36:55 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-05-02 01:06:39 [main] INFO  c.m.d.insurance.FindByCoverageTests - Starting FindByCoverageTests using Java 1.8.0_292 on WPF45DYX2 with PID 24080 (started by xxnlnnnd in C:\DLTE-JavaFullStack-Divija-2024\DLTE-FinalProject\InsuranceDao)
+2024-05-02 01:06:39 [main] INFO  c.m.d.insurance.FindByCoverageTests - No active profile set, falling back to 1 default profile: "default"
+2024-05-02 01:06:40 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-05-02 01:06:40 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 89 ms. Found 0 JDBC repository interfaces.
+2024-05-02 01:06:41 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-05-02 01:06:41 [main] WARN  c.z.hikari.util.DriverDataSource - Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2024-05-02 01:06:42 [main] INFO  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Driver does not support get/set network timeout for connections. (oracle.jdbc.driver.T4CConnection.getNetworkTimeout()I)
+2024-05-02 01:06:42 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-05-02 01:06:43 [main] INFO  c.m.d.insurance.FindByCoverageTests - Started FindByCoverageTests in 3.847 seconds (JVM running for 6.634)
+2024-05-02 01:06:43 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-05-02 01:06:43 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-05-02 01:08:22 [main] INFO  c.m.d.insurance.FindByCoverageTests - Starting FindByCoverageTests using Java 1.8.0_292 on WPF45DYX2 with PID 8444 (started by xxnlnnnd in C:\DLTE-JavaFullStack-Divija-2024\DLTE-FinalProject\InsuranceDao)
+2024-05-02 01:08:22 [main] INFO  c.m.d.insurance.FindByCoverageTests - No active profile set, falling back to 1 default profile: "default"
+2024-05-02 01:08:23 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-05-02 01:08:23 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 10 ms. Found 0 JDBC repository interfaces.
+2024-05-02 01:08:23 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-05-02 01:08:23 [main] WARN  c.z.hikari.util.DriverDataSource - Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2024-05-02 01:08:24 [main] INFO  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Driver does not support get/set network timeout for connections. (oracle.jdbc.driver.T4CConnection.getNetworkTimeout()I)
+2024-05-02 01:08:24 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-05-02 01:08:24 [main] INFO  c.m.d.insurance.FindByCoverageTests - Started FindByCoverageTests in 1.961 seconds (JVM running for 3.995)
+2024-05-02 01:08:24 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-05-02 01:08:24 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-05-02 01:08:52 [main] INFO  c.m.d.insurance.FindByCoverageTests - Starting FindByCoverageTests using Java 1.8.0_292 on WPF45DYX2 with PID 17064 (started by xxnlnnnd in C:\DLTE-JavaFullStack-Divija-2024\DLTE-FinalProject\InsuranceDao)
+2024-05-02 01:08:52 [main] INFO  c.m.d.insurance.FindByCoverageTests - No active profile set, falling back to 1 default profile: "default"
+2024-05-02 01:08:52 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-05-02 01:08:52 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 9 ms. Found 0 JDBC repository interfaces.
+2024-05-02 01:08:53 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-05-02 01:08:53 [main] WARN  c.z.hikari.util.DriverDataSource - Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2024-05-02 01:08:53 [main] INFO  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Driver does not support get/set network timeout for connections. (oracle.jdbc.driver.T4CConnection.getNetworkTimeout()I)
+2024-05-02 01:08:53 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-05-02 01:08:53 [main] INFO  c.m.d.insurance.FindByCoverageTests - Started FindByCoverageTests in 1.997 seconds (JVM running for 3.93)
+2024-05-02 01:08:53 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-05-02 01:08:53 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-05-02 01:09:14 [main] INFO  c.m.d.insurance.FindByCoverageTests - Starting FindByCoverageTests using Java 1.8.0_292 on WPF45DYX2 with PID 14100 (started by xxnlnnnd in C:\DLTE-JavaFullStack-Divija-2024\DLTE-FinalProject\InsuranceDao)
+2024-05-02 01:09:14 [main] INFO  c.m.d.insurance.FindByCoverageTests - No active profile set, falling back to 1 default profile: "default"
+2024-05-02 01:09:15 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-05-02 01:09:15 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 9 ms. Found 0 JDBC repository interfaces.
+2024-05-02 01:09:15 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-05-02 01:09:15 [main] WARN  c.z.hikari.util.DriverDataSource - Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2024-05-02 01:09:15 [main] INFO  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Driver does not support get/set network timeout for connections. (oracle.jdbc.driver.T4CConnection.getNetworkTimeout()I)
+2024-05-02 01:09:16 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-05-02 01:09:16 [main] INFO  c.m.d.insurance.FindByCoverageTests - Started FindByCoverageTests in 1.93 seconds (JVM running for 3.809)
+2024-05-02 01:09:16 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-05-02 01:09:16 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-05-02 01:13:47 [main] INFO  c.m.d.insurance.FindByCoverageTests - Starting FindByCoverageTests using Java 1.8.0_292 on WPF45DYX2 with PID 21268 (started by xxnlnnnd in C:\DLTE-JavaFullStack-Divija-2024\DLTE-FinalProject\InsuranceDao)
+2024-05-02 01:13:47 [main] INFO  c.m.d.insurance.FindByCoverageTests - No active profile set, falling back to 1 default profile: "default"
+2024-05-02 01:13:47 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-05-02 01:13:47 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 8 ms. Found 0 JDBC repository interfaces.
+2024-05-02 01:13:48 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-05-02 01:13:48 [main] WARN  c.z.hikari.util.DriverDataSource - Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2024-05-02 01:13:48 [main] INFO  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Driver does not support get/set network timeout for connections. (oracle.jdbc.driver.T4CConnection.getNetworkTimeout()I)
+2024-05-02 01:13:48 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-05-02 01:13:48 [main] INFO  c.m.d.insurance.FindByCoverageTests - Started FindByCoverageTests in 2.069 seconds (JVM running for 4.321)
+2024-05-02 01:13:48 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-05-02 01:13:48 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-05-02 01:14:28 [main] INFO  c.m.d.insurance.FindByCoverageTests - Starting FindByCoverageTests using Java 1.8.0_292 on WPF45DYX2 with PID 23620 (started by xxnlnnnd in C:\DLTE-JavaFullStack-Divija-2024\DLTE-FinalProject\InsuranceDao)
+2024-05-02 01:14:28 [main] INFO  c.m.d.insurance.FindByCoverageTests - No active profile set, falling back to 1 default profile: "default"
+2024-05-02 01:14:28 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-05-02 01:14:28 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7 ms. Found 0 JDBC repository interfaces.
+2024-05-02 01:14:29 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-05-02 01:14:29 [main] WARN  c.z.hikari.util.DriverDataSource - Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2024-05-02 01:14:29 [main] INFO  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Driver does not support get/set network timeout for connections. (oracle.jdbc.driver.T4CConnection.getNetworkTimeout()I)
+2024-05-02 01:14:29 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-05-02 01:14:29 [main] INFO  c.m.d.insurance.FindByCoverageTests - Started FindByCoverageTests in 2.047 seconds (JVM running for 4.472)
+2024-05-02 01:14:29 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-05-02 01:14:30 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

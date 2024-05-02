@@ -94,7 +94,7 @@ Caused by: org.springframework.context.annotation.ConflictingBeanDefinitionExcep
 	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:206)
 	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:174)
 	... 81 common frames omitted
-2024-04-29 17:53:59 [main] ERROR o.s.test.context.TestContextManager - Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@2254127a] to prepare test instance [mybank.insurance.webservice.EndpointTest@2b62442c]
+2024-04-29 17:53:59 [main] ERROR o.s.test.context.TestContextManager - Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@2254127a] to prepare test instance [mybank.insurance.webservice.ListAll@2b62442c]
 java.lang.IllegalStateException: Failed to load ApplicationContext
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:98)
 	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:124)

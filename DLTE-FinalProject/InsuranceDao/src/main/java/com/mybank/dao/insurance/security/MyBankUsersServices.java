@@ -9,10 +9,8 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 import java.util.ResourceBundle;
-
 @Service
 public class MyBankUsersServices implements UserDetailsService {
 
@@ -79,6 +77,16 @@ public class MyBankUsersServices implements UserDetailsService {
             exception.printStackTrace();
             return null;
         }
+    }
+    public String getCustomerName(String user) {
+        try {
+            String sql = "SELECT c.CUSTOMER_NAME FROM mybank_app_customer c WHERE c.username =  ?";
+            System.out.println(sql);
+            return jdbcTemplate.queryForObject(sql, new Object[]{user}, String.class);
+        } catch (Exception exception) {
+            exception.printStackTrace();
+        }
+        return null;
     }
     }
 

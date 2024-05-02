@@ -43,14 +43,14 @@ public class TransactionSecurity {
     protected SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
 
         httpSecurity.httpBasic();
-        httpSecurity.formLogin().loginPage("/login/").
-                usernameParameter("username").
-                failureHandler(officialsFailureHandler).
-                successHandler(officialsSuccessHandler);        httpSecurity.authorizeRequests().antMatchers("/profiles/register").permitAll();
+        httpSecurity.formLogin().loginPage("/web/").usernameParameter("username").failureHandler(officialsFailureHandler).successHandler(officialsSuccessHandler);
+        httpSecurity.authorizeRequests().antMatchers("/profiles/register").permitAll();
         httpSecurity.authorizeRequests().antMatchers("/v3/api-docs").permitAll();
-        httpSecurity.authorizeRequests().antMatchers("/login/**").permitAll();
+        httpSecurity.authorizeRequests().antMatchers("/web/**").permitAll();
         httpSecurity.authorizeRequests().antMatchers("/pictures/**").permitAll();
         httpSecurity.authorizeRequests().antMatchers("/styles/**").permitAll();
+        httpSecurity.authorizeRequests().antMatchers("/insurancerepo/insurance.wsdl").permitAll();
+
         httpSecurity.csrf().disable();
         httpSecurity.authorizeRequests().anyRequest().authenticated();
 
@@ -64,18 +64,5 @@ public class TransactionSecurity {
 
     }
 
-    @Bean
-    public CorsConfigurationSource corsConfigurationSource() {
-        CorsConfiguration configuration = new CorsConfiguration();
-        configuration.setAllowedOriginPatterns(Arrays.asList(resourceBundle.getString("security.url")));
-
-        configuration.addAllowedMethod("*");
-        configuration.addAllowedHeader("*");
-        configuration.setAllowCredentials(true);
-
-        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
-        source.registerCorsConfiguration("/**", configuration);
-        return source;
-    }
 }
 

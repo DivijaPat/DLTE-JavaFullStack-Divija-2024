@@ -33,7 +33,7 @@ public class InsuranceServices implements InsuranceRepository {
     private JdbcTemplate jdbcTemplate;
 
     @Override
-    public List<InsuranceAvailable> allAvailableInsurance() throws SQLSyntaxErrorException, InsuranceAvailableException, NoDataFoundException {
+    public List<InsuranceAvailable> allAvailableInsurance() throws SQLSyntaxErrorException, NoDataFoundException {
         List<InsuranceAvailable> insuranceList = null;
         try {
             //retrieve the insurance list
@@ -53,21 +53,21 @@ public class InsuranceServices implements InsuranceRepository {
     }
 
 
-    public class InsuranceAvailedRowMapper implements RowMapper<InsuranceAvailed> {
-        @Override
-        public InsuranceAvailed mapRow(ResultSet rs, int rowNum) throws SQLException {
-            InsuranceAvailed avail = new InsuranceAvailed();
-            avail.setInsuranceAvailedId(rs.getInt("INSURANCE_AVAIL_ID"));
-            avail.setCustomerId(rs.getInt("CUSTOMER_ID"));
-            avail.setInsuranceId(rs.getInt("INSURANCE_ID"));
-            avail.setInsurancePremium(rs.getDouble("INSURANCE_PREMIUM"));
-            avail.setInsuranceType(rs.getString("INSURANCE_TYPE"));
-            avail.setInsuranceName(rs.getString("INSURANCE_NAME"));
-            avail.setInsuranceKeyBenefits(rs.getString("INSURANCE_KEY_BENEFITS"));
-            avail.setInsuranceLifetime(rs.getInt("INSURANCE_LIFETIME"));
-            return avail;
-        }
-    }
+//    public class InsuranceAvailedRowMapper implements RowMapper<InsuranceAvailed> {
+//        @Override
+//        public InsuranceAvailed mapRow(ResultSet rs, int rowNum) throws SQLException {
+//            InsuranceAvailed avail = new InsuranceAvailed();
+//            avail.setInsuranceAvailedId(rs.getInt("INSURANCE_AVAIL_ID"));
+//            avail.setCustomerId(rs.getInt("CUSTOMER_ID"));
+//            avail.setInsuranceId(rs.getInt("INSURANCE_ID"));
+//            avail.setInsurancePremium(rs.getDouble("INSURANCE_PREMIUM"));
+//            avail.setInsuranceType(rs.getString("INSURANCE_TYPE"));
+//            avail.setInsuranceName(rs.getString("INSURANCE_NAME"));
+//            avail.setInsuranceKeyBenefits(rs.getString("INSURANCE_KEY_BENEFITS"));
+//            avail.setInsuranceLifetime(rs.getInt("INSURANCE_LIFETIME"));
+//            return avail;
+//        }
+//    }
 
 
 
@@ -77,7 +77,7 @@ public class InsuranceServices implements InsuranceRepository {
 
         try {
             CallableStatementCreator callableStatement = conn -> {
-                CallableStatement statement = conn.prepareCall("{call fetch_insurance_data(?, ?, ?,?)}");
+                CallableStatement statement = conn.prepareCall("{call fetch_insurance_data(?, ?, ?, ?)}");
                 statement.setDouble(1, startLimit);
                 statement.setDouble(2, endLimit);
                 statement.setInt(3, customerId);
@@ -123,26 +123,26 @@ public class InsuranceServices implements InsuranceRepository {
         }
     }
 
-    public class CardMapperAvailed implements RowMapper<InsuranceAvailed> {
-
-        @Override
-        public InsuranceAvailed mapRow(ResultSet rs, int rowNum) throws SQLException {
-            //create an instance of InsuranceAvailable
-            InsuranceAvailed availed = new InsuranceAvailed();
-
-            //Set properties of the InsuranceAvailable object from the ResultSet
-            availed.setInsuranceAvailedId(rs.getInt(1));
-            availed.setCustomerId(rs.getInt(2));
-            availed.setInsuranceId(rs.getInt(3));
-            availed.setInsuranceCoverage(rs.getDouble(4));
-            availed.setInsurancePremium(rs.getDouble(5));
-            availed.setInsuranceType(rs.getString(6));
-            availed.setInsuranceName(rs.getString(7));
-            availed.setInsuranceKeyBenefits(rs.getString(8));
-            availed.setInsuranceLifetime(rs.getInt(9));
-            return availed;
-        }
-    }
+//    public class CardMapperAvailed implements RowMapper<InsuranceAvailed> {
+//
+//        @Override
+//        public InsuranceAvailed mapRow(ResultSet rs, int rowNum) throws SQLException {
+//            //create an instance of InsuranceAvailable
+//            InsuranceAvailed availed = new InsuranceAvailed();
+//
+//            //Set properties of the InsuranceAvailable object from the ResultSet
+//            availed.setInsuranceAvailedId(rs.getInt(1));
+//            availed.setCustomerId(rs.getInt(2));
+//            availed.setInsuranceId(rs.getInt(3));
+//            availed.setInsuranceCoverage(rs.getDouble(4));
+//            availed.setInsurancePremium(rs.getDouble(5));
+//            availed.setInsuranceType(rs.getString(6));
+//            availed.setInsuranceName(rs.getString(7));
+//            availed.setInsuranceKeyBenefits(rs.getString(8));
+//            availed.setInsuranceLifetime(rs.getInt(9));
+//            return availed;
+//        }
+//    }
 }
 
 

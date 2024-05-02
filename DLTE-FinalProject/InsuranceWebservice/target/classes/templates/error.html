@@ -1,13 +1,53 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-    <title>Error page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error Page</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        .custom-card {
+            width: 350px;
+            height: 250px;
+            border-radius: 50px;
+            background-color: #043670;
+            color: #ffffff;
+        }
+        .center-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: 'poppins-bold', sans-serif !important;
+            font-size: 150px;
+            font-weight: bold;
+        }
+        .vertical-center {
+            padding-top: 250px;
+        }
+    </style>
 </head>
 <body>
-<h1>
-    Invalid endpoint/ URL
-</h1>
+<div class="container-fluid vertical-center">
+    <div class="row justify-content-center">
+        <div class="text-center">
+            <div class="card custom-card shadow-lg">
+                <div class="card-body">
+                    <p class="card-text center-text">404</p>
+                </div>
+            </div>
+            <div class="text-center">
+                <p class="font-weight-bold display-5"><h3>PAGE NOT FOUND.</h3></p>
+            </div>
+            <div class="text-center">
+                <a href="index.html" class="btn btn-primary rounded-pill" style="background-color: rgb(253, 141, 12);">
+                    <i class="fas fa-home mr-2"></i>
+                    Home Page
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>

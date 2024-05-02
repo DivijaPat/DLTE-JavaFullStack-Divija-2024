@@ -23,7 +23,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 
-
 @Endpoint
 @ComponentScan("com.mybank.dao.insurance.remotes.InsuranceRepository")
 public class InsuranceAvailableEndpoint {
