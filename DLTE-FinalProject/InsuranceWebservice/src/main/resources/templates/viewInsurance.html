@@ -39,17 +39,17 @@
         </div>
         <!-- Search by Coverage -->
         <div class="col-6">
-            <div class="form-group" style="border: 1px solid #182052; padding: 10px;">
+            <div class="form-group" id=coverageForm style="border: 1px solid #182052; padding: 10px;">
                 <h6 class="mb-3" style="color: #182052; font-weight: bold;">Find by Coverage</h6>
                 <div class="form-row">
                     <div class="col">
-                        <input type="text" class="form-control" placeholder="Enter Minimum Amount">
+                        <input type="text" id="minLimit" class="form-control" placeholder="Enter Minimum Amount">
                     </div>
                     <div class="col">
-                        <input type="text" class="form-control" placeholder="Enter Maximum Amount">
+                        <input type="text" id="maxLimit" class="form-control" placeholder="Enter Maximum Amount">
                     </div>
                     <div class="col-auto" style="padding-left: 0;">
-                        <button style=" padding: 5px" th:href="@{'/web/filterByCoverage'}" type="button">Search</button>
+                        <button style=" padding: 5px"  id="searchByCoverage" th:href="@{'/web/filterByCoverage'}" type="button">Search</button>
                     </div>
                 </div>
             </div>

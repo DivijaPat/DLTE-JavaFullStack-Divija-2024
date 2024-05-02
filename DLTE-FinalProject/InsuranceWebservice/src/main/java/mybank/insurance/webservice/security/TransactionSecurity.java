@@ -50,6 +50,7 @@ public class TransactionSecurity {
         httpSecurity.authorizeRequests().antMatchers("/pictures/**").permitAll();
         httpSecurity.authorizeRequests().antMatchers("/styles/**").permitAll();
         httpSecurity.authorizeRequests().antMatchers("/insurancerepo/insurance.wsdl").permitAll();
+        httpSecurity.logout().permitAll();
 
         httpSecurity.csrf().disable();
         httpSecurity.authorizeRequests().anyRequest().authenticated();

@@ -2,7 +2,6 @@ package com.mybank.dao.insurance.services;
 
 import com.mybank.dao.insurance.entity.InsuranceAvailable;
 import com.mybank.dao.insurance.entity.InsuranceAvailed;
-import com.mybank.dao.insurance.exceptions.InsuranceAvailableException;
 import com.mybank.dao.insurance.exceptions.InsuranceAvailedException;
 import com.mybank.dao.insurance.exceptions.NoDataFoundException;
 import com.mybank.dao.insurance.remotes.InsuranceRepository;
@@ -13,14 +12,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.*;
 import org.springframework.jdbc.core.*;
 import org.springframework.stereotype.Service;
-
-import java.math.BigDecimal;
 import java.sql.*;
 import java.util.*;
-import java.util.stream.Collectors;
-
-
-
 /* This service retrieves all the record from the oracle db and returns the list of the records.
  This service also throws the required exception if encountered.*/
 
@@ -51,25 +44,6 @@ public class InsuranceServices implements InsuranceRepository {
         }
         return insuranceList;
     }
-
-
-//    public class InsuranceAvailedRowMapper implements RowMapper<InsuranceAvailed> {
-//        @Override
-//        public InsuranceAvailed mapRow(ResultSet rs, int rowNum) throws SQLException {
-//            InsuranceAvailed avail = new InsuranceAvailed();
-//            avail.setInsuranceAvailedId(rs.getInt("INSURANCE_AVAIL_ID"));
-//            avail.setCustomerId(rs.getInt("CUSTOMER_ID"));
-//            avail.setInsuranceId(rs.getInt("INSURANCE_ID"));
-//            avail.setInsurancePremium(rs.getDouble("INSURANCE_PREMIUM"));
-//            avail.setInsuranceType(rs.getString("INSURANCE_TYPE"));
-//            avail.setInsuranceName(rs.getString("INSURANCE_NAME"));
-//            avail.setInsuranceKeyBenefits(rs.getString("INSURANCE_KEY_BENEFITS"));
-//            avail.setInsuranceLifetime(rs.getInt("INSURANCE_LIFETIME"));
-//            return avail;
-//        }
-//    }
-
-
 
     @Override
     public List<InsuranceAvailed> findByInsuranceCoverage(int customerId, double startLimit, double endLimit) throws SQLException {
@@ -123,26 +97,6 @@ public class InsuranceServices implements InsuranceRepository {
         }
     }
 
-//    public class CardMapperAvailed implements RowMapper<InsuranceAvailed> {
-//
-//        @Override
-//        public InsuranceAvailed mapRow(ResultSet rs, int rowNum) throws SQLException {
-//            //create an instance of InsuranceAvailable
-//            InsuranceAvailed availed = new InsuranceAvailed();
-//
-//            //Set properties of the InsuranceAvailable object from the ResultSet
-//            availed.setInsuranceAvailedId(rs.getInt(1));
-//            availed.setCustomerId(rs.getInt(2));
-//            availed.setInsuranceId(rs.getInt(3));
-//            availed.setInsuranceCoverage(rs.getDouble(4));
-//            availed.setInsurancePremium(rs.getDouble(5));
-//            availed.setInsuranceType(rs.getString(6));
-//            availed.setInsuranceName(rs.getString(7));
-//            availed.setInsuranceKeyBenefits(rs.getString(8));
-//            availed.setInsuranceLifetime(rs.getInt(9));
-//            return availed;
-//        }
-//    }
 }
 
 

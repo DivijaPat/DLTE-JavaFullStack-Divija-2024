@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head>
+<head th:replace="dashboard::new">
     <title>Insurance</title>
     <link rel="stylesheet" type="text/css" th:href="@{/styles.css}">
     <link rel="stylesheet" th:href="@{https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css}">
@@ -10,6 +10,7 @@
 </head>
 </head>
 <body>
+<div th:replace="dashboard::menu"></div>
 <nav class="navbar navbar-expand-lg" style="background:linear-gradient(90deg,white,lavender);">
     <div class="container-fluid">
         <a class="navbar-brand  display-6 text-uppercase" style="font-weight: bold; color: darkblue" href="#">MyBank</a>
