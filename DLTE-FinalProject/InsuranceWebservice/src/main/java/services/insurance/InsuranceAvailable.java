@@ -56,6 +56,13 @@ public class InsuranceAvailable {
     protected String insuranceKeyBenefits;
     protected int insuranceLifetime;
 
+    public InsuranceAvailable(int i, String life, String maxlife, String lifetime_coverage, int i1) {
+    }
+
+    public InsuranceAvailable() {
+
+    }
+
     /**
      * Gets the value of the insuranceId property.
      * 

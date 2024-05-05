@@ -81,7 +81,6 @@ public class MyBankUsersServices implements UserDetailsService {
     public String getCustomerName(String user) {
         try {
             String sql = "SELECT c.CUSTOMER_NAME FROM mybank_app_customer c WHERE c.username =  ?";
-            System.out.println(sql);
             return jdbcTemplate.queryForObject(sql, new Object[]{user}, String.class);
         } catch (Exception exception) {
             exception.printStackTrace();

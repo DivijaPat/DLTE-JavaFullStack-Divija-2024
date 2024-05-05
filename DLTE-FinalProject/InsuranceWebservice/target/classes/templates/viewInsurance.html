@@ -149,38 +149,6 @@
             });
         };
 
-        // const fetchInsuranceByCoverage = (minLimit, maxLimit) => {
-        //     insuranceData.length = 0; // Clear existing insurance data
-        //
-        //     // Fetch data via REST API
-        //     $.ajax({
-        //         url: `/module/insurance/${minLimit}/${maxLimit}`,
-        //         type: "GET",
-        //         success: function(response) {
-        //             console.log(response)
-        //             const insurance = response;
-        //             // Extract insurance details
-        //             const insurancepremium = insurance.INSURANCE_PREMIUM;
-        //             const insuranceType = insurance.insuranceType;
-        //             const insuranceName = insurance.insuranceName;
-        //             const insuranceKeyBenefits = insurance.insuranceKeyBenefits;
-        //             const insuranceLifetime = insurance.insuranceLifetime;
-        //
-        //             insuranceData.push({insurancepremium,insuranceType,insuranceName,insuranceKeyBenefits,insuranceLifetime})
-        //
-        //             generateInsuranceCards();
-        //         },
-        //         error: function(xhr, status, error) {
-        //             console.error("Error fetching insurance data:", error);
-        //             if (xhr.status === 404) {
-        //                 alert("Insurance not found.");
-        //             } else {
-        //                 alert("An error occurred while fetching insurance data.");
-        //             }
-        //         }
-        //     });
-        // };
-
         const fetchInsuranceByCoverage = (minLimit, maxLimit) => {
             insuranceData.length = 0; // Clear existing insurance data
 
@@ -250,11 +218,11 @@
                                         <p class="card-text fst-poppins">Key Benefits: ${insurance.INSURANCE_KEY_BENEFITS}</p>
                                         <p class="card-text font-poppins">Insurance Lifetime: ${insurance.INSURANCE_LIFETIME}</p>
                                     </h5>
-                                    <input type="hidden" id="insuranceID${index}" value="${insurance.INSURANCE_ID}">
-                                    <input type="hidden" id="insuranceType${index}" value="${insurance.INSURANCE_TYPE}">
-                                    <input type="hidden" id="insuranceName${index}" value="${insurance.INSURANCE_NAME}">
-                                    <input type="hidden" id="insuranceKeyBenefits${index}" value="${insurance.INSURANCE_KEY_BENEFITS}">
-                                    <input type="hidden" id="insuranceLifetime${index}" value="${insurance.INSURANCE_LIFETIME}">
+                                    <input type="hidden" id="insuranceID${index}" value="${insurance.insurance_id}">
+                                    <input type="hidden" id="insuranceType${index}" value="${insurance.insurance_type}">
+                                    <input type="hidden" id="insuranceName${index}" value="${insurance.insurance_name}">
+                                    <input type="hidden" id="insuranceKeyBenefits${index}" value="${insurance.insurance_key_benefits}">
+                                    <input type="hidden" id="insuranceLifetime${index}" value="${insurance.insurance_lifetime}">
                                     <button type="button"  class="apply">Apply Insurance</button>
                                 </div>
                             </div>
@@ -347,13 +315,6 @@
 
             generatePageNumbers();
         };
-
-
-
-
-
-
-
 
         // Function to generate page numbers
         const generatePageNumbers = () => {
