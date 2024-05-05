@@ -88,15 +88,6 @@ public class MyBankUsersServices implements UserDetailsService {
         }
         return null;
     }
-    public String getPassword(String username){
-        try {
-            String sql = "SELECT c.Password FROM mybank_app_customer c WHERE c.username =  ?";
-            System.out.println(sql);
-            return jdbcTemplate.queryForObject(sql, new Object[]{username}, String.class);
-        } catch (Exception exception) {
-            exception.printStackTrace();
-        }
-        return null;
-    }
+
     }
 

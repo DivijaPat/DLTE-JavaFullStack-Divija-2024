@@ -35,11 +35,16 @@ public class InsuranceController {
     }
 
     @GetMapping("/insurance/{startLimit}/{endLimit}")
-    public ResponseEntity<?> findByInsuranceCoverage(@PathVariable("startLimit") double startLimit, @PathVariable("endLimit") double endLimit) {
+    public ResponseEntity<?> findByInsuranceCoverage(@PathVariable("startLimit") String minLimit, @PathVariable("endLimit") String maxLimit) {
         String username = getUser();
         MyBankUsers customer=services.findByUsernameStream(username);
         List<InsuranceAvailed> insurance;
         try {
+            if (!isValidStartLimit(minLimit)&&!isValidEndLimit(maxLimit)) {
+                return ResponseEntity.badRequest().body(resourceBundle.getString("enter.proper.limits"));
+            }
+            Double startLimit=Double.valueOf(minLimit);
+            Double endLimit=Double.valueOf(maxLimit);
             insurance = insuranceRepository.findByInsuranceCoverage(customer.getCustomerId(), startLimit, endLimit);
             if (insurance.size() == 0) {
                 return ResponseEntity.status(HttpStatus.OK).body(resourceBundle.getString("insurance.data.null"));
@@ -54,6 +59,12 @@ public class InsuranceController {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(exception.getMessage());
         }
     }
+    private boolean isValidStartLimit(String startlimit){
+        return startlimit != null && !startlimit.isEmpty() && startlimit.matches("^\\d*\\.?\\d+$");
+    }
+    private boolean isValidEndLimit(String endLimit){
+        return endLimit != null && !endLimit.isEmpty() && endLimit.matches("^\\d*\\.?\\d+$");
+    }
 
 
 
@@ -61,7 +72,6 @@ public class InsuranceController {
     public String getCustomerName() {
         String name = getUser();
         String user = services.getCustomerName(name);
-        System.out.println(user);
         return user;
     }
 

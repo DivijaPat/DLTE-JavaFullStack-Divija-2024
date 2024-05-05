@@ -1,6 +1,6 @@
 body {
-    /*background-image:url('/pictures/login-image.jpg');*/
-    background-color: rgba(5, 14, 64, 0.99);
+    background-image:url('/pictures/login.jpg');
+    /*background-color: rgba(5, 14, 64, 0.99);*/
     background-size: cover;
     background-position: center;
     height: 100vh;
