@@ -57,7 +57,7 @@ public class TransactionSecurity {
         httpSecurity.logout().permitAll();
         httpSecurity.authorizeRequests().anyRequest().authenticated();
 
-        httpSecurity.cors();
+//        httpSecurity.cors();
         AuthenticationManagerBuilder builder = httpSecurity.getSharedObject(AuthenticationManagerBuilder.class);
         builder.userDetailsService(services);
         manager = builder.build();

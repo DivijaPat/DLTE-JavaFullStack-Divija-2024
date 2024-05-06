@@ -1,10 +1,10 @@
 package mybank.insurance.webservice.rest.controller;
 
 
+import com.mybank.dao.insurance.entity.Customer;
 import com.mybank.dao.insurance.entity.InsuranceAvailed;
 import com.mybank.dao.insurance.exceptions.InsuranceAvailedException;
 import com.mybank.dao.insurance.remotes.InsuranceRepository;
-import com.mybank.dao.insurance.security.MyBankUsers;
 import com.mybank.dao.insurance.security.MyBankUsersServices;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -31,13 +31,11 @@ public class InsuranceController {
     MyBankUsersServices services;
     Logger logger = LoggerFactory.getLogger(InsuranceController.class);
     ResourceBundle resourceBundle = ResourceBundle.getBundle("app");
-    public InsuranceController(InsuranceRepository insuranceRepository) {
-    }
 
     @GetMapping("/insurance/{startLimit}/{endLimit}")
     public ResponseEntity<?> findByInsuranceCoverage(@PathVariable("startLimit") String minLimit, @PathVariable("endLimit") String maxLimit) {
         String username = getUser();
-        MyBankUsers customer=services.findByUsernameStream(username);
+        Customer customer=services.findByUsernameStream(username);
         List<InsuranceAvailed> insurance;
         try {
             if (!isValidStartLimit(minLimit)&&!isValidEndLimit(maxLimit)) {
@@ -59,18 +57,18 @@ public class InsuranceController {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(exception.getMessage());
         }
     }
-    private boolean isValidStartLimit(String startlimit){
+//    public InsuranceController(InsuranceRepository insuranceRepository) {
+//    }
+    public boolean isValidStartLimit(String startlimit){
         return startlimit != null && !startlimit.isEmpty() && startlimit.matches("^\\d*\\.?\\d+$");
     }
-    private boolean isValidEndLimit(String endLimit){
+    public boolean isValidEndLimit(String endLimit){
         return endLimit != null && !endLimit.isEmpty() && endLimit.matches("^\\d*\\.?\\d+$");
     }
-
-
-
     @GetMapping("/name")
     public String getCustomerName() {
         String name = getUser();
+        System.out.println(name);
         String user = services.getCustomerName(name);
         return user;
     }
@@ -78,7 +76,10 @@ public class InsuranceController {
     public String getUser() {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         String name = authentication.getName();
+        System.out.println(name);
         return name;
     }
+
+
 
 }

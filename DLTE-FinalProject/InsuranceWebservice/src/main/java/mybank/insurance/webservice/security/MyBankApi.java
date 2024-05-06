@@ -1,6 +1,6 @@
 package mybank.insurance.webservice.security;
 
-import com.mybank.dao.insurance.security.MyBankUsers;
+import com.mybank.dao.insurance.entity.Customer;
 import com.mybank.dao.insurance.security.MyBankUsersServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -18,8 +18,8 @@ public class MyBankApi {
     private PasswordEncoder passwordEncoder;
 
     @PostMapping("/register")
-    public MyBankUsers save(@RequestBody MyBankUsers myBankUsers){
-        myBankUsers.setPassword(passwordEncoder.encode(myBankUsers.getPassword()));
-        return service.signUp(myBankUsers);
+    public Customer save(@RequestBody Customer customer){
+        customer.setPassword(passwordEncoder.encode(customer.getPassword()));
+        return service.signUp(customer);
     }
 }

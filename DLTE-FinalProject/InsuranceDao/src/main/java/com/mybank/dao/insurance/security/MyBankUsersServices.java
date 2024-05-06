@@ -1,5 +1,6 @@
 package com.mybank.dao.insurance.security;//package com.payment.webservices.security;//package springjdbc.transaction.demo.security;
 
+import com.mybank.dao.insurance.entity.Customer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +20,7 @@ public class MyBankUsersServices implements UserDetailsService {
     Logger logger= LoggerFactory.getLogger(MyBankUsersServices.class);
     ResourceBundle resourceBundle=ResourceBundle.getBundle("application");
 
-    public MyBankUsers signUp(MyBankUsers myBankUsers){
+    public Customer signUp(Customer myBankUsers){
        jdbcTemplate.update("insert into  MYBANK_APP_CUSTOMER values(CUSTOMERID_SEQ.nextval,?,?,?,?,?,?,?)",new Object[]{
                myBankUsers.getCustomerName(),
                 myBankUsers.getCustomerAddress(),myBankUsers.getCustomerStatus(),
@@ -31,21 +32,21 @@ public class MyBankUsersServices implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        MyBankUsers users = findByUsernameStream(username);
+        Customer users = findByUsernameStream(username);
         if(users==null)
             throw new UsernameNotFoundException(username);
         return users;
     }
 
-    public List<MyBankUsers> findByUsername(){
-        List<MyBankUsers> customer = jdbcTemplate.query("select * from MYBANK_APP_CUSTOMER",
-                new BeanPropertyRowMapper<>(MyBankUsers.class));
+    public List<Customer> findByUsername(){
+        List<Customer> customer = jdbcTemplate.query("select * from MYBANK_APP_CUSTOMER",
+                new BeanPropertyRowMapper<>(Customer.class));
         return customer;
     }
 
-    public MyBankUsers findByUsernameStream(String username) {
-        List<MyBankUsers> customerList = findByUsername();
-        MyBankUsers customer = customerList.stream()
+    public Customer findByUsernameStream(String username) {
+        List<Customer> customerList = findByUsername();
+        Customer customer = customerList.stream()
                 .filter(customer1 -> customer1.getUsername().equals(username)).findFirst().orElse(null);
         if(customer==null){
             throw new UsernameNotFoundException(username);
@@ -54,13 +55,13 @@ public class MyBankUsersServices implements UserDetailsService {
     }
 
 
-    public void updateAttempts(MyBankUsers myBankUsers){
+    public void updateAttempts(Customer myBankUsers){
         jdbcTemplate.update("update MYBANK_APP_CUSTOMER set attempts=? where username=?",
                 new Object[]{myBankUsers.getAttempts(),myBankUsers.getUsername()});
       logger.info(resourceBundle.getString("attempts.update"));
     }
 
-    public void updateStatus(MyBankUsers myBankUsers){
+    public void updateStatus(Customer myBankUsers){
         jdbcTemplate.update("update MYBANK_APP_CUSTOMER set CUSTOMER_STATUS='inactive' where username=?",
                 new Object[]{myBankUsers.getUsername()});
         logger.info(resourceBundle.getString("status.change"));

@@ -1,6 +1,4 @@
 C:\DLTE-JavaFullStack-Divija-2024\DLTE-FinalProject\InsuranceDao\src\main\java\com\mybank\dao\insurance\remotes\InsuranceRepository.java
-C:\DLTE-JavaFullStack-Divija-2024\DLTE-FinalProject\InsuranceDao\src\main\java\com\mybank\dao\insurance\exceptions\CustomerException.java
-C:\DLTE-JavaFullStack-Divija-2024\DLTE-FinalProject\InsuranceDao\src\main\java\com\mybank\dao\insurance\exceptions\InsuranceAvailableException.java
 C:\DLTE-JavaFullStack-Divija-2024\DLTE-FinalProject\InsuranceDao\src\main\java\com\mybank\dao\insurance\entity\Customer.java
 C:\DLTE-JavaFullStack-Divija-2024\DLTE-FinalProject\InsuranceDao\src\main\java\com\mybank\dao\insurance\exceptions\InsuranceAvailedException.java
 C:\DLTE-JavaFullStack-Divija-2024\DLTE-FinalProject\InsuranceDao\src\main\java\com\mybank\dao\insurance\security\MyBankUsersServices.java

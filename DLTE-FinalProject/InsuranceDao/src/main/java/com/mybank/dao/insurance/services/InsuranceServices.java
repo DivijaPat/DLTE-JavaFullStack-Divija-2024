@@ -36,19 +36,17 @@ public class InsuranceServices implements InsuranceRepository {
             logger.error(resourceBundle.getString("insurance.sql.error"), sqlException);
             throw new SQLSyntaxErrorException(sqlException);
         }
-
-        //if the list is empty
-        if (insuranceList.size() == 0) {
-            logger.warn(resourceBundle.getString("insurance.data.null"));
-            throw new NoDataFoundException(resourceBundle.getString("insurance.data.null"));
-        }
+//
+//        //if the list is empty
+//        if (insuranceList.size() == 0) {
+//            logger.warn(resourceBundle.getString("insurance.data.null"));
+//            throw new NoDataFoundException(resourceBundle.getString("insurance.data.null"));
+//        }
         return insuranceList;
     }
 
     @Override
     public List<InsuranceAvailed> findByInsuranceCoverage(int customerId, double startLimit, double endLimit) throws SQLException {
-
-
         try {
             CallableStatementCreator callableStatement = conn -> {
                 CallableStatement statement = conn.prepareCall("{call fetch_insurance_data(?, ?, ?, ?)}");

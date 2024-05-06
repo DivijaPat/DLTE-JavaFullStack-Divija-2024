@@ -3,11 +3,8 @@ com\mybank\dao\insurance\remotes\InsuranceRepository.class
 com\mybank\dao\insurance\entity\Customer.class
 com\mybank\dao\insurance\exceptions\NoDataFoundException.class
 com\mybank\dao\insurance\entity\InsuranceAvailed.class
-com\mybank\dao\insurance\services\InsuranceServices$CardMapper.class
-com\mybank\dao\insurance\InsuranceDaoApplication.class
-com\mybank\dao\insurance\exceptions\InsuranceAvailableException.class
-com\mybank\dao\insurance\security\MyBankUsers.class
 com\mybank\dao\insurance\security\MyBankUsersServices.class
 com\mybank\dao\insurance\services\InsuranceServices.class
 com\mybank\dao\insurance\entity\InsuranceAvailable.class
-com\mybank\dao\insurance\exceptions\CustomerException.class
+com\mybank\dao\insurance\services\InsuranceServices$CardMapper.class
+com\mybank\dao\insurance\InsuranceDaoApplication.class

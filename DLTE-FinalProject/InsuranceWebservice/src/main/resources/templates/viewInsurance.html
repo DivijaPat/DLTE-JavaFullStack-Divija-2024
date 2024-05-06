@@ -158,6 +158,14 @@
                 type: "GET",
                 success: function (response) {
                     console.log(response);
+
+                    $('#responseContent').empty();
+
+                    // Populate the response content with the fetched data
+                    $('#responseContent').html(response);
+
+                    // Show the modal
+                    $('#responseModal').modal('show');
                     // Assuming response is an array of insurance objects
                     insuranceData.push(...response);
 
@@ -174,7 +182,6 @@
                 }
             });
         }
-
 
         const generateCoverageCards = (data) => {
             const containerHeight = 2000;
@@ -372,6 +379,24 @@
         fetchInsuranceData();
     });
 </script>
+<div class="modal fade" id="responseModal" tabindex="-1" aria-labelledby="responseModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="responseModalLabel">Response Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Empty div to display the response -->
+                <div id="responseContent"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 <br><br>
 <footer style="margin-top: 15px">
     <div th:insert="footer::footer"></div>

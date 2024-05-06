@@ -1,6 +1,6 @@
 package mybank.insurance.webservice.security;
 
-import com.mybank.dao.insurance.security.MyBankUsers;
+import com.mybank.dao.insurance.entity.Customer;
 import com.mybank.dao.insurance.security.MyBankUsersServices;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -29,20 +29,20 @@ public class OfficialsFailureHandler extends SimpleUrlAuthenticationFailureHandl
     public void onAuthenticationFailure(HttpServletRequest request, HttpServletResponse response, AuthenticationException exception) throws IOException, ServletException {
         String username = request.getParameter("username");
         try {
-            MyBankUsers myBankUsers = service.findByUsernameStream(username);
-            if (myBankUsers != null) {
-                if (myBankUsers.getCustomerStatus().equalsIgnoreCase("active")) {
-                    if (myBankUsers.getAttempts() < myBankUsers.getMaxAttempts()) {
-                        myBankUsers.setAttempts(myBankUsers.getAttempts() + 1);
-                        service.updateAttempts(myBankUsers);
+            Customer customer = service.findByUsernameStream(username);
+            if (customer != null) {
+                if (customer.getCustomerStatus().equalsIgnoreCase("active")) {
+                    if (customer.getAttempts() < customer.getMaxAttempts()) {
+                        customer.setAttempts(customer.getAttempts() + 1);
+                        service.updateAttempts(customer);
                         logger.warn(resourceBundle.getString("invalid.credential"));
-                        exception = new LockedException((4 - myBankUsers.getAttempts()) + resourceBundle.getString("attempts.remain"));
-                        String err = myBankUsers.getAttempts().toString() + " " + exception.getMessage();
+                        exception = new LockedException((4 - customer.getAttempts()) + resourceBundle.getString("attempts.remain"));
+                        String err = customer.getAttempts().toString() + " " + exception.getMessage();
                         logger.warn(err);
                         super.setDefaultFailureUrl("/web/?error=" + err);
 
                     } else {
-                        service.updateStatus(myBankUsers);
+                        service.updateStatus(customer);
                         logger.warn(resourceBundle.getString("account.suspend"));
                         exception = new LockedException(resourceBundle.getString("max.attempts"));
                         super.setDefaultFailureUrl("/web/?error=" + exception.getMessage());

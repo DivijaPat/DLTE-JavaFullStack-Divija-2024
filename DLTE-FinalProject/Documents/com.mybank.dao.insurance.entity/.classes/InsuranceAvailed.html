@@ -1,0 +1,154 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="htmlId">
+<head>
+  <title>Coverage Report :: InsuranceAvailed</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+  </style>
+</head>
+
+<body>
+<div class="header"></div>
+
+<div class="content">
+<div class="breadCrumbs">
+    [ <a href="../../index.html">all classes</a> ]
+    [ <a href="../index.html">com.mybank.dao.insurance.entity</a> ]
+</div>
+
+<h1>Coverage Summary for Class: InsuranceAvailed (com.mybank.dao.insurance.entity)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">InsuranceAvailed</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/ 1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    50%
+  </span>
+  <span class="absValue">
+    (2/ 4)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    80%
+  </span>
+  <span class="absValue">
+    (12/ 15)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<div class="sourceCode"><i>1</i>&nbsp;package com.mybank.dao.insurance.entity;
+<i>2</i>&nbsp;
+<i>3</i>&nbsp;import com.fasterxml.jackson.annotation.JsonProperty;
+<i>4</i>&nbsp;
+<i>5</i>&nbsp;import javax.validation.constraints.Digits;
+<i>6</i>&nbsp;import javax.validation.constraints.NotNull;
+<i>7</i>&nbsp;
+<i>8</i>&nbsp;public class InsuranceAvailed {
+<i>9</i>&nbsp;    @NotNull(message = &quot;{availed.insuranceAvailedId.null}&quot;)
+<i>10</i>&nbsp;    @Digits(integer = 8, fraction = 0, message = &quot;{user.customerId.null}&quot;)
+<i>11</i>&nbsp;    private int insuranceAvailedId;
+<i>12</i>&nbsp;    @NotNull(message = &quot;{availed.customerId.null}&quot;)
+<i>13</i>&nbsp;    @Digits(integer = 8, fraction = 0, message = &quot;{user.customerId.null}&quot;)
+<i>14</i>&nbsp;    private Integer customerId;
+<i>15</i>&nbsp;    @NotNull(message = &quot;{availed.insuranceId.null}&quot;)
+<i>16</i>&nbsp;    @Digits(integer = 8, fraction = 0, message = &quot;{user.customerId.null}&quot;)
+<i>17</i>&nbsp;    private Integer insuranceId;
+<i>18</i>&nbsp;    @NotNull(message = &quot;{availed.insuranceCoverage.null}&quot;)
+<i>19</i>&nbsp;    @Digits(integer = Integer.MAX_VALUE, fraction = Integer.MAX_VALUE, message = &quot;{availed.insuranceCoverage.invalid}&quot;)
+<i>20</i>&nbsp;
+<i>21</i>&nbsp;    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+<i>22</i>&nbsp;    private Double insuranceCoverage;
+<i>23</i>&nbsp;    @NotNull(message = &quot;{availed.insurancePremium.null}&quot;)
+<i>24</i>&nbsp;    @Digits(integer = Integer.MAX_VALUE, fraction = Integer.MAX_VALUE, message = &quot;{availed.insuranceCoverage.invalid}&quot;)
+<i>25</i>&nbsp;    private Double insurancePremium;
+<i>26</i>&nbsp;    @NotNull(message = &quot;{availed.insuranceType.null}&quot;)
+<i>27</i>&nbsp;    private String insuranceType;
+<i>28</i>&nbsp;    @NotNull(message = &quot;{availed.insuranceName.null}&quot;)
+<i>29</i>&nbsp;    private String insuranceName;
+<i>30</i>&nbsp;    @NotNull(message = &quot;{availed.insuranceKeyBenefits.null}&quot;)
+<i>31</i>&nbsp;    private String insuranceKeyBenefits;
+<i>32</i>&nbsp;    @NotNull(message = &quot;{availed.insuranceLifetime.null}&quot;)
+<i>33</i>&nbsp;    @Digits(integer = 4, fraction = 0, message = &quot;{user.customerId.null}&quot;)
+<i>34</i>&nbsp;    private Integer insuranceLifetime;
+<i>35</i>&nbsp;
+<i>36</i>&nbsp;
+<i>37</i>&nbsp;
+<b class="fc"><i>38</i>&nbsp;    public InsuranceAvailed(int insuranceAvailedId, Integer customerId, Integer insuranceId, Double insuranceCoverage, Double insurancePremium, String insuranceType, String insuranceName, String insuranceKeyBenefits, Integer insuranceLifetime) {</b>
+<b class="fc"><i>39</i>&nbsp;        this.insuranceAvailedId = insuranceAvailedId;</b>
+<b class="fc"><i>40</i>&nbsp;        this.customerId = customerId;</b>
+<b class="fc"><i>41</i>&nbsp;        this.insuranceId = insuranceId;</b>
+<b class="fc"><i>42</i>&nbsp;        this.insuranceCoverage = insuranceCoverage;</b>
+<b class="fc"><i>43</i>&nbsp;        this.insurancePremium = insurancePremium;</b>
+<b class="fc"><i>44</i>&nbsp;        this.insuranceType = insuranceType;</b>
+<b class="fc"><i>45</i>&nbsp;        this.insuranceName = insuranceName;</b>
+<b class="fc"><i>46</i>&nbsp;        this.insuranceKeyBenefits = insuranceKeyBenefits;</b>
+<b class="fc"><i>47</i>&nbsp;        this.insuranceLifetime = insuranceLifetime;</b>
+<b class="fc"><i>48</i>&nbsp;    }</b>
+<i>49</i>&nbsp;
+<b class="nc"><i>50</i>&nbsp;    public InsuranceAvailed() {</b>
+<b class="nc"><i>51</i>&nbsp;    }</b>
+<i>52</i>&nbsp;
+<i>53</i>&nbsp;    public int getInsuranceAvailedId() {
+<b class="fc"><i>54</i>&nbsp;        return insuranceAvailedId;</b>
+<i>55</i>&nbsp;    }
+<i>56</i>&nbsp;
+<i>57</i>&nbsp;    @Override
+<i>58</i>&nbsp;    public String toString() {
+<b class="nc"><i>59</i>&nbsp;        return &quot;InsuranceAvailed{&quot; +</b>
+<i>60</i>&nbsp;                &quot;insuranceAvailedId=&quot; + insuranceAvailedId +
+<i>61</i>&nbsp;                &quot;, customerId=&quot; + customerId +
+<i>62</i>&nbsp;                &quot;, insuranceId=&quot; + insuranceId +
+<i>63</i>&nbsp;                &quot;, insuranceCoverage=&quot; + insuranceCoverage +
+<i>64</i>&nbsp;                &quot;, insurancePremium=&quot; + insurancePremium +
+<i>65</i>&nbsp;                &quot;, insuranceType=&#39;&quot; + insuranceType + &#39;\&#39;&#39; +
+<i>66</i>&nbsp;                &quot;, insuranceName=&#39;&quot; + insuranceName + &#39;\&#39;&#39; +
+<i>67</i>&nbsp;                &quot;, insuranceKeyBenefits=&#39;&quot; + insuranceKeyBenefits + &#39;\&#39;&#39; +
+<i>68</i>&nbsp;                &quot;, insuranceLifetime=&quot; + insuranceLifetime +
+<i>69</i>&nbsp;                &#39;}&#39;;
+<i>70</i>&nbsp;    }
+<i>71</i>&nbsp;}
+</div>
+</div>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2024-05-06 16:07</div>
+</div>
+</body>
+</html>

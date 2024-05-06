@@ -16,13 +16,13 @@
     <script th:src="@{'/scripts/greet.js'}"></script>
     <nav class="navbar navbar-expand-lg navbar-light navbar-custom" style="background-color: #ffffff;">
         <div class="container">
-            <a class="navbar-brand" th:href="@{'/web/'}">
+            <a class="navbar-brand" th:href="@{'/web/'}" >
                 <img src="/pictures/logo.png" style="width: 60px; height: 60px; margin-left: 10px;
  "/>
                 <span style="color: #182052;  font-family: 'Montserrat', sans-serif;">My Bank</span>
             </a>
                 <div class="navbar-text ml-auto d-flex align-items-center">
-                <span th:id="Username" class="text-danger" style="color: #182052; font-size: 24px;" ></span>
+                <span th:id="Username"  style="color: #182052; font-size: 24px;" ></span>
             <div class="navbar-text ml-auto">
                 <button class="btn btn-logout ml-2"> <a class="nav-link text-white" th:href="@{'/logout'}">Logout</a></button>
             </div>
@@ -31,43 +31,46 @@
     </nav>
     <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
         <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mr-auto justify-content-start">
                     <li class="nav-item dropdown" aria-haspopup="false">
-                        <a class="nav-link dropdown-toggle" href="#" id="accountsDropdownToggle" role="button" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle"th:href="@{'/error?code=404&msg=Page under construction'}" >
                             Accounts <i class="bi bi-chevron-down"></i>
                         </a>
                     </li>
 
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="depositsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle"th:href="@{'/error?code=404&msg=Page under construction'}">
                             Deposits <i class="bi bi-chevron-down"></i>
                         </a>
                     </li>
 
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="paymentsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle"th:href="@{'/error?code=404&msg=Page under construction'}" >
                             Payments <i class="bi bi-chevron-down"></i>
                         </a>
                     </li>
 
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="loansDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" th:href="@{'/error?code=404&msg=Page under construction'}" >
                             Loans <i class="bi bi-chevron-down"></i>
                         </a>
                     </li>
 
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="cardsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" th:href="@{'/error?code=404&msg=Page under construction'}">
                             Cards <i class="bi bi-chevron-down"></i>
                         </a>
                     </li>
 
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="insuranceDropdown" role="button" data-toggle="dropdown" >
+                        <a class="nav-link dropdown-toggle" href="#" id="insuranceDropdown" role="button" data-toggle="dropdown">
                             Insurance <i class="bi bi-chevron-down"></i>
                         </a>
-                        <div class="dropdown-menu" >
+                        <div class="dropdown-menu">
                             <a class="dropdown-item" th:href="@{'/web/view'}">View Insurance</a>
                         </div>
                     </li>
@@ -75,6 +78,7 @@
             </div>
         </div>
     </nav>
+
 </div>
 </div>
 </body>

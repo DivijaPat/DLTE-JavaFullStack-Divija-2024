@@ -1,6 +1,6 @@
 package mybank.insurance.webservice.security;
 
-import com.mybank.dao.insurance.security.MyBankUsers;
+import com.mybank.dao.insurance.entity.Customer;
 import com.mybank.dao.insurance.security.MyBankUsersServices;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -24,11 +24,11 @@ public class OfficialsSuccessHandler extends SimpleUrlAuthenticationSuccessHandl
 
     @Override
     public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication) throws IOException, ServletException {
-        MyBankUsers myBankUsers= (MyBankUsers) authentication.getPrincipal();
-        if(myBankUsers.getCustomerStatus().equalsIgnoreCase("active")){
-            if(myBankUsers.getAttempts()>1){
-                myBankUsers.setAttempts(1);
-                service.updateAttempts(myBankUsers);
+        Customer customer= (Customer) authentication.getPrincipal();
+        if(customer.getCustomerStatus().equalsIgnoreCase("active")){
+            if(customer.getAttempts()>1){
+                customer.setAttempts(1);
+                service.updateAttempts(customer);
             }
             super.setDefaultTargetUrl("/web/dashboard");
         }

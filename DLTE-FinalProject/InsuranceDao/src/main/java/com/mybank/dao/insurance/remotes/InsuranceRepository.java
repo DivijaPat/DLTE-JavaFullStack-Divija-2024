@@ -2,7 +2,6 @@ package com.mybank.dao.insurance.remotes;
 
 import com.mybank.dao.insurance.entity.InsuranceAvailable;
 import com.mybank.dao.insurance.entity.InsuranceAvailed;
-import com.mybank.dao.insurance.exceptions.InsuranceAvailableException;
 import com.mybank.dao.insurance.exceptions.NoDataFoundException;
 import org.springframework.stereotype.Repository;
 
