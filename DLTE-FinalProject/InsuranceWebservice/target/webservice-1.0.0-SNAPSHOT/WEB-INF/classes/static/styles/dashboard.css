@@ -1,0 +1,72 @@
+.navbar-custom {
+    background-color: #182052;
+}
+.navbar-custom .navbar-brand, .navbar-custom .navbar-nav .nav-link {
+    color: white;
+}
+.navbar-custom .nav-item.active .nav-link {
+    color: #f8f9fa !important;
+}
+.dropdown-toggle::after {
+    display: none;
+}
+.dropdown-menu {
+    background-color: #f25c19;
+    color: white;
+
+}
+
+.dropdown-item {
+    color: white;
+}
+.navbar-brand {
+    font-size: 46px;
+    font-weight: 800; /* Extra bold */
+}
+.navbar {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.btn-logout {
+    background-color: #182052;
+    color: white;
+    border-radius: 20px;
+    padding: 5px 15px;
+}
+
+.btn-logout:hover {
+    background-color: #f25c19;
+    border: 1px solid #182052;
+    color: white;
+}
+.carousel-container {
+    padding-top: 30px;
+    max-width: 700px;
+    margin: auto;
+}
+.carousel {
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+.carousel-item img {
+    object-fit: cover;
+    height: 300px;
+    border: 2px solid #182052;
+}
+
+.bottom-right-image {
+    position: relative;
+    bottom: 10px;
+    left: 1010px;
+}
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    color: #ff0000; /* Change to the color you desire */
+}
+
+/* Define the color for the hover effect on carousel control icons */
+.carousel-control-prev:hover .carousel-control-prev-icon,
+.carousel-control-next:hover .carousel-control-next-icon {
+    color: #00ff00; /* Change to the color you desire */
+}

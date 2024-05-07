@@ -55,7 +55,7 @@
 </td>
 </tr>
   <tr>
-    <td class="name">InsuranceDaoApplication$$EnhancerBySpringCGLIB$$b2b5e76f</td>
+    <td class="name">InsuranceDaoApplication$$EnhancerBySpringCGLIB$$63e3d9c3</td>
   </tr>
 <tr>
   <td class="name"><strong>total</strong></td>
@@ -84,31 +84,28 @@
 
 <div class="sourceCode"><i>1</i>&nbsp;package com.mybank.dao.insurance;
 <i>2</i>&nbsp;
-<i>3</i>&nbsp;import com.mybank.dao.insurance.exceptions.NoDataFoundException;
-<i>4</i>&nbsp;import com.mybank.dao.insurance.remotes.InsuranceRepository;
-<i>5</i>&nbsp;import org.springframework.boot.SpringApplication;
-<i>6</i>&nbsp;import org.springframework.boot.autoconfigure.SpringBootApplication;
-<i>7</i>&nbsp;
-<i>8</i>&nbsp;import org.springframework.context.ConfigurableApplicationContext;
-<i>9</i>&nbsp;
-<i>10</i>&nbsp;import java.sql.SQLException;
+<i>3</i>&nbsp;import com.mybank.dao.insurance.remotes.InsuranceRepository;
+<i>4</i>&nbsp;import org.springframework.boot.SpringApplication;
+<i>5</i>&nbsp;import org.springframework.boot.autoconfigure.SpringBootApplication;
+<i>6</i>&nbsp;
+<i>7</i>&nbsp;import org.springframework.context.ConfigurableApplicationContext;
+<i>8</i>&nbsp;
+<i>9</i>&nbsp;@SpringBootApplication
+<b class="fc"><i>10</i>&nbsp;public class InsuranceDaoApplication {</b>
 <i>11</i>&nbsp;
-<i>12</i>&nbsp;@SpringBootApplication
-<b class="fc"><i>13</i>&nbsp;public class InsuranceDaoApplication {</b>
-<i>14</i>&nbsp;
-<i>15</i>&nbsp;    public static void main(String[] args) {
+<i>12</i>&nbsp;    public static void main(String[] args) {
+<i>13</i>&nbsp;
+<b class="nc"><i>14</i>&nbsp;        ConfigurableApplicationContext context = SpringApplication.run(InsuranceDaoApplication.class, args);</b>
+<b class="nc"><i>15</i>&nbsp;        InsuranceRepository availableDbRepo = context.getBean(InsuranceRepository.class);</b>
 <i>16</i>&nbsp;
-<b class="nc"><i>17</i>&nbsp;        ConfigurableApplicationContext context = SpringApplication.run(InsuranceDaoApplication.class, args);</b>
-<b class="nc"><i>18</i>&nbsp;        InsuranceRepository availableDbRepo = context.getBean(InsuranceRepository.class);</b>
-<i>19</i>&nbsp;
-<b class="nc"><i>20</i>&nbsp;    }</b>
-<i>21</i>&nbsp;}
+<b class="nc"><i>17</i>&nbsp;    }</b>
+<i>18</i>&nbsp;}
 </div>
 </div>
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2024-05-06 16:07</div>
+    <div style="float:right;">generated on 2024-05-07 12:14</div>
 </div>
 </body>
 </html>

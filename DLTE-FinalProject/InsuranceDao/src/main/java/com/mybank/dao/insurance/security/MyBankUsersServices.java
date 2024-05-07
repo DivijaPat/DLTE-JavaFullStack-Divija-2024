@@ -1,4 +1,4 @@
-package com.mybank.dao.insurance.security;//package com.payment.webservices.security;//package springjdbc.transaction.demo.security;
+package com.mybank.dao.insurance.security;
 
 import com.mybank.dao.insurance.entity.Customer;
 import org.slf4j.Logger;
@@ -88,6 +88,5 @@ public class MyBankUsersServices implements UserDetailsService {
         }
         return null;
     }
-
     }
 

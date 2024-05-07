@@ -1,25 +1,25 @@
 package com.mybank.dao.insurance;
 
 import com.mybank.dao.insurance.entity.InsuranceAvailable;
-import com.mybank.dao.insurance.exceptions.NoDataFoundException;
 import com.mybank.dao.insurance.services.InsuranceServices;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.test.context.junit.jupiter.SpringJUnitConfig;
 
 import java.sql.SQLException;
 import java.sql.SQLSyntaxErrorException;
 import java.util.ArrayList;
 import java.util.List;
-
 import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.ArgumentMatchers.anyString;
+import static org.mockito.ArgumentMatchers.*;
 import static org.mockito.Mockito.when;
 
 @SpringBootTest
+@SpringJUnitConfig
 public class ListAllInsuranceTests {
     @Mock
     private JdbcTemplate jdbcTemplate;
@@ -27,7 +27,7 @@ public class ListAllInsuranceTests {
     InsuranceServices insuranceServices;
 
     @Test
-    void testAllInsurance() throws SQLSyntaxErrorException, NoDataFoundException {
+    void testAllInsurance() throws SQLSyntaxErrorException {
         List<InsuranceAvailable> insuranceAvailable = new ArrayList<>();
         insuranceAvailable.add(new InsuranceAvailable(1, "life", "maxlife", "lifetime coverage", 10));
         insuranceAvailable.add(new InsuranceAvailable(2, "vehicle", "bajaj", "cashless claim settlement", 5));
@@ -42,7 +42,7 @@ public class ListAllInsuranceTests {
     }
 
     @Test
-    void testAllInsuranceFailure() throws SQLSyntaxErrorException, NoDataFoundException {
+    void testAllInsuranceFailure() throws SQLSyntaxErrorException {
         List<InsuranceAvailable> insuranceAvailable = new ArrayList<>();
         insuranceAvailable.add(new InsuranceAvailable(1, "life", "maxlife", "lifetime coverage", 10));
         insuranceAvailable.add(new InsuranceAvailable(2, "vehicle", "bajaj", "cashless claim settlement", 5));
@@ -55,13 +55,7 @@ public class ListAllInsuranceTests {
         assertNotEquals(2, actualList.size());
         assertNotSame("travel",actualList.get(1).getInsuranceType());
     }
-//    @Test
-//    void testAllInsuranceException() {
-//        // Mocking an empty response from the database
-//        when(jdbcTemplate.query(anyString(), any(InsuranceServices.CardMapper.class))).thenReturn(new ArrayList<>());
-//        // Calling the method under test and expecting an exception
-//        assertThrows(NoDataFoundException.class, () -> insuranceServices.allAvailableInsurance());
-//    }
+
     @Test
     void testAllInsuranceExceptionFailure(){
         List<InsuranceAvailable> insuranceAvailable = new ArrayList<>();
@@ -79,5 +73,26 @@ public class ListAllInsuranceTests {
         assertThrows(SQLException.class, () -> insuranceServices.findByInsuranceCoverage(1,20000,40000));
     }
 
-
+    @Test
+    void callAllInsuranceAvailable_DataAccessException() throws SQLException {
+        when(jdbcTemplate.query(any(String.class), any(InsuranceServices.CardMapper.class)))
+            .thenThrow(new DataAccessException("Test DataAccessException") {});
+        assertThrows(SQLException.class, () -> insuranceServices.allAvailableInsurance());
 }
+    @Test
+    public void testGettersAndSetters() {
+        InsuranceAvailable insuranceAvailable = new InsuranceAvailable();
+        insuranceAvailable.setInsuranceId(123);
+        insuranceAvailable.setInsuranceType("life");
+        insuranceAvailable.setInsuranceName("jeevan");
+        insuranceAvailable.setInsuranceKeyBenefits("death cover");
+        insuranceAvailable.setInsuranceLifetime(5);
+        assertEquals(123, insuranceAvailable.getInsuranceId());
+        assertEquals("life", insuranceAvailable.getInsuranceType());
+        assertEquals("jeevan", insuranceAvailable.getInsuranceName());
+        assertEquals("death cover", insuranceAvailable.getInsuranceKeyBenefits());
+        assertEquals(5, insuranceAvailable.getInsuranceLifetime());
+    }
+}
+
+

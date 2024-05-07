@@ -44,21 +44,17 @@ public class InsuranceController {
             Double startLimit=Double.valueOf(minLimit);
             Double endLimit=Double.valueOf(maxLimit);
             insurance = insuranceRepository.findByInsuranceCoverage(customer.getCustomerId(), startLimit, endLimit);
-            if (insurance.size() == 0) {
-                return ResponseEntity.status(HttpStatus.OK).body(resourceBundle.getString("insurance.data.null"));
-            }
             return ResponseEntity.ok(insurance);
         }catch (InsuranceAvailedException | SQLException noDataFound) {
             logger.warn(resourceBundle.getString("insurance.data.null"));
-            return ResponseEntity.status(HttpStatus.OK).body(resourceBundle.getString("insurance.data.null"));
+            return ResponseEntity.status(HttpStatus.OK).body(resourceBundle.getString("error.one")+resourceBundle.getString("insurance.data.null"));
         }
         catch (Exception exception ) {
             logger.error(resourceBundle.getString("insurance.sql.error"));
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(exception.getMessage());
         }
     }
-//    public InsuranceController(InsuranceRepository insuranceRepository) {
-//    }
+
     public boolean isValidStartLimit(String startlimit){
         return startlimit != null && !startlimit.isEmpty() && startlimit.matches("^\\d*\\.?\\d+$");
     }
@@ -68,7 +64,6 @@ public class InsuranceController {
     @GetMapping("/name")
     public String getCustomerName() {
         String name = getUser();
-        System.out.println(name);
         String user = services.getCustomerName(name);
         return user;
     }
@@ -76,7 +71,6 @@ public class InsuranceController {
     public String getUser() {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         String name = authentication.getName();
-        System.out.println(name);
         return name;
     }
 

@@ -58,10 +58,10 @@
 </td>
 <td class="coverageStat">
   <span class="percent">
-    32.1%
+    32%
   </span>
   <span class="absValue">
-    (9/ 28)
+    (8/ 25)
   </span>
 </td>
 </tr>
@@ -96,7 +96,7 @@
 <i>22</i>&nbsp;@RestController
 <i>23</i>&nbsp;@RequestMapping(&quot;/module&quot;)
 <i>24</i>&nbsp;@ComponentScan(&quot;com.mybank.dao.insurance&quot;)
-<i>25</i>&nbsp;public class InsuranceController {
+<b class="fc"><i>25</i>&nbsp;public class InsuranceController {</b>
 <i>26</i>&nbsp;
 <i>27</i>&nbsp;    @Autowired
 <i>28</i>&nbsp;    private InsuranceRepository insuranceRepository;
@@ -118,51 +118,45 @@
 <b class="nc"><i>44</i>&nbsp;            Double startLimit=Double.valueOf(minLimit);</b>
 <b class="nc"><i>45</i>&nbsp;            Double endLimit=Double.valueOf(maxLimit);</b>
 <b class="nc"><i>46</i>&nbsp;            insurance = insuranceRepository.findByInsuranceCoverage(customer.getCustomerId(), startLimit, endLimit);</b>
-<b class="nc"><i>47</i>&nbsp;            if (insurance.size() == 0) {</b>
-<b class="nc"><i>48</i>&nbsp;                return ResponseEntity.status(HttpStatus.OK).body(resourceBundle.getString(&quot;insurance.data.null&quot;));</b>
-<i>49</i>&nbsp;            }
-<b class="nc"><i>50</i>&nbsp;            return ResponseEntity.ok(insurance);</b>
-<b class="nc"><i>51</i>&nbsp;        }catch (InsuranceAvailedException | SQLException noDataFound) {</b>
-<b class="nc"><i>52</i>&nbsp;            logger.warn(resourceBundle.getString(&quot;insurance.data.null&quot;));</b>
-<b class="nc"><i>53</i>&nbsp;            return ResponseEntity.status(HttpStatus.OK).body(resourceBundle.getString(&quot;insurance.data.null&quot;));</b>
-<i>54</i>&nbsp;        }
-<b class="nc"><i>55</i>&nbsp;        catch (Exception exception ) {</b>
-<b class="nc"><i>56</i>&nbsp;            logger.error(resourceBundle.getString(&quot;insurance.sql.error&quot;));</b>
-<b class="nc"><i>57</i>&nbsp;            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(exception.getMessage());</b>
-<i>58</i>&nbsp;        }
-<i>59</i>&nbsp;    }
-<b class="fc"><i>60</i>&nbsp;    public InsuranceController(InsuranceRepository insuranceRepository) {</b>
-<b class="fc"><i>61</i>&nbsp;    }</b>
-<i>62</i>&nbsp;    public boolean isValidStartLimit(String startlimit){
-<b class="fc"><i>63</i>&nbsp;        return startlimit != null &amp;&amp; !startlimit.isEmpty() &amp;&amp; startlimit.matches(&quot;^\\d*\\.?\\d+$&quot;);</b>
-<i>64</i>&nbsp;    }
-<i>65</i>&nbsp;    public boolean isValidEndLimit(String endLimit){
-<b class="fc"><i>66</i>&nbsp;        return endLimit != null &amp;&amp; !endLimit.isEmpty() &amp;&amp; endLimit.matches(&quot;^\\d*\\.?\\d+$&quot;);</b>
-<i>67</i>&nbsp;    }
-<i>68</i>&nbsp;    @GetMapping(&quot;/name&quot;)
-<i>69</i>&nbsp;    public String getCustomerName() {
-<b class="nc"><i>70</i>&nbsp;        String name = getUser();</b>
-<b class="nc"><i>71</i>&nbsp;        System.out.println(name);</b>
-<b class="nc"><i>72</i>&nbsp;        String user = services.getCustomerName(name);</b>
-<i>73</i>&nbsp;        return user;
-<i>74</i>&nbsp;    }
-<i>75</i>&nbsp;
-<b class="fc"><i>76</i>&nbsp;    public String getUser() {</b>
-<b class="fc"><i>77</i>&nbsp;        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();</b>
-<b class="fc"><i>78</i>&nbsp;        String name = authentication.getName();</b>
-<i>79</i>&nbsp;        System.out.println(name);
-<i>80</i>&nbsp;        return name;
-<i>81</i>&nbsp;    }
-<i>82</i>&nbsp;
-<i>83</i>&nbsp;
-<i>84</i>&nbsp;
-<i>85</i>&nbsp;}
+<b class="nc"><i>47</i>&nbsp;            return ResponseEntity.ok(insurance);</b>
+<b class="nc"><i>48</i>&nbsp;        }catch (InsuranceAvailedException | SQLException noDataFound) {</b>
+<b class="nc"><i>49</i>&nbsp;            logger.warn(resourceBundle.getString(&quot;insurance.data.null&quot;));</b>
+<b class="nc"><i>50</i>&nbsp;            return ResponseEntity.status(HttpStatus.OK).body(resourceBundle.getString(&quot;error.one&quot;)+resourceBundle.getString(&quot;insurance.data.null&quot;));</b>
+<i>51</i>&nbsp;        }
+<b class="nc"><i>52</i>&nbsp;        catch (Exception exception ) {</b>
+<b class="nc"><i>53</i>&nbsp;            logger.error(resourceBundle.getString(&quot;insurance.sql.error&quot;));</b>
+<b class="nc"><i>54</i>&nbsp;            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(exception.getMessage());</b>
+<i>55</i>&nbsp;        }
+<i>56</i>&nbsp;    }
+<i>57</i>&nbsp;
+<i>58</i>&nbsp;    public boolean isValidStartLimit(String startlimit){
+<b class="fc"><i>59</i>&nbsp;        return startlimit != null &amp;&amp; !startlimit.isEmpty() &amp;&amp; startlimit.matches(&quot;^\\d*\\.?\\d+$&quot;);</b>
+<i>60</i>&nbsp;    }
+<i>61</i>&nbsp;    public boolean isValidEndLimit(String endLimit){
+<b class="fc"><i>62</i>&nbsp;        return endLimit != null &amp;&amp; !endLimit.isEmpty() &amp;&amp; endLimit.matches(&quot;^\\d*\\.?\\d+$&quot;);</b>
+<i>63</i>&nbsp;    }
+<i>64</i>&nbsp;    @GetMapping(&quot;/name&quot;)
+<i>65</i>&nbsp;    public String getCustomerName() {
+<b class="nc"><i>66</i>&nbsp;        String name = getUser();</b>
+<b class="nc"><i>67</i>&nbsp;        String user = services.getCustomerName(name);</b>
+<b class="nc"><i>68</i>&nbsp;        return user;</b>
+<i>69</i>&nbsp;    }
+<i>70</i>&nbsp;
+<i>71</i>&nbsp;    public String getUser() {
+<b class="fc"><i>72</i>&nbsp;        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();</b>
+<b class="fc"><i>73</i>&nbsp;        String name = authentication.getName();</b>
+<b class="fc"><i>74</i>&nbsp;        return name;</b>
+<i>75</i>&nbsp;    }
+<i>76</i>&nbsp;
+<i>77</i>&nbsp;
+<i>78</i>&nbsp;
+<i>79</i>&nbsp;}
 </div>
 </div>
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2024-05-06 22:54</div>
+    <div style="float:right;">generated on 2024-05-07 12:13</div>
 </div>
 </body>
 </html>

@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.mybank.dao.insurance.CustomerTests
+-------------------------------------------------------------------------------
+Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.834 s - in com.mybank.dao.insurance.CustomerTests

@@ -17,31 +17,33 @@ public class InsuranceAvailable {
 
     public InsuranceAvailable() {
     }
-
     public Integer getInsuranceId() {
         return insuranceId;
     }
-
     public void setInsuranceId(Integer insuranceId) {
         this.insuranceId = insuranceId;
+    }
+
+    public String getInsuranceKeyBenefits() {
+        return insuranceKeyBenefits;
+    }
+
+    public Integer getInsuranceLifetime() {
+        return insuranceLifetime;
     }
 
     public String getInsuranceType() {
         return insuranceType;
     }
-
     public void setInsuranceType(String insuranceType) {
         this.insuranceType = insuranceType;
     }
-
     public String getInsuranceName() {
         return insuranceName;
     }
-
     public void setInsuranceName(String insuranceName) {
         this.insuranceName = insuranceName;
     }
-
     public void setInsuranceKeyBenefits(String insuranceKeyBenefits) {
         this.insuranceKeyBenefits = insuranceKeyBenefits;
     }

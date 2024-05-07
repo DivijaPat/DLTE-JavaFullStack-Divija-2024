@@ -7,7 +7,6 @@ import mybank.insurance.webservice.security.MyBankApi;
 import mybank.insurance.webservice.security.OfficialsFailureHandler;
 import mybank.insurance.webservice.security.OfficialsSuccessHandler;
 import org.junit.Test;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.runner.RunWith;
@@ -24,7 +23,6 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
@@ -32,9 +30,6 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.Arrays;
-import java.util.Collections;
-
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
@@ -45,6 +40,10 @@ public class SecurityTests {
 
     @InjectMocks
     private OfficialsSuccessHandler successHandler;
+
+    @InjectMocks
+    private OfficialsFailureHandler failureHandler;
+
     @Mock
     MyBankUsersServices myBankUsersServices;
     @Mock
@@ -133,36 +132,9 @@ public class SecurityTests {
         // Verify behavior
         assertNotEquals("/web/?errors=Contact%20administrator", response.encodeRedirectURL("/web/?errors=Contact administrator"));
     }
-//    @Test
-//    public void testGetCustomerName() {
-//        // Mock SecurityContextHolder to return a mock Authentication object
-//        Authentication authentication = Mockito.mock(Authentication.class);
-//        Mockito.when(authentication.getName()).thenReturn("Aru");
-//        SecurityContext securityContext = Mockito.mock(SecurityContext.class);
-//        Mockito.when(securityContext.getAuthentication()).thenReturn(authentication);
-//        SecurityContextHolder.setContext(securityContext);
-//        Mockito.when(myBankUsersServices.getCustomerName(Mockito.anyString())).thenReturn("Aru");
-//        String result = insuranceController.getCustomerName();
-//        Assertions.assertEquals("Aru", result);
-//    }
 
-//    @Test
-//    public void testSearchByCoverageSuccess() throws Exception {
-//    String requestBody = "{\"startLimit\":20000,\"endLimit\":45000\"}";
-//    Authentication authentication = mock(Authentication.class);
-//    SecurityContextHolder.getContext().setAuthentication(authentication);
-//    when(authentication.getName()).thenReturn("testUser");
-//    Customer customer = new Customer();
-//    customer.setCustomerId(123);
-//    customer.setCustomerName("Divija");
-//    customer.setCustomerAddress("Ujire");
-//    customer.setCustomerStatus("active");
-//    customer.setCustomerContact(8765432345L);
-//    customer.setUsername("testUser");
-//    customer.setPassword("12233");
-//    customer.setAttempts(1);
-//    when(myBankUsersServices.findByUsernameStream("testUser")).thenReturn(customer);
-//    when(myBankUsersServices.getCustomerName("testUser")).thenReturn(String.valueOf(Collections.singletonList(customer)));
-//}
 
 }
+
+
+

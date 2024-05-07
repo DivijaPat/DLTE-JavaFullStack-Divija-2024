@@ -1,13 +1,10 @@
 package com.mybank.dao.insurance;
 
-import com.mybank.dao.insurance.exceptions.NoDataFoundException;
 import com.mybank.dao.insurance.remotes.InsuranceRepository;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import org.springframework.context.ConfigurableApplicationContext;
-
-import java.sql.SQLException;
 
 @SpringBootApplication
 public class InsuranceDaoApplication {

@@ -1,5 +1,4 @@
 package mybank.insurance.webservice.mvc;
-
 import com.mybank.dao.insurance.security.MyBankUsersServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

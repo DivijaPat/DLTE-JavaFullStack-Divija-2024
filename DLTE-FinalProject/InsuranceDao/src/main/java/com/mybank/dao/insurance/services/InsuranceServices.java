@@ -3,7 +3,6 @@ package com.mybank.dao.insurance.services;
 import com.mybank.dao.insurance.entity.InsuranceAvailable;
 import com.mybank.dao.insurance.entity.InsuranceAvailed;
 import com.mybank.dao.insurance.exceptions.InsuranceAvailedException;
-import com.mybank.dao.insurance.exceptions.NoDataFoundException;
 import com.mybank.dao.insurance.remotes.InsuranceRepository;
 import oracle.jdbc.OracleTypes;
 import org.slf4j.Logger;
@@ -26,7 +25,7 @@ public class InsuranceServices implements InsuranceRepository {
     private JdbcTemplate jdbcTemplate;
 
     @Override
-    public List<InsuranceAvailable> allAvailableInsurance() throws SQLSyntaxErrorException, NoDataFoundException {
+    public List<InsuranceAvailable> allAvailableInsurance() throws SQLSyntaxErrorException {
         List<InsuranceAvailable> insuranceList = null;
         try {
             //retrieve the insurance list
@@ -36,12 +35,6 @@ public class InsuranceServices implements InsuranceRepository {
             logger.error(resourceBundle.getString("insurance.sql.error"), sqlException);
             throw new SQLSyntaxErrorException(sqlException);
         }
-//
-//        //if the list is empty
-//        if (insuranceList.size() == 0) {
-//            logger.warn(resourceBundle.getString("insurance.data.null"));
-//            throw new NoDataFoundException(resourceBundle.getString("insurance.data.null"));
-//        }
         return insuranceList;
     }
 
@@ -78,7 +71,7 @@ public class InsuranceServices implements InsuranceRepository {
     }
 
 
-    public class CardMapper implements RowMapper<InsuranceAvailable> {
+    public static class CardMapper implements RowMapper<InsuranceAvailable> {
 
         @Override
         public InsuranceAvailable mapRow(ResultSet rs, int rowNum) throws SQLException {

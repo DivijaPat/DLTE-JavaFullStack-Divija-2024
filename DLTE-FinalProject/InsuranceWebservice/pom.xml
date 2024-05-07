@@ -10,7 +10,7 @@
     </parent>
     <groupId>mybank.insurance</groupId>
     <artifactId>webservice</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.0-SNAPSHOT</version>
     <packaging>war</packaging>
     <name>webservice</name>
     <description>project for insurance webservice</description>
@@ -21,7 +21,7 @@
         <dependency>
             <groupId>com.mybank.dao</groupId>
             <artifactId>insurance</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <version>1.0.0-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>

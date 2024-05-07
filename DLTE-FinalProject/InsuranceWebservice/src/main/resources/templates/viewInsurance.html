@@ -30,8 +30,16 @@
 <header>
     <div th:replace="header::menu"></div>
 </header>
-<h2 class="mb-0" style="color: #182052; font-weight: bold; font-family: 'Poppins', sans-serif; padding: 20px;">View
-    Insurance</h2>
+<div class="container mt-3">
+    <div class="row">
+        <div class="d-flex text-left ">
+            <i class="bi bi-arrow-left-circle-fill mt-3" style="color: #182052; font-size: 2rem;" onclick="window.history.back()"></i>
+            <h2 class="mb-0" style="color: #182052; font-weight: bold; font-family: 'Poppins', sans-serif; padding: 20px;">View
+                Insurance</h2>
+        </div>
+    </div>
+</div>
+
 
 <div class="container">
     <!-- Search by Insurance ID -->
@@ -41,7 +49,7 @@
                 <h6 class="mb-3" style="color: #182052; font-weight: bold;">Find by ID</h6>
                 <div class="input-group">
                     <input id="searchByIdInput" type="text" class="form-control" placeholder="Search by Insurance ID">
-                    <button id="searchByIdButton" type="button">Search</button>
+                    <button id="searchByIdButton" onclik="redirectToErrorPage" type="button">Search</button>
                 </div>
             </div>
         </div>
@@ -51,10 +59,10 @@
                 <h6 class="mb-3" style="color: #182052; font-weight: bold;">Find by Coverage</h6>
                 <div class="form-row">
                     <div class="col">
-                        <input type="text" id="minLimit" class="form-control" placeholder="Enter Minimum Amount">
+                        <input type="number" id="minLimit" class="form-control" placeholder="Enter Minimum Amount" required>
                     </div>
                     <div class="col">
-                        <input type="text" id="maxLimit" class="form-control" placeholder="Enter Maximum Amount">
+                        <input type="number" id="maxLimit" class="form-control" placeholder="Enter Maximum Amount" required>
                     </div>
                     <button id="searchByCoverage" style="padding: 5px">
                         Search
@@ -65,7 +73,7 @@
     </div>
 </div>
 
-
+</div>
 <div class="container-fluid col-10 ">
     <div class="row">
         <div class="col card-container">
@@ -149,6 +157,7 @@
             });
         };
 
+
         const fetchInsuranceByCoverage = (minLimit, maxLimit) => {
             insuranceData.length = 0; // Clear existing insurance data
 
@@ -158,17 +167,18 @@
                 type: "GET",
                 success: function (response) {
                     console.log(response);
-
+                    var exceptionRegex = /EXC00\d\s*:/;
+                    if (exceptionRegex.test(response)) {
+                        var errorMessage = response.replace(exceptionRegex, '').trim();
+                        $("#modalheader").text(`Error occurred `);
+                        $("#message").text(errorMessage);
+                        $('#responseModal').modal('show');
+                    }
                     $('#responseContent').empty();
-
                     // Populate the response content with the fetched data
                     $('#responseContent').html(response);
-
-                    // Show the modal
-                    $('#responseModal').modal('show');
                     // Assuming response is an array of insurance objects
                     insuranceData.push(...response);
-
                     // Regenerate insurance cards with the updated data
                     generateCoverageCards(response);
                 },
@@ -230,7 +240,7 @@
                                     <input type="hidden" id="insuranceName${index}" value="${insurance.insurance_name}">
                                     <input type="hidden" id="insuranceKeyBenefits${index}" value="${insurance.insurance_key_benefits}">
                                     <input type="hidden" id="insuranceLifetime${index}" value="${insurance.insurance_lifetime}">
-                                    <button type="button"  class="apply">Apply Insurance</button>
+                                    <button type="button"  onclick="redirectToErrorPage()" class="apply" >Apply Insurance</button>
                                 </div>
                             </div>
                         </div>
@@ -270,7 +280,6 @@
             // Loop through data and generate cards for current page
             for (let i = startIndex; i < endIndex; i++) {
                 if (i >= insuranceData.length) break; // Exit loop if reached end of data
-
                 const insurance = insuranceData[i];
                 let cardHtml = `
             <div class="col">
@@ -309,7 +318,7 @@
                         <input type="hidden" id="insuranceName${i}" value="${insurance.insuranceName}">
                         <input type="hidden" id="insuranceKeyBenefits${i}" value="${insurance.insuranceKeyBenefits}">
                         <input type="hidden" id="insuranceLifetime${i}" value="${insurance.insuranceLifetime}">
-                        <button type="button" onclick="appendDataToForm(${i})" class="apply">Apply Insurance</button>
+                        <button type="button" onclick="redirectToErrorPage" class="apply">Apply Insurance</button>
                                 </div>
                             </div>
                         </div>
@@ -378,20 +387,21 @@
 
         fetchInsuranceData();
     });
+    function redirectToErrorPage() {
+        window.location.href = '/error?code=404&msg=Page Under Construction';
+    }
 </script>
 <div class="modal fade" id="responseModal" tabindex="-1" aria-labelledby="responseModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="responseModalLabel">Response Details</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <h5  id="modalheader" class="modal-title"  style="color: #182052; font-weight: bold; font-family:'Montserrat', sans-serif "></h5>
             </div>
             <div class="modal-body">
-                <!-- Empty div to display the response -->
-                <div id="responseContent"></div>
+                <p id="message" style="color: #182052;  font-family: 'Poppins', sans-serif"></p>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <a type="button" class="btn narrow-btn-back-to-view" th:href="@{'/web/view'}" >Back to View All</a>
             </div>
         </div>
     </div>
