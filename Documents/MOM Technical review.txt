@@ -1,0 +1,110 @@
+MOM:
+
+
+use setters rather than constructors
+keep the package in a proper format
+break and return
+break a single sql statement into multiple lines and then run without selecting 
+handle constraint violation exceptions
+printing to display to user
+loggers only for developers
+sql
+create return type, exception
+display error to user only which can be modified by user.
+custom exception for validation... key and value        using error code interpret the exception
+validate at both sides
+system error for sensitive error
+
+
+
+
+when to go for constructor and when not to go
+1 method for each case.... case should not be lengthy
+junit
+file size
+
+
+
+
+
+
+
+
+2 tables... combine address tables;
+on delete cascade
+file size exceeds
+sql multi line statements comment
+inner join and join difference
+use alias
+use column name instead of * in select query
+types of joins.
+format queries to multiple lines
+connection or schema or database
+rest soap main
+
+
+
+
+
+have a flag for address table
+return everything instead of resultant then apply filter
+join and inner join
+create a new schema and only have tables which are required to us
+directly pass data to web service testing end to end,make console 3.0 then call webservice
+
+
+
+
+
+error codes
+http request response
+when to go for @component, @service
+use url in properties rather than directly use it
+console 3.0
+db 2.0
+add spring core,IOC
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

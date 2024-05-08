@@ -1,0 +1,36 @@
+INSERT INTO MYBANK_APP_CUSTOMER VALUES (CUSTOMERID_SEQ.NEXTVAL, 'Divija','Ujire', 'Active', 7019594061, 'DivijaP', 'divijap6');
+INSERT INTO MYBANK_APP_CUSTOMER VALUES (CUSTOMERID_SEQ.NEXTVAL, 'Annapoorna Pai', 'Karkala', 'Active', 6363276256, 'annapoornapai6', 'annapoo6');
+commit;
+
+INSERT INTO mybank_app_kyc VALUES (kyc_seq.NEXTVAL,100,'ABCDE1234F','123456789012','Verified');
+INSERT INTO mybank_app_kyc VALUES (kyc_seq.NEXTVAL,101,'PQRST1234F','987654321012','Verified');
+commit;
+
+
+insert into mybank_app_account values(acc_seq.nextval,100,'current','ABCD12345678',1);
+insert into mybank_app_account values(acc_seq.nextval,101,'savings','12345678PQRS',1);
+
+insert into mybank_app_depositavailable values(deposit_seq.nextval,'Fixed',7.5,'demand','includes checking account');
+insert into mybank_app_depositavailable values(deposit_seq.nextval,'Recurring',5.8,'time','includes saving money');
+
+insert into mybank_app_depositavailed values(depositavail_seq.nextval,100,100,2000.55,8,TO_DATE('01-04-2025', 'DD-MM-YYYY'));
+insert into mybank_app_depositavailed values(depositavail_seq.nextval,101,101,3000.12,5,TO_DATE('11-02-2024', 'DD-MM-YYYY'));
+
+commit;
+
+
+insert into mybank_app_insuranceavailable values(insuranceid_seq.nextval,'Life Insurance','LIC','fulfill financial goals',10);
+insert into mybank_app_insuranceavailable values(insuranceid_seq.nextval,'Health Insurance','Bajaj','fulfill medical goals',11);
+commit;
+insert into mybank_app_insuranceavailable values(insuranceid_seq.nextval,'Life Insurance','LIC','fulfill financial goals',10);
+insert into mybank_app_insuranceavailable values(insuranceid_seq.nextval,'Health Insurance','Bajaj','fulfill medical goals',11);
+commit;
+
+insert into mybank_app_insuranceavailed values(insurance_avail_id_seq.nextval,100,100,30000.5,1000.5);
+insert into mybank_app_insuranceavailed values(insurance_avail_id_seq.nextval,101,101,50000.5,3000.5);
+commit;
+ 
+
+insert into mybank_app_debitcard values(debit_seq.nextval,101,123,TO_DATE('01-10-2025', 'DD-MM-YYYY'),1,50000,50000);
+insert into mybank_app_debitcard values(debit_seq.nextval,102,456,TO_DATE('01-04-2023', 'DD-MM-YYYY'),0,60000,70000);
+commit;

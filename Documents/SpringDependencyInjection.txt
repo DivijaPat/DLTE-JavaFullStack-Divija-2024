@@ -1,0 +1,73 @@
+ rather than classes creating instances with of their dependencies, the dependencies are "injected" into the classes from outside.
+
+Inversion of Control: With Inversion of Control, the control flow is inverted or reversed. Instead of objects controlling the creation and management of their dependencies, dependencies are provided to objects from external sources, typically by a framework or container.
+
+Dependency Injection: Dependency Injection is a common implementation of Inversion of Control. It involves injecting dependencies into objects rather than allowing objects to create their dependencies internally. This allows for greater flexibility, testability, and maintainability of code.
+
+
+In Spring, you don't create objects using the new keyword as you typically would in Java. Instead, you define beans in the Spring configuration files or using Java-based configuration, and the Spring IoC container manages the creation and lifecycle of these beans. Here's how you can create objects (beans) using beans in Spring:
+
+XML Configuration:
+
+In XML configuration, you define beans within Spring configuration files (typically with a .xml extension). Each bean definition includes the class of the bean, its dependencies, properties, and other configurations.
+
+With Java configuration, you define beans using @Configuration-annotated classes and @Bean-annotated methods. This approach allows you to create beans programmatically using Java code.
+
+You can annotate your classes with stereotype annotations such as @Component, @Service, @Repository, or @Controller. Spring will automatically detect these annotated classes during component scanning and create beans for them.
+
+context:component-scan base-package="com.example"/>
+
+ It automatically creates instances of these annotated classes and registers them as beans in the application context.
+
+If there are multiple beans of the same type detected during component scanning, you can use the @Qualifier annotation to specify which bean should be injected. This helps in disambiguating dependencies and ensuring that the correct bean is registered.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//@SpringBootTest
+//class EndpointTest {
+
+//    @Mock
+//    private JdbcTemplate jdbcTemplate;
+//
+//    @InjectMocks
+//    private InsuranceServices insurance;
+//    @Test
+//    void testListOfInsurance() throws SQLSyntaxErrorException {
+//        // Mocking the response from the database
+//        List insuranceList = new ArrayList<>();
+//
+//        InsuranceAvailable insurance1= new InsuranceAvailable(123,"type1","name1","benefit1",2);
+//        InsuranceAvailable insurance2 = new InsuranceAvailable(657,"type2","name2","benefit1",5);
+//
+//
+//        insuranceList = Stream.of(insurance1,insurance2).collect(Collectors.toList());
+//        when(jdbcTemplate.query(anyString(),any(InsuranceServices.CardMapper.class))).thenReturn(insuranceList);
+//
+//        // Calling the method under test
+//        List<InsuranceAvailable> result = insurance.allAvailableInsurance();
+//        System.out.println(result.size());
+//
+//        //assertEquals(2, result.size()); //passes
+//        //  assertEquals(1, result.size()); //fails
+//        // assertEquals(342, result.get(0).getInsuranceId());  //fails
+//        assertEquals("name1", result.get(0).getInsuranceName());  //passes
+//    }
+//}
+

@@ -1,0 +1,50 @@
+
+
+1.validation in same class ---own util class
+2.Is there any limit on contents in log file
+3.turn on or off a particular log level
+4.previlege in log levels
+ 2.---keep it on a specific size then archive and zip
+5. loosely coupled---interface
+6. version of snapshot or jarfile ...backward compatibility
+7. version update for db
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1 class ,2 objects for address 
+
+
+
